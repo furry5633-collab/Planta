@@ -1,0 +1,2987 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#173024">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Semillita · tu mascota vegetal</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22f%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fdf8ea%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23dcebc4%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22m%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%220%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23b0603c%22%2F%3E%3Cstop%20offset%3D%22.5%22%20stop-color%3D%22%23d0794f%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a85732%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23f)%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%2213%22%20r%3D%228%22%20fill%3D%22%23ffe08a%22%20opacity%3D%22.55%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%2213%22%20r%3D%225.4%22%20fill%3D%22%23ffd75e%22%2F%3E%3Cpath%20d%3D%22M0%2C50%20C14%2C46%2026%2C50%2038%2C47%20C48%2C45%2056%2C47%2064%2C46%20L64%2C64%20L0%2C64%20Z%22%20fill%3D%22%239cc97a%22%2F%3E%3Cpath%20d%3D%22M32%2C44%20L32%2C25%22%20stroke%3D%22%235c9a4a%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M32%2C32%20C24%2C30%2020%2C24%2020%2C18%20C27%2C19%2031%2C25%2032%2C32%20Z%22%20fill%3D%22%236bb155%22%2F%3E%3Cpath%20d%3D%22M32%2C30%20C40%2C28%2044%2C22%2044%2C16%20C37%2C17%2033%2C23%2032%2C30%20Z%22%20fill%3D%22%2357a043%22%2F%3E%3Cpath%20d%3D%22M22%2C40%20h20%20l-2.6%2C17%20a3.6%2C3.6%200%200%201%20-3.6%2C3%20h-7.6%20a3.6%2C3.6%200%200%201%20-3.6%2C-3%20Z%22%20fill%3D%22url(%23m)%22%2F%3E%3Crect%20x%3D%2219.6%22%20y%3D%2235%22%20width%3D%2224.8%22%20height%3D%226.4%22%20rx%3D%223.2%22%20fill%3D%22%23d98a5e%22%2F%3E%3Ccircle%20cx%3D%2228.4%22%20cy%3D%2247.5%22%20r%3D%222%22%20fill%3D%22%232b2018%22%2F%3E%3Ccircle%20cx%3D%2235.6%22%20cy%3D%2247.5%22%20r%3D%222%22%20fill%3D%22%232b2018%22%2F%3E%3Cpath%20d%3D%22M28%2C52.5%20q4%2C4%208%2C0%22%20stroke%3D%22%232b2018%22%20stroke-width%3D%221.9%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2224.6%22%20cy%3D%2251.5%22%20r%3D%222.4%22%20fill%3D%22%23e0705f%22%20opacity%3D%22.55%22%2F%3E%3Ccircle%20cx%3D%2239.4%22%20cy%3D%2251.5%22%20r%3D%222.4%22%20fill%3D%22%23e0705f%22%20opacity%3D%22.55%22%2F%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-title" content="Semillita">
+
+<style>
+/* ============================================================
+   SEMILLITA — mascota vegetal con hora real
+   Hoja de estilos: naturaleza, madera, hojas y cielo vivo
+   ============================================================ */
+:root{
+  --verde-noche:#0b1a12;
+  --verde-1:#173024;
+  --verde-2:#1f4531;
+  --verde-3:#2f6b43;
+  --verde-4:#4d9a5c;
+  --verde-5:#8ccf7e;
+  --hoja:#7dc267;
+  --tierra-1:#33200f;
+  --tierra-2:#5d3c20;
+  --tierra-3:#8d6134;
+  --arcilla:#c07a48;
+  --arcilla-2:#a95f36;
+  --crema:#f8f2e0;
+  --crema-2:#eadfc2;
+  --crema-3:#cbbd97;
+  --madera:#8a5a33;
+  --madera-2:#6d452a;
+  --agua:#6ec8e8;
+  --agua-2:#3ba3cf;
+  --sombra:rgba(8,24,14,.35);
+  --madera-3:#4f3120;
+  --sans: "Avenir Next", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --r-lg:26px; --r-md:18px; --r-sm:12px;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{height:100%;margin:0;padding:0;}
+body{
+  background:#08110c;
+  color:var(--crema);
+  font-family:var(--sans);
+  overscroll-behavior:none;
+  overflow:hidden;
+  user-select:none; -webkit-user-select:none;
+}
+button{font-family:inherit;color:inherit;border:0;background:none;cursor:pointer;}
+h1,h2,h3,h4{font-family:var(--serif);margin:0;font-weight:600;letter-spacing:.2px;}
+
+/* ---------- Estructura de la app ---------- */
+#app{
+  position:fixed; inset:0;
+  display:flex; flex-direction:column;
+  max-width:520px; margin:0 auto;
+  overflow:hidden;
+  background:var(--verde-1);
+}
+#stage{position:relative; flex:1; overflow:hidden; touch-action:none;}
+
+/* ---------- Cielo según la hora real ---------- */
+#sky{position:absolute; inset:0; transition:background 3s linear;}
+#sky .grad{position:absolute; inset:0;}
+#stars{position:absolute; inset:0; opacity:0; transition:opacity 3s linear; pointer-events:none;}
+#stars i{position:absolute; background:#fff; border-radius:50%; animation:twinkle 4.6s infinite ease-in-out;}
+#stars i.big{background:radial-gradient(circle,#fff,rgba(255,255,255,.35));}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+#celestial{position:absolute; width:64px; height:64px; margin:-32px 0 0 -32px; transition:transform 6s linear, opacity 2s linear; pointer-events:none;}
+.sun{width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 35%, #fff8c9, #ffd75e 55%, #ff9f43);
+  box-shadow:0 0 42px 12px rgba(255,205,90,.55); animation:breathe 6s ease-in-out infinite;}
+.moon{width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 38% 34%, #ffffff, #dfe6f5 60%, #b9c2da);
+  box-shadow:0 0 30px 8px rgba(200,220,255,.35);}
+.moon::after{content:"";position:absolute;width:52px;height:52px;border-radius:50%;background:#0d1730; transform:translate(16px,-9px) scale(1.02); opacity:.0;}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.cloud{position:absolute; opacity:.85; pointer-events:none; will-change:transform;}
+.cloudIn{display:block; transform-origin:0 0;}
+@keyframes drift{0%{transform:translateX(0)}100%{transform:translateX(150vw)}}
+.cloud svg{display:block;}
+#hills{position:absolute; left:0; right:0; bottom:0; height:46%; pointer-events:none;}
+#ground{position:absolute; left:0; right:0; bottom:0; height:27%;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,.08), transparent 60%),
+    linear-gradient(#4a3a24, #2b2013 70%, #1d1610);
+  box-shadow:inset 0 18px 30px -18px rgba(0,0,0,.6);}
+#ground .grass{position:absolute; left:0; right:0; top:-9px; height:18px; opacity:.9;}
+#ground .speck{position:absolute; border-radius:50%; background:rgba(255,255,255,.06);}
+#ground .pit{position:absolute; border-radius:50%; background:rgba(0,0,0,.22); filter:blur(2px);}
+
+/* ---------- Escena de la planta ---------- */
+#scenePlant,#pot{position:absolute; left:50%; bottom:2.6%; transform:translateX(-50%);
+  width:min(72%,340px); height:min(73%,530px);}
+#scenePlant{pointer-events:none; z-index:3;}
+#plantWrap{position:relative; width:100%; height:100%;}
+#plantSvg{width:100%; height:100%; overflow:visible; transform-origin:50% 90%; display:block;}
+#plantSvg.pop{animation:popIn 1.15s cubic-bezier(.2,1.5,.4,1) both;}
+@keyframes popIn{0%{transform:scale(.55) translateY(14px)}55%{transform:scale(1.09) translateY(-3px)}100%{transform:scale(1)}}
+#plantSvg.shake{animation:shakeGrow 2.2s ease-in-out both;}
+@keyframes shakeGrow{
+  0%{transform:rotate(0) scale(1)} 8%{transform:rotate(-3.5deg) scale(1.01)} 16%{transform:rotate(3.5deg) scale(1.015)}
+  24%{transform:rotate(-3deg) scale(1.02)} 32%{transform:rotate(3deg) scale(1.03)} 42%{transform:rotate(-2deg) scale(1.05)}
+  54%{transform:rotate(1.5deg) scale(1.07)} 66%{transform:rotate(-1deg) scale(1.05)} 80%{transform:rotate(.6deg) scale(1.02)}
+  100%{transform:rotate(0) scale(1)} }
+#plantSvg.wilt{filter:saturate(.55) brightness(.9);}
+#plantSvg.happy{animation:happyWobble 1.5s ease-in-out;}
+@keyframes happyWobble{0%{transform:rotate(0)}20%{transform:rotate(-4deg) translateY(-4px)}45%{transform:rotate(4deg) translateY(-2px)}70%{transform:rotate(-2.5deg)}100%{transform:rotate(0)}}
+#plantSvg.petted{animation:petWobble .9s ease-in-out;}
+body.hojaAbierta #stage *,body.hojaAbierta #plantWrap,body.hojaAbierta .cloud{animation-play-state:paused !important;}
+@keyframes petWobble{0%{transform:rotate(0)}25%{transform:rotate(6deg) scale(.99)}50%{transform:rotate(-6deg)}75%{transform:rotate(4deg)}100%{transform:rotate(0)}}
+
+/* ---- viento relajante: cada planta se mece a su aire (--sway = intensidad) ---- */
+.hoja{transform-box:fill-box; transform-origin:0% 50%; animation:leafSway 5.4s ease-in-out infinite;}
+.still{animation:none;}
+@keyframes leafSway{
+  0%,100%{transform:rotate(0deg)}
+  24%{transform:rotate(calc(2.3deg * var(--sway,1)))}
+  52%{transform:rotate(calc(-1.2deg * var(--sway,1)))}
+  76%{transform:rotate(calc(2.9deg * var(--sway,1)))}
+}
+.tallo{transform-box:fill-box; transform-origin:50% 100%; animation:stemSway 7.2s ease-in-out infinite;}
+@keyframes stemSway{
+  0%,100%{transform:rotate(0deg)}
+  22%{transform:rotate(calc(1.15deg * var(--sway,1)))}
+  48%{transform:rotate(calc(-0.75deg * var(--sway,1)))}
+  74%{transform:rotate(calc(1.5deg * var(--sway,1)))}
+}
+.flor{transform-box:fill-box; transform-origin:50% 100%; animation:flowerNod 6s ease-in-out infinite;}
+@keyframes flowerNod{
+  0%,100%{transform:rotate(0deg) scale(1)}
+  30%{transform:rotate(calc(-2deg * var(--sway,1))) scale(1.01)}
+  62%{transform:rotate(calc(2.4deg * var(--sway,1))) scale(1.03)}
+}
+.frutaG{pointer-events:all; cursor:pointer;}
+.frutaGi{transform-box:fill-box; transform-origin:50% 0;
+  animation:fruitBob 5.6s ease-in-out infinite;}
+@keyframes fruitBob{0%,100%{transform:rotate(calc(-2.4deg * var(--sway,1)))}
+  50%{transform:rotate(calc(2.4deg * var(--sway,1))) translateY(1.4px)}}
+@media (prefers-reduced-motion:reduce){
+  #plantWrap,.frutaGi,.plot svg,.shine{animation:none !important;}
+}
+/* la planta entera se mece con la brisa */
+#plantWrap{transform-origin:50% 100%; will-change:transform;
+  animation:breeze 9.5s ease-in-out infinite;}
+@keyframes breeze{
+  0%,100%{transform:translateX(0) rotate(0deg)}
+  32%{transform:translateX(2.5px) rotate(calc(-0.55deg * var(--sway,1)))}
+  66%{transform:translateX(-2.5px) rotate(calc(0.7deg * var(--sway,1)))}
+}
+#plantWrap.gust{animation:windGust 2.8s cubic-bezier(.4,.1,.5,.9);}
+@keyframes windGust{
+  0%{transform:rotate(0deg)}
+  22%{transform:translateX(4px) rotate(calc(2.1deg * var(--sway,1)))}
+  46%{transform:translateX(-2px) rotate(calc(-1.3deg * var(--sway,1)))}
+  68%{transform:translateX(3px) rotate(calc(1.5deg * var(--sway,1)))}
+  100%{transform:rotate(0deg)}
+}
+/* las plantas del jardín se mecen enteras (una sola animación por parcela: mucho más ligero) */
+.plot svg{transform-origin:50% 100%; will-change:transform; animation:breeze 11s ease-in-out infinite;}
+.plot svg .hoja,.plot svg .tallo,.plot svg .flor,.plot svg .frutaGi,
+.plot svg .shine,.plot svg .semilla,.plot svg .butterfly,.plot svg .zZz{animation:none;}
+#plantSvg [data-fi]{pointer-events:all;cursor:pointer;}
+.flyFruit{position:absolute;width:14px;height:14px;border-radius:50% 50% 55% 55%;transform:translate(-50%,-50%);
+  animation:flyUp .9s cubic-bezier(.2,.7,.3,1) forwards;z-index:7;}
+@keyframes flyUp{0%{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  100%{opacity:0;transform:translate(-50%,-170px) scale(.5)}}
+.semilla{transform-box:fill-box;transform-origin:50% 60%;animation:seedWiggle 4s ease-in-out infinite;}
+@keyframes seedWiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.zZz{animation:floatZ 3.2s ease-in-out infinite;}
+@keyframes floatZ{0%{opacity:0;transform:translateY(6px)}30%{opacity:1}100%{opacity:0;transform:translateY(-22px)}}
+
+/* ---------- Maceta con carita ---------- */
+#pot{z-index:4; cursor:grab; touch-action:none;}
+#pot.grabbing{cursor:grabbing;}
+#potSvg{width:100%; height:100%; display:block; filter:drop-shadow(0 12px 16px rgba(0,0,0,.35));}
+#pot.happy #potSvg{animation:potBounce .9s ease-in-out;}
+@keyframes potBounce{0%{transform:translateY(0)}30%{transform:translateY(-9px) rotate(-2deg)}60%{transform:translateY(0) rotate(1.5deg)}100%{transform:translateY(0)}}
+#petRing{position:absolute; inset:-14% -10% -6% -10%; border-radius:50%; pointer-events:none;}
+#petHint{position:absolute; left:50%; bottom:-16px; transform:translateX(-50%); font-size:10px; letter-spacing:.6px;
+  text-transform:uppercase; color:rgba(255,255,255,.72); background:rgba(10,30,18,.55); padding:5px 11px; border-radius:20px;
+  backdrop-filter:blur(3px); white-space:nowrap; transition:opacity .5s; pointer-events:none;}
+#pot .blush{opacity:.35; transition:opacity .3s;}
+
+/* ---------- Lienzo de FX (gotas, corazones, brillos) ---------- */
+#fx{position:absolute; inset:0; pointer-events:none; z-index:6; overflow:hidden;}
+.drop{position:absolute; width:9px; height:13px; background:linear-gradient(#bfeeff,#39a6d6); border-radius:50% 50% 55% 55%;
+  box-shadow:inset -1px -2px 3px rgba(255,255,255,.6); transform:translate(-50%,-50%);}
+.heart{position:absolute; font-size:20px; transform:translate(-50%,-50%); animation:heartUp 1.5s ease-out forwards;}
+@keyframes heartUp{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}18%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--dx,0px)), calc(-50% - 90px)) scale(1.25)}}
+.spark{position:absolute; font-size:15px; transform:translate(-50%,-50%); animation:sparkOut 1.1s ease-out forwards;}
+@keyframes sparkOut{0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(0)}25%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--dx,10px)), calc(-50% + var(--dy,-40px))) scale(1) rotate(140deg)}}
+.splash{position:absolute; border-radius:50%; border:2px solid rgba(160,225,255,.85); transform:translate(-50%,-50%); animation:splashOut .8s ease-out forwards;}
+@keyframes splashOut{0%{opacity:.9;width:6px;height:6px}100%{opacity:0;width:52px;height:52px;margin:-23px 0 0 -23px}}
+.tipText{position:absolute; transform:translate(-50%,-50%); font-size:13px; font-weight:600; color:#fff;
+  background:rgba(20,50,30,.82); border:1px solid rgba(255,255,255,.25); padding:6px 11px; border-radius:14px;
+  white-space:nowrap; animation:tipFloat 2s ease-out forwards;}
+@keyframes tipFloat{0%{opacity:0;transform:translate(-50%,0) scale(.85)}15%{opacity:1;transform:translate(-50%,-8px) scale(1)}100%{opacity:0;transform:translate(-50%,-46px) scale(1)}}
+
+/* ---------- Regadera ---------- */
+#canLayer{position:absolute; inset:0; z-index:7; pointer-events:none;}
+#can{position:absolute; width:150px; height:120px; pointer-events:auto; touch-action:none; cursor:grab;
+  transform-origin:62% 74%; transition:opacity .4s;}
+#can.hidden{opacity:0; pointer-events:none; transform:translate(150px,40px);}
+#can.grabbing{cursor:grabbing;}
+#can svg{width:100%;height:100%; display:block; filter:drop-shadow(0 10px 12px rgba(0,0,0,.4));}
+#can.grabbing svg{filter:drop-shadow(0 3px 4px rgba(0,0,0,.35));}
+#can.pour{filter:none;}
+#waterJet{position:absolute; z-index:6; pointer-events:none; opacity:0; transition:opacity .12s; width:6px; border-radius:4px;
+  background:linear-gradient(rgba(190,240,255,.9), rgba(70,170,215,.85)); filter:blur(.3px);}
+#waterJet.on{opacity:.9;}
+#waterMeter{position:absolute; left:50%; top:calc(29% - 2px); transform:translateX(-50%); width:min(58%,210px); z-index:8;
+  display:flex; flex-direction:column; align-items:center; gap:5px; opacity:0; transition:opacity .35s; pointer-events:none;}
+#waterMeter.on{opacity:1;}
+#waterMeter .bar{width:100%; height:9px; border-radius:9px; background:rgba(6,26,16,.55); border:1px solid rgba(255,255,255,.3); overflow:hidden;}
+#waterMeter .fill{height:100%; width:0%; border-radius:9px; background:linear-gradient(90deg,#8fe3ff,#3aa6d6); transition:width .12s linear;}
+#waterMeter .lbl{font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#eafaff; text-shadow:0 1px 4px rgba(0,0,0,.6);}
+#waterMeter #waterHint{font-size:11.5px; font-weight:600; color:#f2fffb; text-align:center; text-shadow:0 1px 5px rgba(0,20,10,.75);
+  background:rgba(9,40,26,.45); border-radius:12px; padding:4px 10px; max-width:100%;}
+/* la regadera se coloca con transform (más fluido, sin repintar el layout) */
+#can{left:0;top:0;width:150px;height:120px;opacity:1;transition:opacity .3s, filter .2s;will-change:transform;touch-action:none;}
+#can.hidden{opacity:0;pointer-events:none;}
+#can.grabbing{filter:brightness(1.06);}
+#waterJet{left:0;top:0;height:420px;width:6px;transform-origin:50% 0;will-change:transform;}
+/* brillo suave cuando la regadera apunta a la maceta */
+#potGlow{position:absolute; left:50%; bottom:2.6%; transform:translateX(-50%); width:min(100%,470px); height:min(48%,330px);
+  z-index:2; pointer-events:none; opacity:0; transition:opacity .25s;
+  background:radial-gradient(ellipse at 50% 80%, rgba(150,255,200,.55), rgba(150,255,200,0) 62%);}
+#potGlow.on{opacity:1;}
+/* mimos SOLO sobre la maceta (el resto de la pantalla no cuenta) */
+#potSvg{pointer-events:none;}
+#potSvg #petZoneR{pointer-events:all;}
+
+/* ---------- Barra superior: reloj real ---------- */
+#topbar{position:absolute; top:0; left:0; right:0; z-index:9; padding:calc(env(safe-area-inset-top,0px) + 10px) 14px 0;
+  display:flex; gap:8px; align-items:flex-start; justify-content:space-between; pointer-events:none;}
+.pill{pointer-events:auto; display:flex; align-items:center; gap:7px; background:rgba(9,26,17,.52); border:1px solid rgba(255,255,255,.18);
+  border-radius:20px; padding:7px 12px; backdrop-filter:blur(6px); font-size:13px; box-shadow:0 6px 14px rgba(0,0,0,.22);}
+.pill b{font-variant-numeric:tabular-nums; font-weight:700; letter-spacing:.4px;}
+.pill small{color:rgba(255,255,255,.68); font-size:10.5px; letter-spacing:.5px;}
+#clockPill b{font-size:15px;}
+#dayPill small{display:block;}
+.pill.warn{border-color:rgba(255,190,120,.6); background:rgba(70,40,10,.55);}
+.pill.good{border-color:rgba(150,240,170,.55); background:rgba(14,60,32,.6);}
+
+/* ---------- Dock inferior (madera y hojas) ---------- */
+#dock{position:relative; z-index:9; padding:8px 10px calc(env(safe-area-inset-bottom,0px) + 10px);
+  background:linear-gradient(#6d4529,#4f3120 60%,#3d2517); border-top:2px solid rgba(255,255,255,.12);
+  box-shadow:0 -10px 22px rgba(0,0,0,.35);}
+#dock .woodgrain{position:absolute; inset:0; opacity:.25;
+  background:repeating-linear-gradient(90deg, rgba(0,0,0,.14) 0 2px, transparent 2px 9px); pointer-events:none;}
+#dockRow{display:grid; grid-template-columns:repeat(4,1fr); gap:7px; position:relative;}
+.dbtn{position:relative; display:flex; flex-direction:column; align-items:center; gap:3px; padding:9px 4px 8px; border-radius:16px;
+  background:linear-gradient(#3c8a4f,#26613a); border:1px solid rgba(255,255,255,.22); box-shadow:0 3px 0 rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.25);
+  color:#eafce9; font-size:11px; letter-spacing:.4px; font-weight:600; transition:transform .12s, filter .2s;}
+.dbtn .ic{font-size:20px; line-height:1; filter:drop-shadow(0 1px 2px rgba(0,0,0,.35));}
+.dbtn:active{transform:translateY(2px); box-shadow:0 1px 0 rgba(0,0,0,.3);}
+.dbtn[disabled]{filter:grayscale(.75) brightness(.75); opacity:.75;}
+.dbtn.tierra{background:linear-gradient(#a9743f,#7d5227);}
+.dbtn.cielo{background:linear-gradient(#4a90b8,#2c6a90);}
+.dbtn .badge{position:absolute; top:-6px; right:-4px; background:#ffd75e; color:#3a2a05; font-size:10px; font-weight:800;
+  border-radius:12px; padding:2px 7px; box-shadow:0 2px 6px rgba(0,0,0,.35); border:1px solid rgba(0,0,0,.15);}
+.dbtn .badge.hide{display:none;}
+
+/* ---------- Hojas / formularios ---------- */
+.sheet{position:fixed; inset:0; z-index:20; display:flex; flex-direction:column; justify-content:flex-end;
+  background:rgba(5,14,9,.55); backdrop-filter:blur(3px); opacity:0; pointer-events:none; transition:opacity .28s;}
+.sheet.open{opacity:1; pointer-events:auto;}
+.sheet .panel{max-width:520px; width:100%; margin:0 auto; max-height:92%; overflow:hidden; display:flex; flex-direction:column;
+  background:linear-gradient(#fdf8ea,#f1e7cd); color:#25361f; border-radius:24px 24px 0 0; border-top:3px solid #cbbd97;
+  box-shadow:0 -18px 40px rgba(0,0,0,.45); transform:translateY(24px); transition:transform .3s cubic-bezier(.2,.9,.3,1);}
+.sheet.open .panel{transform:translateY(0);}
+.sheet .phead{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:14px 16px 10px; border-bottom:1px dashed rgba(60,80,50,.28);}
+.sheet .phead h2{font-size:19px; color:#20402a;}
+.sheet .phead p{margin:2px 0 0; font-size:12px; color:#5d6b52;}
+.xbtn{width:34px;height:34px;border-radius:50%; background:#e6dcc0; color:#33452c; font-size:17px; display:grid; place-items:center; border:1px solid rgba(0,0,0,.08);}
+.sheet .pbody{padding:14px 16px calc(env(safe-area-inset-bottom,0px) + 18px); overflow:auto; -webkit-overflow-scrolling:touch;}
+.grab{width:44px;height:5px;border-radius:5px;background:rgba(60,80,50,.3); margin:8px auto 0;}
+
+.chips{display:flex; gap:7px; overflow-x:auto; padding-bottom:9px; margin-bottom:8px;}
+.chip{flex:0 0 auto; padding:7px 12px; border-radius:16px; background:#e7dcc0; border:1px solid rgba(0,0,0,.07);
+  font-size:12px; font-weight:600; color:#3c4f33; white-space:nowrap;}
+.chip.on{background:#2f6b43; color:#eafce9; border-color:#1f4531;}
+
+.seedGrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(102px,1fr)); gap:9px;}
+.seedCard{position:relative; background:linear-gradient(#fffdf5,#f0e7cf); border:1px solid rgba(60,80,50,.16); border-radius:16px;
+  padding:8px 6px 7px; text-align:center; box-shadow:0 2px 0 rgba(0,0,0,.06); transition:transform .12s;}
+.seedCard:active{transform:scale(.97);}
+.seedCard svg{width:62px; height:70px; display:block; margin:0 auto;}
+.seedCard .nm{font-size:11px; font-weight:700; color:#2c4227; line-height:1.15; margin-top:2px; min-height:26px;
+  display:flex; align-items:center; justify-content:center;}
+.seedCard .fm{font-size:9.5px; letter-spacing:.5px; text-transform:uppercase; color:#7b8a6c;}
+.seedCard.actual{outline:2px solid #4d9a5c; outline-offset:1px;}
+.seedCard .tag{position:absolute; top:5px; right:5px; font-size:9px; background:#ffd75e; color:#3a2a05; border-radius:9px; padding:2px 5px;
+  font-weight:800; box-shadow:0 1px 3px rgba(0,0,0,.2);}
+.seedCard .tag.jardin{background:#8fd3a8;}
+.noteBox{background:#fffdf3; border:1px dashed #b9ab84; border-radius:14px; padding:11px 13px; font-size:12.5px; line-height:1.5; color:#42523a;}
+.noteBox b{color:#20402a;}
+
+/* ---------- Jardín ---------- */
+#gardenScene{position:relative; border-radius:18px; overflow:hidden; border:2px solid #b9ab84; min-height:260px;
+  background:linear-gradient(#a9d8f5 0%, #c6e6f5 24%, #d2e7dc 40%, #b3d19e 54%, #8cb56d 70%, #6f9c58 86%, #649048 100%);}
+#gardenDecor{position:absolute; inset:0 0 auto 0; height:120px; pointer-events:none; opacity:.92;}
+#gardenDecor svg{width:100%;height:100%;display:block;}
+#gardenStats{grid-template-columns:repeat(3,minmax(0,1fr));}
+#gardenStats .stat b{font-size:17px;}
+#gardenStats .stat span{font-size:9px;}
+#gardenGrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(78px,1fr)); gap:6px; padding:12px 10px 14px;}
+.plot{position:relative; background:linear-gradient(#7a5636,#5c3f26); border-radius:12px; padding:4px 2px 5px; text-align:center;
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.12), 0 3px 0 rgba(0,0,0,.18);}
+.plot svg{width:52px;height:62px;display:block;margin:0 auto; filter:drop-shadow(0 3px 3px rgba(0,0,0,.3));}
+.plot .nm{font-size:9px; color:#f4ead3; font-weight:600; line-height:1.1; margin-top:1px;}
+.plot .tm{font-size:8px; color:#d9c9a3; letter-spacing:.3px;}
+.plot .ok{position:absolute; top:3px; right:4px; font-size:9px;}
+.plot .frutas{position:absolute; top:2px; right:3px; font-size:9.5px; font-weight:800; background:linear-gradient(#ffd75e,#f2b03c);
+  color:#3a2a05; border-radius:9px; padding:1px 5px; box-shadow:0 2px 6px rgba(0,0,0,.3);}
+.gardenBar{display:flex; align-items:center; justify-content:space-between; gap:10px; margin:0 0 10px; flex-wrap:wrap;}
+.statGrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(84px,1fr)); gap:8px; margin-top:10px;}
+.stat{background:#fffdf3; border:1px solid rgba(60,80,50,.16); border-radius:13px; padding:9px 8px; text-align:center;}
+.stat b{display:block; font-size:19px; font-family:var(--serif); color:#20402a;}
+.stat span{font-size:10px; text-transform:uppercase; letter-spacing:.6px; color:#7b8a6c;}
+.btnRow{display:flex; gap:9px; flex-wrap:wrap; margin-top:12px;}
+.btnBig{flex:1 1 150px; padding:13px 14px; border-radius:16px; font-weight:700; font-size:14px; text-align:center;
+  background:linear-gradient(#3c8a4f,#26613a); color:#eafce9; border:1px solid rgba(255,255,255,.25);
+  box-shadow:0 3px 0 rgba(0,0,0,.22);}
+.btnBig:active{transform:translateY(2px);}
+.btnBig.tierra{background:linear-gradient(#bb8548,#8b5b2b); color:#fff6e6;}
+.btnBig.cielo{background:linear-gradient(#5aa3c9,#2f6f96); color:#f0fbff;}
+.btnBig.ghost{background:#efe6cd; color:#3c4f33; border-color:rgba(0,0,0,.12); box-shadow:0 3px 0 rgba(0,0,0,.08);}
+.btnBig[disabled]{filter:grayscale(.7) brightness(.85); opacity:.8;}
+.small{font-size:11.5px; color:#6d7a61; line-height:1.5;}
+
+/* ficha de especie */
+.specHero{display:flex; gap:14px; align-items:center; background:#fffdf3; border:1px solid rgba(60,80,50,.16); border-radius:18px; padding:12px;}
+.specHero svg{width:96px; height:112px; flex:0 0 auto;}
+.specHero h3{font-size:20px; color:#20402a;}
+.specHero .fam{font-size:11px; letter-spacing:.8px; text-transform:uppercase; color:#7b8a6c; margin-bottom:4px;}
+.specHero p{margin:6px 0 0; font-size:12.5px; line-height:1.5; color:#48583d;}
+.bars{margin-top:11px; display:grid; gap:8px;}
+.bar{display:grid; grid-template-columns:78px 1fr 40px; gap:9px; align-items:center; font-size:11.5px; color:#4b5b40;}
+.bar .track{height:9px; border-radius:9px; background:#e0d6ba; overflow:hidden;}
+.bar .track i{display:block; height:100%; border-radius:9px; background:linear-gradient(90deg,#8ccf7e,#2f6b43);}
+
+/* toast */
+#topLayer{position:fixed; inset:0; z-index:60; pointer-events:none;}
+#topLayer>*{pointer-events:auto;}
+#toast{position:fixed; left:50%; top:22%; transform:translate(-50%,-12px); z-index:14; max-width:88%;
+  background:rgba(9,30,18,.9); border:1px solid rgba(190,255,200,.35); color:#f2ffe9; border-radius:18px;
+  padding:11px 15px; font-size:13.5px; line-height:1.4; text-align:center; box-shadow:0 12px 26px rgba(0,0,0,.45);
+  opacity:0; pointer-events:none; transition:opacity .35s, transform .35s;}
+#toast.on{opacity:1; transform:translate(-50%,0);}
+#toast b{color:#ffe9a8;}
+
+
+/* semillero: secciones, reclamar, semilla nueva */
+.secTitle{display:flex;align-items:baseline;gap:8px;font-family:var(--serif);font-size:17px;color:#20402a;margin:14px 0 8px;}
+.secTitle small{font-family:var(--sans);font-size:11px;color:#7b8a6c;font-weight:600;letter-spacing:.3px;}
+.claimCard{margin:12px 0 10px;background:linear-gradient(#fffdf3,#f4ebd2);border:2px dashed #c2b28c;border-radius:20px;padding:16px;text-align:center;}
+.claimCard .big{font-size:46px;line-height:1;filter:drop-shadow(0 4px 6px rgba(0,0,0,.18));}
+.claimCard h3{font-size:19px;color:#20402a;margin:6px 0 4px;}
+.claimCard p{font-size:12.5px;color:#5d6b52;line-height:1.5;margin:0 0 12px;}
+.btnBig.gold{background:linear-gradient(#f7d15e,#e0a12c);color:#3d2a05;border-color:rgba(255,255,255,.45);}
+.seedCard.nueva{animation:newSeedPop .95s cubic-bezier(.2,1.6,.4,1);outline:2px solid #f2b03c;outline-offset:1px;}
+@keyframes newSeedPop{0%{transform:scale(.55) rotate(-7deg);opacity:0}55%{transform:scale(1.07) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+.seedCard .tag.nueva{background:linear-gradient(#ffd75e,#f2b03c);color:#3a2a05;box-shadow:0 2px 8px rgba(242,176,60,.55);}
+.seedCard.ref{opacity:.75;}
+.seedCard.ref:active{transform:none;}
+.dbtn .badge.pulse{animation:pulseIt 1.4s ease-in-out infinite;}
+/* vuelo al jardin / pulsos / plots */
+#plantSvg.fly{animation:flyAway 1s cubic-bezier(.4,0,.9,.4) forwards;}
+@keyframes flyAway{0%{opacity:1}35%{transform:translateY(-30px) scale(.92) rotate(-4deg);opacity:1}
+  100%{transform:translate(34px,-300px) scale(.1) rotate(14deg);opacity:0}}
+.pulse{animation:pulseIt 1.5s ease-in-out infinite;}
+@keyframes pulseIt{0%,100%{transform:scale(1);box-shadow:0 3px 0 rgba(0,0,0,.22)}50%{transform:scale(1.045);box-shadow:0 6px 14px rgba(242,176,60,.5)}}
+#petHint.pulse{opacity:1 !important;animation:pulseIt 1.25s ease-in-out infinite;}
+.plot{border:0;font-family:inherit;color:inherit;cursor:pointer;transition:transform .12s;}
+.plot:active{transform:scale(.97);}
+#sendWrap{display:none;width:100%;}
+#sendWrap.on{display:flex;}
+.btnBig.hot{background:linear-gradient(#f2b03c,#d98a1f);color:#40290a;border-color:rgba(255,255,255,.35);}
+.btnBig.hot b{color:#2f1d04;}
+#toast b{color:#ffe9a8}
+/* intro */
+#intro{position:absolute; inset:0; z-index:16; display:grid; place-items:center; padding:24px;
+  background:radial-gradient(120% 90% at 50% 10%, rgba(12,40,24,.72), rgba(6,18,11,.92)); backdrop-filter:blur(2px); text-align:center;}
+#intro.hide{display:none;}
+#intro .card{max-width:400px; background:linear-gradient(#fdf8ea,#efe4c8); color:#25361f; border-radius:26px; padding:22px 20px;
+  border:2px solid #cbbd97; box-shadow:0 24px 50px rgba(0,0,0,.5);}
+#intro h1{font-size:26px; color:#20402a;}
+#intro .sub{font-size:12.5px; color:#5d6b52; margin-top:4px;}
+#intro ul{text-align:left; margin:14px 0 0; padding-left:20px; font-size:12.5px; line-height:1.65; color:#3d4d34;}
+#intro .go{margin-top:16px; width:100%; padding:14px; border-radius:16px; font-weight:800; font-size:15px;
+  background:linear-gradient(#3c8a4f,#26613a); color:#eafce9; box-shadow:0 4px 0 rgba(0,0,0,.25);}
+.hintSeed{font-size:12px; color:#7b8a6c; margin-top:2px;}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="stage">
+    <!-- cielo dinámico -->
+    <div id="sky">
+      <div class="grad"></div>
+      <div id="stars"></div>
+      <div id="celestial"></div>
+      <div id="clouds"></div>
+    </div>
+    <div id="hills">
+      <svg viewBox="0 0 400 220" preserveAspectRatio="none" width="100%" height="100%">
+        <path d="M0,150 C40,110 70,132 105,104 C140,76 168,120 205,96 C240,74 268,116 305,92 C338,70 368,108 400,88 L400,220 L0,220 Z" fill="#2c5138" opacity=".75"/>
+        <path d="M0,178 C46,152 78,172 118,146 C158,120 190,160 232,142 C272,125 300,158 340,140 C366,128 384,142 400,132 L400,220 L0,220 Z" fill="#20402c" opacity=".85"/>
+      </svg>
+    </div>
+    <div id="ground">
+      <div class="grass">
+        <svg viewBox="0 0 400 18" preserveAspectRatio="none" width="100%" height="100%">
+          <path d="M0,18 C10,6 16,6 22,18 C28,4 36,4 42,18 C50,7 58,7 66,18 C74,3 84,3 92,18 C100,8 108,8 116,18 C124,5 134,5 142,18 C150,7 158,7 166,18 C174,4 184,4 192,18 C200,9 208,9 216,18 C224,3 234,3 242,18 C250,6 258,6 266,18 C274,5 284,5 292,18 C300,8 308,8 316,18 C324,4 334,4 342,18 C350,7 358,7 366,18 C374,5 384,5 392,18 L400,18 L0,18 Z" fill="#3f7a4a"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- planta + maceta -->
+    <div id="scenePlant"><div id="plantWrap"><svg id="plantSvg" viewBox="0 0 240 400" preserveAspectRatio="xMidYMax meet"></svg></div></div>
+    <div id="potGlow"></div>
+    <div id="pot">
+      <svg id="potSvg" data-mood="feliz" viewBox="0 0 240 400" preserveAspectRatio="xMidYMax meet"></svg>
+      <div id="petRing"></div>
+      <div id="petHint">arrastra aquí para mimar</div>
+    </div>
+
+    <!-- regadera -->
+    <div id="canLayer">
+      <div id="waterJet"></div>
+      <div id="can" class="hidden"></div>
+    </div>
+    <div id="waterMeter"><div class="lbl">Riego de hoy</div><div class="bar"><div class="fill"></div></div><div id="waterHint">Lleva la regadera sobre la maceta 🌱</div></div>
+
+    <div id="fx"></div>
+    <div id="toast"></div>
+
+    <!-- barra superior -->
+    <div id="topbar">
+      <div class="pill" id="clockPill"><span class="led">🕰️</span><div><b id="clockTxt">--:--</b><small id="clockSub">cargando…</small></div></div>
+      <div style="display:flex;gap:8px;">
+        <div class="pill" id="dayPill"><span style="font-size:16px" id="dayIc">🌱</span><div><b id="stageTxt">Semilla</b><small id="dayTxt">Día 1</small></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- dock -->
+  <div id="dock">
+    <div class="woodgrain"></div>
+    <div id="dockRow">
+      <button class="dbtn" id="btnWater"><span class="ic">💧</span>Regar<span class="badge hide" id="badgeWater">¡sed!</span></button>
+      <button class="dbtn tierra" id="btnPet"><span class="ic">🫶</span>Mimos</button>
+      <button class="dbtn cielo" id="btnGarden"><span class="ic">🌳</span>Jardín<span class="badge hide" id="badgeGarden">1</span></button>
+      <button class="dbtn tierra" id="btnSeeds"><span class="ic">🌱</span>Semillas<span class="badge hide" id="badgeSeeds">0</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HOJA: JARDÍN ================= -->
+<div class="sheet" id="sheetGarden">
+  <div class="panel">
+    <div class="grab"></div>
+    <div class="phead">
+      <div><h2>🌳 El Jardín</h2><p id="gardenSub">Aquí viven las plantas que ya crecieron solas</p></div>
+      <button class="xbtn" data-close="sheetGarden">✕</button>
+    </div>
+    <div class="pbody">
+      <div class="gardenBar">
+        <div class="noteBox" style="flex:1 1 210px">
+          En el jardín <b>el agua es automática</b>: cada planta sigue creciendo sola, a su ritmo, con la hora real. Vuelve cada día y verás que han cambiado.
+        </div>
+      </div>
+      <div id="gardenScene">
+        <div id="gardenDecor"><svg viewBox="0 0 400 120" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="gdA" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#7fb482" stop-opacity=".85"/>
+              <stop offset=".55" stop-color="#7fb482" stop-opacity=".8"/>
+              <stop offset="1" stop-color="#7fb482" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="gdB" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#5f9b62" stop-opacity=".95"/>
+              <stop offset=".45" stop-color="#5f9b62" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#5f9b62" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <circle cx="330" cy="34" r="20" fill="#ffe08a" opacity=".95"/>
+          <circle cx="330" cy="34" r="30" fill="#ffe9a8" opacity=".35"/>
+          <path d="M0,84 C40,58 74,76 110,54 C146,32 176,68 214,48 C250,30 280,66 316,50 C348,36 372,60 400,44 L400,120 L0,120 Z" fill="url(#gdA)"/>
+          <path d="M0,100 C44,80 76,96 116,74 C156,52 190,88 232,72 C270,58 300,86 340,72 C368,62 384,74 400,66 L400,120 L0,120 Z" fill="url(#gdB)"/>
+          <g opacity=".85"><path d="M60,60 l0,-22" stroke="#6b8f4a" stroke-width="3"/><circle cx="60" cy="34" r="12" fill="#8ccf7e"/><circle cx="48" cy="42" r="9" fill="#7dc267"/><circle cx="72" cy="42" r="9" fill="#7dc267"/></g>
+          <g opacity=".8" transform="translate(285 0)"><path d="M0,60 l0,-18" stroke="#6b8f4a" stroke-width="3"/><circle cx="0" cy="38" r="10" fill="#7dc267"/><circle cx="-9" cy="45" r="7" fill="#8ccf7e"/><circle cx="9" cy="45" r="7" fill="#8ccf7e"/></g>
+        </svg></div>
+        <div id="gardenGrid"></div>
+      </div>
+      <div class="statGrid" id="gardenStats"></div>
+      <div id="gardenNote" style="display:none"></div>
+      <p class="small" id="gardenFoot" style="margin-top:10px"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HOJA: SEMILLERO ================= -->
+<div class="sheet" id="sheetSeeds">
+  <div class="panel">
+    <div class="grab"></div>
+    <div class="phead">
+      <div><h2>🌱 El Semillero</h2><p id="seedSub">100 semillas esperando a que las elijas</p></div>
+      <button class="xbtn" data-close="sheetSeeds">✕</button>
+    </div>
+    <div class="pbody">
+      <div class="noteBox">🍃 <b>Las semillas se ganan, no se eligen.</b> Cada planta que llega a <b>plenitud (etapa 8)</b> y viaja al jardín te deja <b>una semilla al azar</b>. Y cada <b>7 días</b> de crecimiento, otra de propina.</div>
+
+      <div class="claimCard" id="seedClaim" style="display:none">
+        <div class="big">🌰</div>
+        <h3>Semilla de bienvenida</h3>
+        <p>La maceta está libre. Pide tu primera semilla: el semillero la elegirá <b>al azar</b> por ti.</p>
+        <button class="btnBig gold" id="claimBtn">🍀 Dame mi semilla al azar</button>
+      </div>
+
+      <div id="seedMine" style="display:none">
+        <div class="secTitle">Tus semillas <small id="seedCount"></small></div>
+        <div class="seedGrid" id="seedGridMine"></div>
+      </div>
+
+      <div class="noteBox" id="seedProgress" style="display:none"></div>
+
+      <button class="chip" id="catalogToggle" style="margin:14px 0 8px">📖 Ver el catálogo de las 100 especies</button>
+      <div id="seedCatalog" style="display:none">
+        <input id="seedSearch" placeholder="Buscar… (rosa, cactus, olivo…)" style="width:100%;padding:11px 13px;border-radius:14px;border:1px solid rgba(60,80,50,.25);background:#fffdf3;font-size:13px;color:#2c4227;margin-bottom:10px;font-family:inherit;">
+        <div class="chips" id="seedChips"></div>
+        <div class="seedGrid" id="seedGrid"></div>
+        <p class="small" style="margin-top:8px">Solo mirar: aquí puedes ver las fichas de todas las especies. Para plantar una, tendrás que <b>ganarte su semilla</b> 🌱</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HOJA: FICHA ================= -->
+<div class="sheet" id="sheetSpec">
+  <div class="panel">
+    <div class="grab"></div>
+    <div class="phead">
+      <div><h2 id="specTitle">Ficha</h2><p id="specSub">Tu especie</p></div>
+      <button class="xbtn" data-close="sheetSpec">✕</button>
+    </div>
+    <div class="pbody">
+      <div class="specHero" id="specHero"></div>
+      <div class="bars" id="specBars"></div>
+      <div class="noteBox" id="specCare" style="margin-top:12px"></div>
+      <div class="btnRow">
+        <button class="btnBig" id="specWater">💧 Regar</button>
+        <button class="btnBig ghost" id="specPet">🫶 Mimar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HOJA: AJUSTES / MODO PRUEBA ================= -->
+<!-- ================= INTRO ================= -->
+<div id="intro">
+  <div class="card">
+    <div style="font-size:44px;line-height:1">🌰</div>
+    <h1>Semillita</h1>
+    <p class="sub">Una mascota vegetal que vive con tu hora real</p>
+    <ul>
+      <li>Riega cada día con la <b>regadera</b> (arrástrala y el agua hará el resto).</li>
+      <li>Si te levantas a las <b>07:00</b> estando dentro, verás cómo se sacude y <b>crece</b>.</li>
+      <li><b>Acaricia su pancita</b> arrastrando el dedo por abajo: le encanta.</li>
+      <li>8 etapas de crecimiento y, al final, la envías al <b>jardín</b> (allí crece sola).</li>
+      <li>Las semillas se <b>ganan al azar</b> 🎲: cada planta en plenitud te deja una nueva.</li>
+    </ul>
+    <button class="go" id="introGo">Empezar 🌱</button>
+    <p class="hintSeed">Consejo: déjala abierta un ratito al amanecer 😉</p>
+  </div>
+</div>
+
+<style>
+/* ---------- carita de la maceta y estados ---------- */
+#potSvg #petZoneR{cursor:grab;}
+#potSvg .mouth,#potSvg .mood{display:none;}
+#potSvg[data-mood="feliz"]   .m-feliz,
+#potSvg[data-mood="agusto"]  .m-agusto,
+#potSvg[data-mood="sedienta"].m-sedienta,
+#potSvg[data-mood="sedienta"] .m-sedienta,
+#potSvg[data-mood="mimada"]  .m-mimada,
+#potSvg[data-mood="dormida"] .m-dormida,
+#potSvg[data-mood="hambre"]  .m-hambre,
+#potSvg[data-mood="feliz"]   .m-feliz{display:block;}
+#potSvg .eyesOpen{display:block;} #potSvg .eyesClosed{display:none;}
+#potSvg.blink .eyesOpen{display:none;} #potSvg.blink .eyesClosed{display:block;}
+#potSvg[data-mood="dormida"] .eyesOpen,#potSvg[data-mood="agusto"] .eyesOpen,#potSvg[data-mood="mimada"] .eyesOpen{display:none;}
+#potSvg[data-mood="dormida"] .eyesClosed,#potSvg[data-mood="agusto"] .eyesClosed,#potSvg[data-mood="mimada"] .eyesClosed{display:block;}
+#potSvg .blush{opacity:0;transition:opacity .5s;}
+#potSvg[data-mood="agusto"] .blush,#potSvg[data-mood="mimada"] .blush,#potSvg[data-mood="feliz"] .blush{opacity:.55;}
+#potSvg .zc{display:none;} #potSvg[data-mood="dormida"] .zc{display:block;}
+#potSvg .potSvgFace{transition:transform .2s;}
+#potSvg .paint{opacity:.9;}
+#petSvgFace{cursor:grab;}
+.butterfly{transform-box:fill-box;transform-origin:50% 50%;animation:bfly 9s ease-in-out infinite;}
+@keyframes bfly{0%{transform:translate(0,0)}25%{transform:translate(18px,-12px) rotate(8deg)}50%{transform:translate(-6px,-22px) rotate(-6deg)}75%{transform:translate(-18px,-8px) rotate(5deg)}100%{transform:translate(0,0)}}
+.shine{animation:shine 2.6s ease-in-out infinite;}
+@keyframes shine{0%,100%{opacity:.2}50%{opacity:1}}
+</style>
+<script>
+(function(){
+"use strict";
+
+/* =====================================================================
+   SEMILLITA · mascota vegetal con hora real
+   0 = semilla ... 7 = plenitud   |   El día de la planta empieza a las 07:00
+   ===================================================================== */
+
+/* ---------------- 1. Utilidades ---------------- */
+const $  = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>Array.prototype.slice.call((r||document).querySelectorAll(s));
+const clamp=(v,a,b)=>v<a?a:(v>b?b:v);
+const lerp=(a,b,t)=>a+(b-a)*t;
+const R=(a,b)=>a+Math.random()*(b-a);
+const RI=(a,b)=>Math.floor(R(a,b+1));
+function hashStr(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+function mulberry(seed){let a=seed>>>0;return function(){a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return ((t^t>>>14)>>>0)/4294967296;};}
+function slug(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-');}
+function pad(n){return n<10?'0'+n:''+n;}
+/* mezcla de colores hex */
+function hex2rgb(h){h=h.replace('#','');if(h.length===3)h=h.split('').map(c=>c+c).join('');return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];}
+function rgb2hex(r,g,b){return '#'+[r,g,b].map(v=>pad(clamp(Math.round(v),0,255).toString(16))).join('');}
+function mixHex(a,b,t){const A=hex2rgb(a),B=hex2rgb(b);return rgb2hex(lerp(A[0],B[0],t),lerp(A[1],B[1],t),lerp(A[2],B[2],t));}
+function shade(c,f){const A=hex2rgb(c);return rgb2hex(A[0]*f,A[1]*f,A[2]*f);}
+function hueShift(hex,deg){ // gira el tono manteniendo sat/luz
+  let [r,g,b]=hex2rgb(hex).map(v=>v/255);
+  const max=Math.max(r,g,b),min=Math.min(r,g,b);let h,s,l=(max+min)/2;
+  if(max===min){h=0;s=0;}else{const d=max-min;s=l>.5?d/(2-max-min):d/(max+min);
+    h=max===r?((g-b)/d+(g<b?6:0)):max===g?((b-r)/d+2):((r-g)/d+4);h/=6;}
+  h=((h+deg/360)%1+1)%1;
+  const hue2rgb=(p,q,t)=>{if(t<0)t+=1;if(t>1)t-=1;if(t<1/6)return p+(q-p)*6*t;if(t<1/2)return q;if(t<2/3)return p+(q-p)*(2/3-t)*6;return p;};
+  const q=l<.5?l*(1+s):l+s-l*s,p=2*l-q;
+  return rgb2hex(hue2rgb(p,q,h+1/3)*255,hue2rgb(p,q,h)*255,hue2rgb(p,q,h-1/3)*255);
+}
+
+/* ---------------- 2. Tiempo real (07:00 = nuevo día) ---------------- */
+const HORA=7;                       // el día de la planta empieza a las 07:00
+const H7=HORA*3600*1000;
+const DAY=86400000;
+const Time={
+  offset:0,                          // solo modo prueba
+  now(){return Date.now()+Time.offset;},
+  date(){return new Date(Time.now());},
+  /* medianoche local a las 07:00 de un timestamp */
+  dawnOf(ts){const d=new Date(ts);
+    return new Date(d.getFullYear(),d.getMonth(),d.getDate(),HORA,0,0,0).getTime();},
+  /* indice de "dia de planta": cada vez que pasan las 07:00 locales sube 1 */
+  dayIdx(ts){ts=(ts===undefined)?Time.now():ts;
+    const b=Time.dawnOf(ts);
+    const base=(ts<b)?(b-DAY):b;
+    const ref=new Date(1970,0,2,HORA,0,0,0).getTime();
+    return Math.round((base-ref)/DAY);},
+  next7(){const now=Time.now(),b=Time.dawnOf(now);return (now<b)?b:(b+DAY);},
+  msToNext7(){return Time.next7()-Time.now();},
+  fmtMs(ms){const s=Math.max(0,Math.floor(ms/1000));const h=Math.floor(s/3600),m=Math.floor(s%3600/60);return (h>0?h+' h ':'')+m+' min';}
+};
+
+/* ---------------- 3. Guardado (localStorage con respaldo) ---------------- */
+const Store=(function(){
+  let ok=true,mem={};
+  try{localStorage.setItem('__sem_t','1');localStorage.removeItem('__sem_t');}catch(e){ok=false;}
+  return{
+    ok:ok,
+    get(k){try{return ok?localStorage.getItem(k):(k in mem?mem[k]:null);}catch(e){return null;}},
+    set(k,v){try{if(ok)localStorage.setItem(k,v);else mem[k]=v;}catch(e){mem[k]=v;}},
+    del(k){try{if(ok)localStorage.removeItem(k);else delete mem[k];}catch(e){}}
+  };
+})();
+
+/* ---------------- 4. Sonido sintetizado (sin archivos) ---------------- */
+const SFX=(function(){
+  /* ============================================================
+     BANCO DE SONIDOS (todo sintetizado en el navegador, sin archivos)
+     30+ efectos: agua, planta, mimos, semillas, interfaz y ambiente
+     ============================================================ */
+  let ac=null,on=true,master=null,nzBuf=null,vol=.9;
+  let pour=null,purr=null,bubbleT=null;
+  function ctx(){
+    if(!on)return null;
+    if(!ac){
+      try{
+        ac=new (window.AudioContext||window.webkitAudioContext)();
+        master=ac.createGain();master.gain.value=vol;
+        const comp=ac.createDynamicsCompressor();
+        comp.threshold.value=-10;comp.knee.value=18;comp.ratio.value=7;
+        comp.attack.value=.004;comp.release.value=.22;
+        master.connect(comp);comp.connect(ac.destination);
+      }catch(e){on=false;return null;}
+    }
+    if(ac.state==='suspended'){try{ac.resume();}catch(e){}}
+    return ac;
+  }
+  function out(){return master||ac.destination;}
+  function noiseBuf(c,sec){
+    if(nzBuf)return nzBuf;
+    const len=Math.floor(c.sampleRate*(sec||2)),b=c.createBuffer(1,len,c.sampleRate),d=b.getChannelData(0);
+    for(let i=0;i<len;i++)d[i]=Math.random()*2-1;
+    nzBuf=b;return b;
+  }
+  /* --- primitivas --- */
+  function t(f,dur,o){ /* tono */
+    o=o||{};const c=ctx();if(!c)return;
+    const t0=c.currentTime+(o.delay||0),osc=c.createOscillator(),g=c.createGain();
+    osc.type=o.type||'sine';osc.frequency.setValueAtTime(f,t0);
+    if(o.to)osc.frequency.exponentialRampToValueAtTime(Math.max(30,o.to),t0+dur);
+    if(o.vib){const l=c.createOscillator(),lg=c.createGain();l.frequency.value=o.vib;lg.gain.value=o.vibAmt||6;
+      l.connect(lg);lg.connect(osc.frequency);l.start(t0);l.stop(t0+dur+.05);}
+    const atk=o.atk||.012;
+    g.gain.setValueAtTime(0,t0);
+    g.gain.linearRampToValueAtTime(o.v||.12,t0+atk);
+    g.gain.exponentialRampToValueAtTime(.0001,t0+dur);
+    osc.connect(g);g.connect(out());osc.start(t0);osc.stop(t0+dur+.06);
+  }
+  function nz(dur,o){ /* ruido filtrado */
+    o=o||{};const c=ctx();if(!c)return;
+    const t0=c.currentTime+(o.delay||0);
+    const s=c.createBufferSource();s.buffer=noiseBuf(c,2);s.loop=true;
+    const f=c.createBiquadFilter();f.type=o.type||'lowpass';f.frequency.setValueAtTime(o.freq||900,t0);
+    if(o.to)f.frequency.exponentialRampToValueAtTime(Math.max(60,o.to),t0+dur);
+    f.Q.value=o.q||1;
+    const g=c.createGain();
+    const atk=o.atk||.02;
+    g.gain.setValueAtTime(0,t0);g.gain.linearRampToValueAtTime(o.v||.09,t0+atk);
+    g.gain.exponentialRampToValueAtTime(.0001,t0+dur);
+    s.connect(f);f.connect(g);g.connect(out());s.start(t0);s.stop(t0+dur+.05);
+  }
+  function plip(f,delay,v,dur){
+    t(f,dur||.07,{type:'sine',to:f*1.35,v:v||.05,delay:delay,atk:.004});
+    nz(.02,{type:'highpass',freq:2600,v:.02,delay:delay});
+  }
+  function chord(fs,dur,o){
+    o=o||{};
+    fs.forEach(function(f,i){t(f,dur,{type:o.type||'triangle',v:o.v||.075,delay:(o.delay||0)+i*(o.spread||.02),atk:o.atk||.02});});
+  }
+  return{
+    /* ---------- control ---------- */
+    setOn(v){on=v;if(!v){this.pourStop();this.purrStop();}},
+    isOn(){return on;},
+    setVolume(v){vol=clamp(v,0,1);if(master)master.gain.value=vol;},
+    unlock(){ctx();},
+    running(){return !!ac&&ac.state==='running';},
+
+    /* ---------- interfaz ---------- */
+    click(){t(880,.05,{type:'triangle',v:.06});nz(.03,{type:'bandpass',freq:2100,q:1.4,v:.05});},
+    clickSoft(){t(520,.05,{type:'sine',v:.05});nz(.03,{type:'bandpass',freq:1500,q:1.2,v:.03});},
+    open(){nz(.28,{type:'bandpass',freq:420,to:1900,q:1.1,v:.06,atk:.05});
+      chord([523.25,783.99],.3,{v:.06,spread:.05,type:'sine'});},
+    close(){nz(.24,{type:'bandpass',freq:1700,to:380,q:1.1,v:.05,atk:.04});
+      t(392,.22,{type:'sine',v:.05});},
+    pop(){t(360,.09,{type:'sine',to:720,v:.07,atk:.005});},
+    toggle(){t(700,.07,{type:'sine',v:.06});t(1050,.09,{type:'sine',v:.05,delay:.07});},
+    ok(){chord([659.25,987.77],.24,{v:.07,spread:.08,type:'sine'});},
+    error(){t(196,.16,{type:'triangle',v:.07,atk:.01});t(164,.22,{type:'triangle',v:.06,delay:.13});},
+    coin(){plip(1318,0,.06,.09);plip(1760,.07,.05,.09);},
+    dice(){
+      for(let i=0;i<6;i++)nz(.02,{type:'highpass',freq:2400,v:.05,delay:R(0,.34)});
+      t(300,.12,{type:'triangle',to:600,v:.06,delay:.36});
+      plip(1318,.46,.06,.1);
+    },
+
+    /* ---------- semillas / acciones ---------- */
+    seedGet(){[523.25,659.25,783.99,1046.5,1318.5].forEach(function(f,i){
+      t(f,.42,{type:'triangle',v:.075,delay:i*.075,atk:.02});});
+      nz(.5,{type:'highpass',freq:3000,v:.035,delay:.2,atk:.15});},
+    dig(){nz(.24,{type:'lowpass',freq:300,v:.14,atk:.01});
+      nz(.3,{type:'bandpass',freq:650,to:1500,q:1.1,v:.06,delay:.03,atk:.06});},
+    plantPlop(){this.dig();t(210,.2,{type:'sine',to:120,v:.1,delay:.18});
+      nz(.12,{type:'lowpass',freq:420,v:.08,delay:.3});},
+    gardenSend(){nz(.6,{type:'bandpass',freq:320,to:2100,q:1.2,v:.07,atk:.12});
+      chord([783.99,987.77,1174.66],.7,{v:.06,spread:.06,type:'sine'});},
+    achievement(){[523.25,659.25,783.99,1046.5].forEach(function(f,i){t(f,.5,{type:'triangle',v:.08,delay:i*.12,atk:.02});});
+      t(1318.5,.7,{type:'sine',v:.06,delay:.5,atk:.05});
+      nz(.8,{type:'highpass',freq:3400,v:.03,delay:.25,atk:.3});},
+
+    /* ---------- la planta ---------- */
+    rustle(){nz(.14,{type:'bandpass',freq:2500,q:1.3,v:.05,atk:.02});},
+    sparkle(){t(2093,.3,{type:'sine',v:.05,atk:.004});nz(.34,{type:'highpass',freq:4200,v:.03,atk:.04});},
+    happyChirp(){[0,.11,.22].forEach(function(d,i){
+      t(1450+i*180,.09,{type:'triangle',to:1900+i*200,v:.07,delay:d,atk:.006});});},
+    thirsty(){t(520,.6,{type:'sine',to:330,v:.07,atk:.05,vib:6,vibAmt:9});
+      t(392,.5,{type:'sine',v:.045,delay:.28,atk:.05});},
+    growShake(){
+      nz(1.5,{type:'lowpass',freq:170,v:.13,atk:.35});
+      t(84,1.3,{type:'sawtooth',to:64,v:.045,atk:.25,vib:9,vibAmt:3});
+      t(196,.5,{type:'sine',to:262,v:.03,delay:.9,atk:.2});
+      this.rustle();},
+    growPop(){[523.25,659.25,783.99,1046.5].forEach(function(f,i){
+        t(f,.55,{type:'triangle',v:.085,delay:i*.14,atk:.015});});
+      this.sparkle();nz(.6,{type:'highpass',freq:2800,v:.03,delay:.3,atk:.2});},
+
+    /* ---------- mimos ---------- */
+    heart(){t(660,.14,{type:'sine',to:1080,v:.06,atk:.006});},
+    giggle(){t(880,.1,{type:'triangle',v:.08});t(1180,.1,{type:'triangle',v:.08,delay:.09});
+      t(1480,.16,{type:'triangle',v:.07,delay:.18});},
+    petHappy(){this.happyChirp();this.heart();this.sparkle();},
+    purrStart(){
+      const c=ctx();if(!c||purr)return;
+      const t0=c.currentTime;
+      const osc=c.createOscillator();osc.type='sawtooth';osc.frequency.value=58;
+      const lp=c.createBiquadFilter();lp.type='lowpass';lp.frequency.value=300;
+      const g=c.createGain();g.gain.setValueAtTime(0,t0);g.gain.linearRampToValueAtTime(.055,t0+.25);
+      const lfo=c.createOscillator(),lg=c.createGain();lfo.type='sine';lfo.frequency.value=26;lg.gain.value=.03;
+      lfo.connect(lg);lg.connect(g.gain);
+      const nzS=c.createBufferSource();nzS.buffer=noiseBuf(c,2);nzS.loop=true;
+      const nf=c.createBiquadFilter();nf.type='bandpass';nf.frequency.value=140;nf.Q.value=.8;
+      const ng=c.createGain();ng.gain.value=.02;
+      osc.connect(lp);lp.connect(g);g.connect(out());
+      nzS.connect(nf);nf.connect(ng);ng.connect(out());
+      osc.start(t0);lfo.start(t0);nzS.start(t0);
+      purr={osc:osc,lfo:lfo,g:g,ng:ng,src:nzS,nf:nf};
+    },
+    purrStop(){
+      if(!purr)return;const c=ac,p=purr;purr=null;
+      try{const t0=c.currentTime;
+        p.g.gain.cancelScheduledValues(t0);p.g.gain.setValueAtTime(p.g.gain.value,t0);
+        p.g.gain.linearRampToValueAtTime(0,t0+.25);
+        p.ng.gain.linearRampToValueAtTime(0,t0+.25);
+        p.osc.stop(t0+.3);p.lfo.stop(t0+.3);p.src.stop(t0+.3);}catch(e){}
+    },
+
+    /* ---------- la regadera y el agua ---------- */
+    canPick(){t(1174,.18,{type:'sine',v:.06,atk:.004});t(1568,.24,{type:'sine',v:.05,delay:.02});
+      nz(.06,{type:'bandpass',freq:3200,q:2,v:.045});},
+    pourStart(){
+      const c=ctx();if(!c||pour)return;
+      const t0=c.currentTime,s=c.createBufferSource();s.buffer=noiseBuf(c,2);s.loop=true;
+      const f=c.createBiquadFilter();f.type='bandpass';f.frequency.value=1450;f.Q.value=1.1;
+      const g=c.createGain();g.gain.setValueAtTime(0,t0);g.gain.linearRampToValueAtTime(.07,t0+.16);
+      const lfo=c.createOscillator(),lg=c.createGain();lfo.frequency.value=4.2;lg.gain.value=330;
+      lfo.connect(lg);lg.connect(f.frequency);
+      s.connect(f);f.connect(g);g.connect(out());s.start(t0);lfo.start(t0);
+      pour={s:s,g:g,lfo:lfo,f:f};
+      /* burbujitas mientras cae el agua */
+      bubbleT=setInterval(function(){
+        if(!pour)return;
+        t(R(240,520),.09,{type:'sine',to:R(520,900),v:.028,atk:.006});
+      },260);
+    },
+    pourStop(){
+      if(bubbleT){clearInterval(bubbleT);bubbleT=null;}
+      if(!pour)return;const c=ac,p=pour;pour=null;
+      try{const t0=c.currentTime;
+        p.g.gain.cancelScheduledValues(t0);p.g.gain.setValueAtTime(p.g.gain.value,t0);
+        p.g.gain.linearRampToValueAtTime(0,t0+.22);
+        p.s.stop(t0+.3);p.lfo.stop(t0+.3);}catch(e){}
+    },
+    drop(){plip(R(900,1500),0,R(.028,.05));},
+    splash(){
+      nz(.5,{type:'lowpass',freq:1100,to:500,v:.13,atk:.008});
+      plip(760,.02,.06,.12);plip(1140,.09,.05,.12);plip(520,.17,.05,.14);
+      nz(.7,{type:'highpass',freq:2600,v:.03,delay:.05,atk:.2});
+    },
+    outSplash(){ /* agua cayendo fuera de la maceta */
+      nz(.3,{type:'lowpass',freq:520,v:.11,atk:.008});
+      t(150,.18,{type:'sine',to:100,v:.07});},
+    almost(){plip(1318.5,0,.05,.1);plip(1568,.09,.045,.12);},
+
+    /* ---------- frutas ---------- */
+    harvest(){plip(R(1000,1250),0,.06,.09);nz(.12,{type:'lowpass',freq:900,v:.05,atk:.01});
+      t(R(1350,1550),.1,{type:'triangle',v:.05,delay:.06,atk:.006});this.sparkle();},
+    gust(){nz(1.5,{type:'bandpass',freq:520,to:1500,q:.9,v:.022,atk:.55});},
+
+    /* ---------- ambiente ---------- */
+    crickets(){for(let i=0;i<4;i++)t(4300+R(-200,200),.05,{type:'sine',v:.03,delay:i*.14,atk:.005});},
+    nightWind(){nz(2.2,{type:'lowpass',freq:200,to:420,v:.05,atk:.9});},
+    dawnBirds(){
+      const n=5+Math.floor(R(0,3));
+      for(let i=0;i<n;i++){
+        const f=R(1800,2600),d=i*R(.09,.2);
+        t(f,.07,{type:'sine',to:f*1.25,v:.045,delay:d,atk:.006});
+        t(f*1.05,.06,{type:'sine',to:f*.9,v:.035,delay:d+.09,atk:.006});
+      }
+      nz(1.4,{type:'lowpass',freq:300,to:520,v:.035,atk:.5});
+    }
+  };
+})();
+/* ---------------- 5. Las 100 especies ---------------- */
+/* Cada familia trae la "forma" base; cada especie la pinta a su manera. */
+const FAM={
+  flor:     {forma:'flor',     pares:3, hoja:'#4a9247', hoja2:'#77c26a', flor:'daisy', pet:8,  c1:'#e46ba6', c2:'#ffd3e6', centro:'#ffd75e', alto:.95, tallo:'#4e8f45', agua:55, luz:80, aroma:55, dificil:35, txt:'flores'},
+  aroma:    {forma:'aroma',    pares:5, hoja:'#5aa14c', hoja2:'#8ac46c', flor:'puff',  pet:6,  c1:'#f2f0e6', c2:'#ffffff', centro:'#e8e2c8', alto:.62, tallo:'#5f9c4a', agua:50, luz:85, aroma:95, dificil:20, txt:'aromas'},
+  suculenta:{forma:'suculenta',pares:6, hoja:'#7fbf8e', hoja2:'#a9dcb0', flor:'spike', pet:6,  c1:'#f2a0c0', c2:'#ffd9e6', centro:'#ffe9a8', alto:.42, tallo:'#7fbf8e', agua:18, luz:75, aroma:10, dificil:10, txt:'suculencia'},
+  cactus:   {forma:'cactus',   pares:0, hoja:'#5da37a', hoja2:'#8ec9a3', flor:'star',  pet:7,  c1:'#f7768f', c2:'#ffd0d9', centro:'#ffe08a', alto:.7,  tallo:'#4f9b6d', agua:12, luz:90, aroma:12, dificil:15, txt:'espinas'},
+  hortaliza:{forma:'huerta',   pares:4, hoja:'#4f9b46', hoja2:'#7cc464', flor:'tiny',  pet:5,  c1:'#e2543f', c2:'#ff8a5c', centro:'#ffd75e', alto:.85, tallo:'#5aa049', agua:70, luz:90, aroma:30, dificil:45, txt:'frutos de huerta'},
+  frutal:   {forma:'arbol',    pares:3, hoja:'#3f8b46', hoja2:'#69b95f', flor:'tiny',  pet:5,  c1:'#f2a33c', c2:'#ffd27a', centro:'#fff3d0', alto:1,   tallo:'#7d5a34', agua:60, luz:90, aroma:45, dificil:50, txt:'frutos'},
+  arbol:    {forma:'arbol',    pares:3, hoja:'#39773c', hoja2:'#5fa452', flor:'none',  pet:0,  c1:'#9cc47a', c2:'#c9e2a6', centro:'#d8e9b8', alto:1.08,tallo:'#7a5533', agua:45, luz:80, aroma:35, dificil:30, txt:'sombra'},
+  trepadora:{forma:'trepadora',pares:5, hoja:'#4b8f45', hoja2:'#79bf63', flor:'bell',  pet:5,  c1:'#f6f2ff', c2:'#ffffff', centro:'#ffe9a8', alto:.85, tallo:'#6a9a4b', agua:55, luz:70, aroma:70, dificil:40, txt:'zarcillos'},
+  bulbo:    {forma:'bulbo',    pares:3, hoja:'#63a94f', hoja2:'#95cf74', flor:'trumpet',pet:6, c1:'#f7c744', c2:'#ffe9a0', centro:'#e08a3c', alto:.66, tallo:'#6aa94f', agua:45, luz:80, aroma:65, dificil:30, txt:'bulbos'},
+  tropical: {forma:'tropical', pares:4, hoja:'#2f7a45', hoja2:'#54a05b', flor:'spike',  pet:5,  c1:'#e0435f', c2:'#ff8fa3', centro:'#ffe9a8', alto:.8,  tallo:'#7a9a52', agua:80, luz:55, aroma:25, dificil:60, txt:'hojas grandes'},
+  acuatica: {forma:'acuatica', pares:3, hoja:'#4b8f6e', hoja2:'#7fc39a', flor:'lotus',  pet:12, c1:'#f7a8c8', c2:'#ffe0ef', centro:'#ffe9a8', alto:.55, tallo:'#5c9a75', agua:100, luz:95, aroma:50, dificil:55, txt:'agua'},
+  silvestre:{forma:'silvestre',pares:4, hoja:'#6aa84f', hoja2:'#9ccb6e', flor:'puff',  pet:8,  c1:'#f6e35c', c2:'#fff8b8', centro:'#e0b23c', alto:.5,  tallo:'#79ab53', agua:30, luz:85, aroma:30, dificil:5,  txt:'vida silvestre'},
+  follaje:  {forma:'follaje',  pares:5, hoja:'#37793f', hoja2:'#63a95c', flor:'none',  pet:0,  c1:'#e8e2c8', c2:'#ffffff', centro:'#cfe0b0', alto:.85, tallo:'#5f8f47', agua:65, luz:45, aroma:20, dificil:45, txt:'follaje'}
+};
+const FAM_NOMBRE={flor:'Flor',aroma:'Aromática',suculenta:'Suculenta',cactus:'Cactus',hortaliza:'Huerta',frutal:'Frutal',arbol:'Árbol',trepadora:'Trepadora',bulbo:'Bulbo',tropical:'Tropical',acuatica:'Acuática',silvestre:'Silvestre',follaje:'Follaje'};
+const NOTAS={
+  flor:['Sus pétalos se abren del todo en la etapa 6. Le encanta que la mires por la mañana.','De floración lenta pero generosa: cuando por fin abre, se lleva todos los halagos.','Un clásico del jardín. Si la riegas cada día, te premia con una flor nueva cada semana.'],
+  aroma:['Basta rozarla para que suelte su perfume. Pídela en la etapa de hojas.','Aromática de las de siempre: crece rápido y perfuma toda la maceta.','Con el sol de la mañana su aroma se multiplica. Riégala a media tarde si puedes.'],
+  suculenta:['Guarda agua en sus hojas: casi se apaña sola, pero agradece un trago semanal.','Carnosa y tranquila. Le gusta el sol directo y que no la ahogues.','Casi no necesita agua; si la mimas mucho, se pone rojiza de gusto.'],
+  cactus:['Del desierto: poquísima agua y mucho sol. Su flor es un regalo raro y precioso.','Paciente y espinosa por fuera, dulce por dentro. Riega poquito, cada dos días.','Sus espinas no pinchan los mimos, tranquila.'],
+  hortaliza:['De huerta: mucha agua y mucho sol. Da fruto en la etapa 6.','Comestible y agradecida, pero bebedora: no le falles con el riego.','Si la cuidas cada día, la cosecha llega sola.'],
+  frutal:['Pequeño árbol frutal. Flores en la etapa 5, frutos en la 6.','Necesita constancia: un día sin agua y se le nota en las hojas.','Con años de mimo acabaría dando sombra, pero con 8 etapas ya te da fruta.'],
+  arbol:['De crecimiento lento y fuerte: cada día cuenta de verdad.','Árbol de verdad: le encanta la lluvia y que le hables.','Su sombra crecerá contigo si eres constante.'],
+  trepadora:['Trepadora curiosa: sus zarcillos buscan siempre la luz.','Se enreda sola y trepa por la maceta si la dejas.','Con agua diaria sube sin parar: es la más ambiciosa del semillero.'],
+  bulbo:['Guardada en un bulbo: menos riego, flor de trompeta.','Del bulbo sale todo su encanto. Riégala cortito.','Le gusta el frescor de la mañana y el sol suave.'],
+  tropical:['Hoja grande y selvática: quiere humedad y luz indirecta.','Tropical de verdad: agua frecuente y calorcito.','Sus hojas se despliegan como un paraguas verde.'],
+  acuatica:['¡Le sobra el agua! Riega siempre al máximo, es su hábitat.','Del estanque: flota, bebe y florece. Insuperable con la hora real.','Necesita sol directo para abrir el loto.'],
+  silvestre:['Crece en cualquier sitio y casi no se queja, pero adora los mimos.','Silvestre y alegre: la más fácil del semillero para empezar.','Se espolvorea de flores cada mañana que la riegas.'],
+  follaje:['Planta de hoja: su belleza está en el verde, no en la flor.','Pura hoja verde jugosa: quiere agua y un rincón con luz suave.','Perfecta para interior. Le gusta que le limpies las hojas con mimos.']
+};
+const SP_RAW=[
+  /* --- Flores (24) --- */
+  ['Rosa','flor',{c1:'#e1557f',c2:'#ffa5c3',pet:26,flor:'rosa',alto:.95,hoja:'#3d7a3f'}],
+  ['Girasol','flor',{c1:'#f2bb2c',c2:'#ffe07a',pet:18,flor:'daisy',centro:'#6b4a1f',alto:1.06,hoja:'#3d8b45'}],
+  ['Tulipán','flor',{c1:'#e23f3f',c2:'#ff8a8a',pet:5,flor:'tulip',alto:.9,tallo:'#4f9b4f'}],
+  ['Margarita','flor',{c1:'#fdfdfd',c2:'#ffffff',pet:14,centro:'#ffd75e',flor:'daisy',hoja:'#4b9b46'}],
+  ['Clavel','flor',{c1:'#ef5f7a',c2:'#ffb0c0',pet:30,flor:'fringe',hoja:'#7fa3b5',hoja2:'#a9c6d2'}],
+  ['Peonía','flor',{c1:'#e8618f',c2:'#ffc0d8',pet:24,flor:'rosa',alto:.8,hoja:'#4a8a4a'}],
+  ['Dalia','flor',{c1:'#c04ec4',c2:'#f0a6f0',pet:22,flor:'daisy',centro:'#ffd75e'}],
+  ['Jacinto','flor',{c1:'#8a63d2',c2:'#c3a8f0',pet:6,flor:'spike',alto:.62,hoja:'#5aa14c'}],
+  ['Narciso','flor',{c1:'#f7e07a',c2:'#fff8c8',pet:6,flor:'trumpet',centro:'#f2a33c'}],
+  ['Iris','flor',{c1:'#6f57c9',c2:'#b9a8f2',pet:6,flor:'iris',alto:.95,hoja:'#63a95c'}],
+  ['Lirio','flor',{c1:'#f4c7e0',c2:'#ffffff',pet:6,flor:'iris',alto:.95,hoja:'#4f9448'}],
+  ['Azucena','flor',{c1:'#fffdf5',c2:'#ffffff',pet:6,flor:'iris',alto:.9,hoja:'#4f9448'}],
+  ['Orquídea','flor',{c1:'#e07ac0',c2:'#ffd0ee',pet:5,flor:'orchid',alto:.75,hoja:'#3f7a4a'}],
+  ['Hibisco','flor',{c1:'#e8433f',c2:'#ffa08a',pet:5,flor:'star',centro:'#ffe08a',hoja:'#3f8b45'}],
+  ['Buganvilla','flor',{c1:'#d2357f',c2:'#ff8ab8',pet:3,flor:'bract',alto:.85,hoja:'#4f9b52'}],
+  ['Hortensia','flor',{c1:'#7aa8e8',c2:'#c2d8f7',pet:4,flor:'ball',alto:.7,hoja:'#4f9b52'}],
+  ['Camelia','flor',{c1:'#e0526f',c2:'#ffb0c0',pet:20,flor:'rosa',hoja:'#2f6f3d',hoja2:'#4f9b52'}],
+  ['Begonia','flor',{c1:'#f2718f',c2:'#ffc4d2',pet:6,flor:'tiny',hoja:'#8a5a3c',hoja2:'#b07a52'}],
+  ['Crisantemo','flor',{c1:'#f7c744',c2:'#ffe9a0',pet:26,flor:'fringe',centro:'#e0a22c'}],
+  ['Caléndula','flor',{c1:'#f08c2c',c2:'#ffc46a',pet:16,flor:'daisy',centro:'#8a5a1f'}],
+  ['Petunia','flor',{c1:'#9a5ad2',c2:'#e0b8f7',pet:5,flor:'trumpet',alto:.6,hoja:'#5aa14c'}],
+  ['Geranio','flor',{c1:'#e2455a',c2:'#ff9aa8',pet:5,flor:'ball',alto:.65,hoja:'#4f9b46'}],
+  ['Lavanda','aroma',{c1:'#8a7fd2',c2:'#c8c0f0',flor:'spike',alto:.72,hoja:'#7fa07a',hoja2:'#a3bfa0'}],
+  ['Campanilla','flor',{c1:'#8fb8f7',c2:'#d8e8ff',pet:5,flor:'bell',alto:.7,tallo:'#6aa94f'}],
+  /* --- Aromáticas (10) --- */
+  ['Albahaca','aroma',{c1:'#fbfbf0',c2:'#ffffff',flor:'puff',alto:.68,hoja:'#3f8b45'}],
+  ['Menta','aroma',{c1:'#e8f0dc',c2:'#ffffff',flor:'spike',alto:.6,hoja:'#4f9b4f'}],
+  ['Romero','aroma',{c1:'#7ab8e8',c2:'#c8e2f7',flor:'spike',alto:.72,hoja:'#4a7a45',hoja2:'#6fa35f'}],
+  ['Tomillo','aroma',{c1:'#e8c8e0',c2:'#fff0fa',flor:'spike',alto:.5,hoja:'#5f8a4a'}],
+  ['Orégano','aroma',{c1:'#f2d0e0',c2:'#fff0f7',flor:'puff',alto:.55,hoja:'#4f8a45'}],
+  ['Salvia','aroma',{c1:'#9a6ad2',c2:'#d8b8f7',flor:'spike',alto:.7,hoja:'#7a9a72',hoja2:'#a3bda0'}],
+  ['Perejil','aroma',{c1:'#e8f0d0',c2:'#ffffff',flor:'puff',alto:.6,hoja:'#2f7a3f'}],
+  ['Cilantro','aroma',{c1:'#f7f7e8',c2:'#ffffff',flor:'puff',alto:.62,hoja:'#5aa14c'}],
+  ['Hierbabuena','aroma',{c1:'#f0f7e8',c2:'#ffffff',flor:'spike',alto:.62,hoja:'#3f9b52'}],
+  ['Manzanilla','aroma',{c1:'#ffffff',c2:'#fff8d8',pet:10,flor:'daisy',centro:'#ffd75e',alto:.55,hoja:'#5aa14c'}],
+  /* --- Suculentas y cactus (12) --- */
+  ['Aloe Vera','suculenta',{flor:'spike',c1:'#f2a33c',c2:'#ffd27a',hoja:'#6fae7f',hoja2:'#9fd0a8',alto:.55}],
+  ['Echeveria','suculenta',{flor:'spike',c1:'#f78fb8',c2:'#ffd0e2',hoja:'#8fc9a3',hoja2:'#c0e6c8',alto:.34}],
+  ['Haworthia','suculenta',{flor:'spike',c1:'#f2f0e6',c2:'#ffffff',hoja:'#3f7a5a',hoja2:'#6aa87f',alto:.36}],
+  ['Sedum','suculenta',{flor:'puff',c1:'#f7a8c8',c2:'#ffe0ef',hoja:'#a3c98f',hoja2:'#cbe6b8',alto:.3}],
+  ['Kalanchoe','suculenta',{flor:'daisy',c1:'#e8435f',c2:'#ff9aa8',pet:5,hoja:'#5f9b6f',hoja2:'#8fc9a3',alto:.45}],
+  ['Crassula','suculenta',{flor:'star',c1:'#f7d0e0',c2:'#ffffff',hoja:'#7fbf8e',hoja2:'#a9dcb0',alto:.4}],
+  ['Planta de Jade','suculenta',{flor:'star',c1:'#ffffff',c2:'#f7f7e8',hoja:'#6fae7f',hoja2:'#9fd0a8',alto:.5}],
+  ['Agave','suculenta',{flor:'spike',c1:'#f2e08a',c2:'#fff8c8',hoja:'#7fbf9f',hoja2:'#a9dcbf',alto:.6}],
+  ['Lithops','suculenta',{flor:'daisy',c1:'#f7e07a',c2:'#fff8c8',pet:12,hoja:'#b0a88a',hoja2:'#d0c8a8',alto:.2}],
+  ['Cactus San Pedro','cactus',{flor:'star',c1:'#f7f2dc',c2:'#ffffff',alto:.95,tallo:'#4f9b6d'}],
+  ['Chumbera','cactus',{flor:'star',c1:'#f2c23c',c2:'#ffe08a',alto:.85,tallo:'#5aa07a'}],
+  ['Mammillaria','cactus',{flor:'star',c1:'#f778a0',c2:'#ffd0e2',alto:.42,tallo:'#57a17c',brazos:false}],
+  /* --- Huerta (10) --- */
+  ['Tomatera','hortaliza',{c1:'#e2543f',c2:'#ff8a5c',alto:.95}],
+  ['Fresa','hortaliza',{c1:'#e8433f',c2:'#ff9a8a',alto:.5,hoja:'#3f8b45'}],
+  ['Pimiento','hortaliza',{c1:'#e0432c',c2:'#ff8a5c',alto:.9}],
+  ['Guindilla','hortaliza',{c1:'#d2352c',c2:'#ff7a5c',alto:.8}],
+  ['Berenjena','hortaliza',{c1:'#6a3f9a',c2:'#a87fd2',alto:.9}],
+  ['Pepino','hortaliza',{c1:'#4f9b3f',c2:'#8ac46c',alto:.85}],
+  ['Calabacín','hortaliza',{c1:'#3f7a45',c2:'#6aa85c',alto:.75}],
+  ['Lechuga','hortaliza',{c1:'#a3d06a',c2:'#cbe89a',alto:.5,flor:'none'}],
+  ['Zanahoria','hortaliza',{c1:'#f28c2c',c2:'#ffc46a',alto:.5,flor:'none'}],
+  ['Maíz','hortaliza',{c1:'#f2d24c',c2:'#fff0a0',alto:1.02,hoja:'#5aa14c'}],
+  /* --- Frutales (8) --- */
+  ['Limonero','frutal',{c1:'#f7d23c',c2:'#fff0a0',alto:.95}],
+  ['Naranjo','frutal',{c1:'#f7922c',c2:'#ffc46a',alto:.95}],
+  ['Manzano','frutal',{c1:'#e0433f',c2:'#ff8a7a',alto:.92,hoja:'#4f9b52'}],
+  ['Cerezo','frutal',{c1:'#c9436a',c2:'#ff8aa8',alto:.9,hoja:'#3f8b45'}],
+  ['Olivo','frutal',{c1:'#6a7a3f',c2:'#a3b86a',alto:.95,hoja:'#7a9a80',hoja2:'#a3bda8'}],
+  ['Higuera','frutal',{c1:'#8a5a9a',c2:'#c08ad0',alto:.9,hoja:'#3f7a45'}],
+  ['Granado','frutal',{c1:'#d2352c',c2:'#ff7a5c',alto:.85,hoja:'#5aa14c'}],
+  ['Vid','trepadora',{c1:'#7a4a9a',c2:'#b88ad0',flor:'none',alto:.85,hoja:'#4f9b46'}],
+  /* --- Árboles y palmas (12) --- */
+  ['Roble','arbol',{c1:'#c9a86a',c2:'#e8d0a0',alto:1.06,hoja:'#3f7a3f',hoja2:'#5fa452'}],
+  ['Olmo','arbol',{alto:1.02,hoja:'#4a8a45',hoja2:'#6fb85c'}],
+  ['Arce','arbol',{c1:'#f29a3c',c2:'#ffd0a0',alto:1,hoja:'#5fa452',hoja2:'#9ccb6e'}],
+  ['Abedul','arbol',{alto:.98,hoja:'#8ac46c',hoja2:'#b8dc96',tallo:'#d8d0bc'}],
+  ['Sauce Llorón','arbol',{alto:.95,hoja:'#9ccb6e',hoja2:'#c2e0a0',formaArbol:'sauce'}],
+  ['Bambú','arbol',{alto:1.1,hoja:'#6aa85c',hoja2:'#95cf74',formaArbol:'bambu'}],
+  ['Bonsái Ficus','arbol',{alto:.8,hoja:'#3f7a45',formaArbol:'bonsai'}],
+  ['Palmera','arbol',{alto:1.08,hoja:'#4f9b52',hoja2:'#7fc45c',formaArbol:'palmera'}],
+  ['Pino','arbol',{alto:1.08,hoja:'#2f6b45',hoja2:'#4f8f5a',formaArbol:'conifera'}],
+  ['Magnolio','arbol',{c1:'#f2a8c8',c2:'#ffd8e8',pet:6,flor:'rosa',alto:.95,hoja:'#3f7a45'}],
+  ['Jacarandá','arbol',{c1:'#a07fd2',c2:'#d0b8f0',pet:5,flor:'bell',alto:1.02,hoja:'#5aa14c'}],
+  ['Nogal','arbol',{c1:'#8a6a3c',c2:'#c0a070',alto:1.04,hoja:'#4a8a45',hoja2:'#6fb85c'}],
+  /* --- Trepadoras (6) --- */
+  ['Jazmín','trepadora',{c1:'#ffffff',c2:'#fff8e0',flor:'star',pet:6,hoja:'#4f9b46',alto:.9}],
+  ['Hiedra','trepadora',{flor:'none',hoja:'#2f6f3f',hoja2:'#4f9b52',alto:.85}],
+  ['Madreselva','trepadora',{c1:'#f7e07a',c2:'#fff8c8',flor:'trumpet',alto:.9}],
+  ['Glicinia','trepadora',{c1:'#a88ad8',c2:'#e0d0f7',flor:'spike',alto:.95}],
+  ['Pasiflora','trepadora',{c1:'#9a6ad2',c2:'#e0c8f7',pet:10,flor:'star',centro:'#ffe08a',alto:.9}],
+  ['Clematis','trepadora',{c1:'#c08ad8',c2:'#f0d8f7',pet:8,flor:'star',alto:.88}],
+  /* --- Bulbos (3) --- */
+  ['Lirio de los Valles','bulbo',{c1:'#ffffff',c2:'#ffffff',flor:'bell',alto:.6,hoja:'#4f9b46'}],
+  ['Azafrán','bulbo',{c1:'#a87fd2',c2:'#e0c8f7',flor:'iris',alto:.45,hoja:'#5aa14c'}],
+  ['Allium','bulbo',{c1:'#b88ae0',c2:'#e8d0f7',flor:'ball',alto:.8,hoja:'#5aa14c'}],
+  /* --- Tropicales y follaje (8) --- */
+  ['Monstera','tropical',{flor:'none',alto:.95,hoja:'#2f7a45',hoja2:'#4f9b52'}],
+  ['Espatifilo','follaje',{c1:'#ffffff',c2:'#fffae8',pet:1,flor:'spathe',centro:'#f7e07a',alto:.7,hoja:'#2f6f3f'}],
+  ['Anturio','tropical',{c1:'#e0435f',c2:'#ff8aa0',pet:1,flor:'spathe',centro:'#ffe08a',alto:.75,hoja:'#2f7a45'}],
+  ['Ave del Paraíso','tropical',{c1:'#f7922c',c2:'#a05fd2',pet:5,flor:'spike',alto:.95,hoja:'#3f7a45'}],
+  ['Calathea','follaje',{flor:'none',alto:.7,hoja:'#3f7a45',hoja2:'#9a6ad2'}],
+  ['Helecho','follaje',{flor:'none',alto:.7,hoja:'#3f8b45',hoja2:'#6fb85c'}],
+  ['Poto','follaje',{flor:'none',alto:.6,hoja:'#4f9b52',hoja2:'#c2e0a0'}],
+  ['Cinta','follaje',{c1:'#ffffff',c2:'#fff8e0',flor:'spike',alto:.65,hoja:'#2f6f3f',hoja2:'#8fc9a3'}],
+  /* --- Acuáticas (2) --- */
+  ['Loto','acuatica',{c1:'#f7a8c8',c2:'#ffe0ef',pet:14,flor:'lotus',alto:.6}],
+  ['Nenúfar','acuatica',{c1:'#fffdf5',c2:'#ffffff',pet:14,flor:'lotus',alto:.45}],
+  /* --- Silvestres (5) --- */
+  ['Trébol','silvestre',{c1:'#f2f0e6',c2:'#ffffff',flor:'tiny',alto:.4,hoja:'#4f9b46'}],
+  ['Diente de León','silvestre',{c1:'#f7e07a',c2:'#fff8c8',flor:'puff',alto:.6}],
+  ['Amapola','flor',{c1:'#e0433f',c2:'#ff9a8a',pet:4,flor:'poppy',alto:.75,hoja:'#6aa85c'}],
+  ['Nomeolvides','silvestre',{c1:'#7aa8e8',c2:'#d0e2f7',pet:5,flor:'tiny',alto:.42,hoja:'#5aa14c'}],
+  ['Botón de Oro','silvestre',{c1:'#f7c744',c2:'#ffe9a0',pet:16,flor:'daisy',centro:'#e0a22c',alto:.5}]
+];
+/* construye la ficha completa de cada especie */
+const SP=SP_RAW.map(function(row,i){
+  const n=row[0],f=row[1],o=row[2]||{},base=FAM[f],rnd=mulberry(hashStr(n));
+  const sp=Object.assign({},base,o);
+  sp.id=slug(n);sp.nombre=n;sp.fam=f;sp.famNombre=FAM_NOMBRE[f];sp.idx=i;
+  sp.c1=hueShift(sp.c1,(rnd()*14-7));sp.c2=mixHex(sp.c2,sp.c1,.12);
+  sp.hoja=hueShift(sp.hoja,(rnd()*16-8));sp.hoja2=mixHex(sp.hoja,'#ffffff',.22);
+  sp.alto=clamp(sp.alto*(0.92+rnd()*0.16),.18,1.18);
+  sp.pares=Math.max(1,Math.round(sp.pares+(rnd()<.45?(rnd()<.5?-1:1):0)));
+  sp.nota=(NOTAS[f]||NOTAS.flor)[Math.floor(rnd()*3)];
+  sp.semilla=sp.id;
+  sp.fruta=(f==='frutal')||(['Tomatera','Fresa','Pimiento','Guindilla','Berenjena','Pepino','Calabacín','Vid'].indexOf(n)>=0);
+  return sp;
+});
+const byId={};SP.forEach(s=>byId[s.id]=s);
+const STAGE_N=['Semilla','Brote','Tallito','Hojas','Capullo','Flor','Fruto','Plenitud'];
+const STAGE_I=['🌰','🌱','🌿','🍃','🌼','🌸','🍎','🌟'];
+const GROWTH=[0,.13,.27,.42,.58,.73,.88,1];
+
+/* ---------------- 6. Motor de dibujo (SVG procedural) ---------------- */
+const POT={x1:38,x2:202,rimTop:296,rimBot:314,base:396,cx:120,soil:290};
+function leafD(kind,L,W){
+  switch(kind){
+    case 'pointy': return 'M0,0 C'+L*.28+','+(-W*.92)+' '+L*.66+','+(-W*.78)+' '+L+','+(-W*.14)+' C'+L*.7+','+(W*.6)+' '+L*.28+','+(W*.9)+' 0,0 Z';
+    case 'round':  return 'M0,0 C'+L*.18+','+(-W*1.2)+' '+L*.86+','+(-W*1.1)+' '+L+',0 C'+L*.86+','+(W*1.1)+' '+L*.18+','+(W*1.2)+' 0,0 Z';
+    case 'heart':  return 'M0,0 C'+L*.3+','+(-W*1.05)+' '+L*.6+','+(-W*1.35)+' '+L*.66+','+(-W*.55)+' C'+L*.8+','+(-W*1.3)+' '+L*1.04+','+(-W*.7)+' '+L+','+(W*.05)+' C'+L*.92+','+(W*.78)+' '+L*.4+','+(W*.85)+' 0,0 Z';
+    case 'needle': return 'M0,0 L'+L+','+(-W*.4)+' L'+(L*.92)+','+(-W*.05)+' L'+L+','+(W*.35)+' Z';
+    case 'strap':  return 'M0,0 C'+L*.35+','+(-W*.72)+' '+L*.78+','+(-W*.5)+' '+L+',0 C'+L*.78+','+(W*.5)+' '+L*.35+','+(W*.72)+' 0,0 Z';
+    case 'thick':  return 'M0,0 C'+L*.26+','+(-W*1.05)+' '+L*.82+','+(-W*.92)+' '+L+',0 C'+L*.82+','+(W*.92)+' '+L*.26+','+(W*1.05)+' 0,0 Z';
+    case 'blade':  return 'M0,0 C'+L*.22+','+(-W*1.5)+' '+L*.66+','+(-W*1.35)+' '+L+','+(-W*.2)+' C'+L*.6+','+(W*.5)+' '+L*.2+','+(W*.35)+' 0,0 Z';
+    case 'pad':    return 'M0,0 C'+L*.3+','+(-W)+' '+L*.78+','+(-W*.9)+' '+L+',0 C'+L*.78+','+(W*.9)+' '+L*.3+','+(W)+' 0,0 Z';
+    case 'frond':  return 'M0,0 C'+L*.3+','+(-W*.55)+' '+L*.72+','+(-W*.45)+' '+L+',0 C'+L*.72+','+(W*.45)+' '+L*.3+','+(W*.55)+' 0,0 Z';
+    default:       return 'M0,0 C'+L*.32+','+(-W*.98)+' '+L*.8+','+(-W*.86)+' '+L+',0 C'+L*.8+','+(W*.86)+' '+L*.32+','+(W*.98)+' 0,0 Z';
+  }
+}
+function leafVeins(L,kind,col){
+  if(kind==='needle'||kind==='blade')return '';
+  let s='<path d="M2,0 L'+(L*.9)+',0" stroke="'+col+'" stroke-width="1.1" opacity=".35" fill="none"/>';
+  const n=3;
+  for(let i=1;i<=n;i++){const t=i/(n+1);const y=0;
+    s+='<path d="M'+(L*t)+',0 L'+(L*(t+.16))+','+(-L*.1)+'" stroke="'+col+'" stroke-width=".8" opacity=".22" fill="none"/>';
+    s+='<path d="M'+(L*t)+',0 L'+(L*(t+.16))+','+(L*.1)+'" stroke="'+col+'" stroke-width=".8" opacity=".22" fill="none"/>';}
+  return s;
+}
+let leafSeq=0;
+function leaf(kind,L,W,fill,stroke,ang,x,y){
+  const d=leafD(kind,L,W);
+  const cls=(leafSeq++%2)?'hoja still':'hoja';
+  return '<g transform="translate('+x+' '+y+') rotate('+ang+')"><g class="'+cls+'">'
+    +'<path d="'+d+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width=".8"/>'
+    +leafVeins(L,kind,stroke)+'</g></g>';
+}
+function stem(x,y,H,col,w,curve){
+  w=w||5;curve=(curve===undefined?7:curve);
+  const h=Math.max(6,H),cx1=x-curve,cx2=x+curve;
+  return '<g class="tallo"><path d="M'+x+','+(y+4)+' C'+cx1+','+(y-h*.55)+' '+cx2+','+(y-h*.82)+' '+x+','+(y-h)+'" fill="none" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round"/></g>';
+}
+function bud(x,y,size,c1,c2){
+  return '<g transform="translate('+x+' '+y+')"><g class="flor">'
+    +'<path d="M0,0 C'+(-size*.7)+','+(-size*.4)+' '+(-size*.6)+','+(-size*1.5)+' 0,'+(-size*1.7)+' C'+(size*.6)+','+(-size*1.5)+' '+size*.7+','+(-size*.4)+' 0,0 Z" fill="'+c1+'" stroke="'+shade(c1,.75)+'" stroke-width=".8"/>'
+    +'<path d="M0,'+(-size*.15)+' C'+(-size*.4)+','+(-size*.8)+' '+(-size*.3)+','+(-size*1.4)+' 0,'+(-size*1.55)+'" fill="none" stroke="'+c2+'" stroke-width="1.4" opacity=".7"/>'
+    +'</g></g>';
+}
+function flower(type,x,y,size,open,o){
+  const c1=o.c1,c2=o.c2,ce=o.centro||'#ffd75e',pet=o.pet||6;
+  if(open<=0.02)return bud(x,y,Math.max(3.5,size*.5),c1,c2);
+  let s=size*(0.45+0.55*open);const st=shade(c1,.72);
+  let g='';
+  const petals=function(n,len,wid,rot0,fillx,extra){let p='';for(let i=0;i<n;i++){
+    const a=rot0+i*(360/n)+(extra||0);
+    p+='<ellipse cx="'+len*.55+'" cy="0" rx="'+len*.55+'" ry="'+wid+'" transform="rotate('+a+')" fill="'+fillx+'" stroke="'+st+'" stroke-width=".7"/>';}
+    return p;};
+  switch(type){
+    case 'daisy': case 'fringe': {
+      const n=Math.max(5,Math.round(pet*open));
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      g+=petals(n,s,s*.3,0,c1);
+      if(type==='fringe')g+=petals(n,s*.72,s*.24,180/pet,c2);
+      g+='<circle r="'+(s*.34)+'" fill="'+ce+'"/>';
+      g+='<circle r="'+(s*.2)+'" fill="'+shade(ce,.85)+'"/>';
+      g+='</g></g>';break;}
+    case 'rosa': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      g+=petals(7,s,s*.55,0,shade(c1,.92));
+      g+=petals(6,s*.75,s*.48,26,c1);
+      g+=petals(5,s*.5,s*.4,12,c2);
+      g+='<path d="M0,0 q'+(s*.2)+','+(-s*.3)+' '+(s*.34)+','+(s*.05)+' q'+(-s*.1)+','+(s*.3)+' '+(-s*.3)+','+(s*.16)+'" fill="none" stroke="'+st+'" stroke-width="1.1"/>';
+      g+='</g></g>';break;}
+    case 'tulip': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      g+='<path d="M'+(-s*.62)+',0 C'+(-s*.8)+','+(-s*1.1)+' '+(-s*.45)+','+(-s*1.75)+' 0,'+(-s*1.85)+' C'+(s*.45)+','+(-s*1.75)+' '+(s*.8)+','+(-s*1.1)+' '+(s*.62)+',0 Z" fill="'+c1+'" stroke="'+st+'" stroke-width=".8"/>';
+      g+='<path d="M0,0 C'+(-s*.22)+','+(-s*.9)+' '+(-s*.16)+','+(-s*1.5)+' 0,'+(-s*1.7)+' C'+(s*.16)+','+(-s*1.5)+' '+(s*.22)+','+(-s*.9)+' 0,0 Z" fill="'+c2+'" opacity=".85"/>';
+      g+='</g></g>';break;}
+    case 'iris': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      for(let i=-1;i<=1;i++){g+='<ellipse cx="0" cy="'+(-s*.75)+'" rx="'+(s*.26)+'" ry="'+(s*.8)+'" transform="rotate('+(i*32)+')" fill="'+c1+'" stroke="'+st+'" stroke-width=".7"/>';}
+      g+='<ellipse cx="0" cy="'+(s*.55)+'" rx="'+(s*.5)+'" ry="'+(s*.5)+'" fill="'+c2+'" opacity=".95"/>';
+      g+='<circle cy="'+(-s*.1)+'" r="'+(s*.22)+'" fill="'+ce+'"/>';
+      g+='</g></g>';break;}
+    case 'trumpet': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      g+='<path d="M'+(-s*.3)+','+(s*.3)+' L'+(-s*.85)+','+(-s*1.2)+' Q0,'+(-s*1.8)+' '+(s*.85)+','+(-s*1.2)+' L'+(s*.3)+','+(s*.3)+' Z" fill="'+c1+'" stroke="'+st+'" stroke-width=".8"/>';
+      g+='<ellipse cx="0" cy="'+(-s*1.2)+'" rx="'+(s*.85)+'" ry="'+(s*.35)+'" fill="'+c2+'"/>';
+      g+='<circle cy="'+(-s*1.15)+'" r="'+(s*.26)+'" fill="'+ce+'"/>';
+      g+='</g></g>';break;}
+    case 'bell': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      for(let i=0;i<3;i++){const dx=(i-1)*s*.62,dy=Math.abs(i-1)*s*.28;
+        g+='<g transform="translate('+dx+' '+(dy-s*.2)+')"><path d="M'+(-s*.3)+',0 C'+(-s*.42)+','+(s*.75)+' '+(-s*.2)+','+(s*1.15)+' 0,'+(s*1.2)+' C'+(s*.2)+','+(s*1.15)+' '+(s*.42)+','+(s*.75)+' '+(s*.3)+',0 Z" fill="'+c1+'" stroke="'+st+'" stroke-width=".7"/><circle cy="'+(s*1.12)+'" r="'+(s*.13)+'" fill="'+ce+'"/></g>';}
+      g+='</g></g>';break;}
+    case 'star': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      for(let i=0;i<(pet>7?7:5);i++){const a=i*(360/(pet>7?7:5))-90;
+        g+='<path d="M0,0 L'+(Math.cos((a-16)*Math.PI/180)*s)+','+(Math.sin((a-16)*Math.PI/180)*s)+' L'+(Math.cos(a*Math.PI/180)*s*1.12)+','+(Math.sin(a*Math.PI/180)*s*1.12)+' L'+(Math.cos((a+16)*Math.PI/180)*s)+','+(Math.sin((a+16)*Math.PI/180)*s)+' Z" fill="'+c1+'" stroke="'+st+'" stroke-width=".6"/>';}
+      g+='<circle r="'+(s*.26)+'" fill="'+ce+'"/>';
+      g+='</g></g>';break;}
+    case 'poppy': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      for(let i=0;i<4;i++){const a=i*90+20;
+        g+='<ellipse cx="'+(Math.cos(a*Math.PI/180)*s*.5)+'" cy="'+(Math.sin(a*Math.PI/180)*s*.5)+'" rx="'+(s*.62)+'" ry="'+(s*.5)+'" fill="'+c1+'" stroke="'+st+'" stroke-width=".7" opacity=".95"/>';}
+      g+='<circle r="'+(s*.28)+'" fill="#31221a"/><circle r="'+(s*.12)+'" fill="'+ce+'"/>';
+      g+='</g></g>';break;}
+    case 'orchid': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      g+='<ellipse cy="'+(-s*.7)+'" rx="'+(s*.32)+'" ry="'+(s*.62)+'" fill="'+c1+'" stroke="'+st+'" stroke-width=".6"/>';
+      g+='<ellipse cx="'+(-s*.6)+'" cy="'+(-s*.1)+'" rx="'+(s*.6)+'" ry="'+(s*.32)+'" transform="rotate(-25)" fill="'+c2+'" stroke="'+st+'" stroke-width=".6"/>';
+      g+='<ellipse cx="'+(s*.6)+'" cy="'+(-s*.1)+'" rx="'+(s*.6)+'" ry="'+(s*.32)+'" transform="rotate(25)" fill="'+c2+'" stroke="'+st+'" stroke-width=".6"/>';
+      g+='<path d="M0,'+(s*.1)+' q'+(-s*.4)+','+(s*.55)+' 0,'+(s*.75)+' q'+(s*.4)+','+(-s*.2)+' 0,'+(-s*.75)+' Z" fill="'+c1+'"/>';
+      g+='<circle cy="'+(-s*.05)+'" r="'+(s*.18)+'" fill="'+ce+'"/>';
+      g+='</g></g>';break;}
+    case 'ball': {
+      s*=1.35;
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      const n=Math.max(8,Math.round(pet*open*2.4));
+      for(let i=0;i<n;i++){const a=R(0,360),r=R(0,s*.78);
+        g+='<circle cx="'+(Math.cos(a*Math.PI/180)*r)+'" cy="'+(Math.sin(a*Math.PI/180)*r)+'" r="'+(s*.28)+'" fill="'+(i%2?c2:c1)+'" stroke="'+st+'" stroke-width=".4"/>';}
+      g+='</g></g>';break;}
+    case 'spike': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      const n=Math.max(4,Math.round(pet*open*2.6));
+      for(let i=0;i<n;i++){const t=i/(n-1||1);
+        g+='<ellipse cx="'+((i%2?.22:-.22)*s)+'" cy="'+(-t*s*1.5)+'" rx="'+(s*.22)+'" ry="'+(s*.3)+'" fill="'+(i%2?c2:c1)+'" opacity=".95"/>';}
+      g+='</g></g>';break;}
+    case 'puff': case 'tiny': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      const n=Math.round((type==='puff'?18:6)*open)+3;
+      for(let i=0;i<n;i++){const a=(i/n)*360+(type==='puff'?0:R(-20,20)),len=s*(type==='puff'?1.1:R(.4,1));
+        g+='<line x1="0" y1="0" x2="'+(Math.cos(a*Math.PI/180)*len)+'" y2="'+(Math.sin(a*Math.PI/180)*len)+'" stroke="'+(i%2?c1:c2)+'" stroke-width="'+(type==='puff'?1.6:2.4)+'" stroke-linecap="round"/>';}
+      g+='<circle r="'+(s*(type==='puff'?.2:.42))+'" fill="'+ce+'"/>';
+      g+='</g></g>';break;}
+    case 'bract': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      for(let i=0;i<3;i++){const a=i*120-90;
+        g+='<path d="M0,0 C'+(Math.cos(a*Math.PI/180)*s*.7)+','+(Math.sin(a*Math.PI/180)*s*.7)+' '+(Math.cos((a+30)*Math.PI/180)*s*1.1)+','+(Math.sin((a+30)*Math.PI/180)*s*1.1)+' 0,'+(-s*.1)+' Z" fill="'+c1+'" stroke="'+st+'" stroke-width=".7"/>';}
+      g+='<circle cy="-1" r="'+(s*.18)+'" fill="#fff8e8"/>';
+      g+='</g></g>';break;}
+    case 'spathe': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      g+='<path d="M0,0 C'+(-s*.9)+','+(-s*.35)+' '+(-s*.75)+','+(-s*1.35)+' 0,'+(-s*1.5)+' C'+(s*.75)+','+(-s*1.35)+' '+(s*.9)+','+(-s*.35)+' 0,0 Z" fill="'+c1+'" stroke="'+st+'" stroke-width=".8"/>';
+      g+='<path d="M0,'+(-s*.15)+' L0,'+(-s*1.25)+'" stroke="'+ce+'" stroke-width="'+(s*.16)+'" stroke-linecap="round"/>';
+      g+='</g></g>';break;}
+    case 'lotus': {
+      g+='<g transform="translate('+x+' '+y+')"><g class="flor">';
+      for(let i=0;i<(pet||12);i++){const a=i*(360/(pet||12));
+        g+='<path d="M0,0 C'+(-s*.2)+','+(-s*.6)+' '+(-s*.12)+','+(-s*1.05)+' 0,'+(-s*1.25)+' C'+(s*.12)+','+(-s*1.05)+' '+(s*.2)+','+(-s*.6)+' 0,0 Z" transform="rotate('+a+')" fill="'+(i%2?c1:c2)+'" stroke="'+st+'" stroke-width=".6"/>';}
+      g+='<circle r="'+(s*.3)+'" fill="'+ce+'"/>';
+      g+='</g></g>';break;}
+    default: return '';
+  }
+  return g;
+}
+function sparkles(x,y,n,col){
+  let s='';for(let i=0;i<n;i++){const a=R(0,360),r=R(8,40);
+    s+='<g class="shine" style="animation-delay:'+R(0,2).toFixed(1)+'s" transform="translate('+(x+Math.cos(a*Math.PI/180)*r)+' '+(y+Math.sin(a*Math.PI/180)*r)+')"><path d="M0,-5 L1.4,-1.4 L5,0 L1.4,1.4 L0,5 L-1.4,1.4 L-5,0 L-1.4,-1.4 Z" fill="'+(col||'#fff8c8')+'"/></g>';}
+  return s;
+}
+function butterfly(x,y,scale){
+  return '<g transform="translate('+x+' '+y+') scale('+(scale||1)+')"><g class="butterfly">'
+    +'<ellipse cx="-4" cy="-2" rx="4.5" ry="3.4" fill="#f7c744" opacity=".9"/>'
+    +'<ellipse cx="4" cy="-2" rx="4.5" ry="3.4" fill="#f2a33c" opacity=".9"/>'
+    +'<ellipse cx="-3.4" cy="2.6" rx="3.4" ry="2.6" fill="#f7d75e" opacity=".9"/>'
+    +'<ellipse cx="3.4" cy="2.6" rx="3.4" ry="2.6" fill="#f7d75e" opacity=".9"/>'
+    +'<rect x="-.8" y="-3" width="1.6" height="6" rx="1" fill="#5a4426"/></g></g>';
+}
+/* --- colocación de hojas a lo largo del tallo --- */
+function hojasTallo(v,kind,Lb,Wb,n,tilt,fillA,fillB,H){
+  let s='';
+  for(let i=0;i<n;i++){
+    const t=(i+1)/(n+1);
+    const side=(i%2===0)?1:-1;
+    const y=v.y-H*t*0.92;
+    const len=(Lb+Wb*v.p)*(0.9+0.28*v.p)*(1-0.2*t);
+    const ang=(side===1? -(24+14*v.p) : 180+(24+14*v.p))+(tilt||0);
+    const f=(i%2?fillB:fillA);
+    s+=leaf(kind,len,len*(kind==='needle'||kind==='strap'?0.22:0.44),f,shade(f,.7),ang,v.x,y);
+  }
+  return s;
+}
+/* --- formas por familia (dibujo procedural determinista) --- */
+const FORMA={
+  flor:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(30+208*p)*sp.alto;
+    let s=stem(v.x,v.y,H,sp.tallo,4+2.6*p,8*p);
+    const maxN=Math.round(sp.pares*2),n=clamp(Math.round(maxN*Math.max(p,0.16)),2,maxN);
+    s+=hojasTallo(v,'oval',34,26,n,0,sp.hoja,sp.hoja2,H);
+    const open=clamp((v.stage-4)/3,0,1)*0.96+ (v.garden?0.04:0);
+    if(v.stage>=4)s+=flower(sp.flor||'daisy',v.x,v.y-H*1.0+2,15+8*sp.alto,open,sp);
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-H-16,3);
+    return s;
+  },
+  aroma:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(26+148*p)*sp.alto,st=sp.tallo||sp.hoja;
+    let s='';
+    const stalks=clamp(Math.round(1+p*3),1,4);
+    for(let k=0;k<stalks;k++){
+      const off=(k-(stalks-1)/2);
+      const dx=off*(20+14*p);
+      const hh=H*(1-0.16*Math.abs(off));
+      s+='<g class="tallo"><path d="M'+v.x+','+(v.y+3)+' C'+(v.x+dx*.4)+','+(v.y-hh*.6)+' '+(v.x+dx*.8)+','+(v.y-hh*.85)+' '+(v.x+dx)+','+(v.y-hh)+'" fill="none" stroke="'+st+'" stroke-width="'+(3.4+1.6*p)+'" stroke-linecap="round"/></g>';
+      const nl=clamp(Math.round(4*p+1),1,5);
+      for(let i=0;i<nl;i++){
+        const t=(i+1)/(nl+1),side=(k%2?1:-1)*(i%2?1:-1);
+        const y=v.y-hh*t,x=v.x+dx*t;
+        const len=(16+26*p)*(1-0.2*t);
+        s+=leaf('strap',len,len*.34,(i%2?sp.hoja2:sp.hoja),shade(sp.hoja,.7),(side===1?-(34+12*p):180+(34+12*p)),x,y);
+      }
+      if(v.stage>=5)s+=flower(sp.flor||'spike',v.x+dx,v.y-hh,10+5*p,clamp((v.stage-4)/3,0,1),sp);
+    }
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-H*.7,2);
+    return s;
+  },
+  suculenta:function(v){
+    const sp=v.sp,p=v.p;
+    let s='';
+    const layers=clamp(Math.round(1+2.2*p),1,3);
+    const per=clamp(sp.pares,3,9);
+    for(let l=layers;l>=1;l--){
+      const li=(layers-l);
+      const L=(20+30*p)*(0.55+0.5*(l/layers)*(0.6+0.7*p));
+      for(let i=0;i<per;i++){
+        const a=(i/per)*360+li*24, f=(i%2?sp.hoja2:sp.hoja);
+        s+=leaf('thick',L,L*.42,f,shade(sp.hoja,.7),a,v.x,v.y-4-li*4);
+      }
+    }
+    if(v.stage===1)s='';
+    if(v.stage>=5){const spk=flower(sp.flor||'spike',v.x,v.y-8-12*p,(9+4*p),clamp((v.stage-4)/3,0,1),sp);s=spk+s;}
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-30,2);
+    return s;
+  },
+  cactus:function(v){
+    const sp=v.sp,p=v.p,col=sp.tallo||sp.hoja;
+    const H=(22+150*p)*sp.alto,W=(21+9*p);
+    let s='';
+    /* cuerpo */
+    s+='<path d="M'+(v.x-W)+','+(v.y+4)+' C'+(v.x-W)+','+(v.y-H*.5)+' '+(v.x-W)+','+(v.y-H*.75)+' '+(v.x-W*.75)+','+(v.y-H)+' C'+(v.x-W*.4)+','+(v.y-H*1.12)+' '+(v.x+W*.4)+','+(v.y-H*1.12)+' '+(v.x+W*.75)+','+(v.y-H)+' C'+(v.x+W)+','+(v.y-H*.75)+' '+(v.x+W)+','+(v.y-H*.5)+' '+(v.x+W)+','+(v.y+4)+' Z" fill="'+col+'" stroke="'+shade(col,.62)+'" stroke-width="1"/>';
+    /* costillas */
+    for(let i=-1;i<=1;i++){
+      s+='<path d="M'+(v.x+i*W*.55)+','+(v.y+2)+' C'+(v.x+i*W*.62)+','+(v.y-H*.5)+' '+(v.x+i*W*.6)+','+(v.y-H*.8)+' '+(v.x+i*W*.42)+','+(v.y-H*.99)+'" fill="none" stroke="'+shade(col,.8)+'" stroke-width="1" opacity=".5"/>';
+    }
+    /* brazos */
+    if(p>0.42&&sp.brazos!==false){
+      const arm=function(side,yy){
+        const ax=v.x+side*W;
+        return '<path d="M'+ax+','+(yy)+' C'+(ax+side*(16+16*p))+','+yy+' '+(ax+side*(20+20*p))+','+(yy-8)+' '+(ax+side*(20+20*p))+','+(yy-26-14*p)+'" fill="none" stroke="'+col+'" stroke-width="'+(13+5*p)+'" stroke-linecap="round"/>'
+        +'<path d="M'+ax+','+yy+' C'+(ax+side*(16+16*p))+','+yy+' '+(ax+side*(20+20*p))+','+(yy-8)+' '+(ax+side*(20+20*p))+','+(yy-26-14*p)+'" fill="none" stroke="'+shade(col,.78)+'" stroke-width="'+(13+5*p)+'" stroke-linecap="round" opacity=".45"/>';
+      };
+      s+=arm(-1,v.y-H*0.62);s+=arm(1,v.y-H*0.52);
+    }
+    /* espinas */
+    const nEsp=clamp(Math.round(10*p)+2,2,12);
+    for(let i=0;i<nEsp;i++){
+      const t=(i+1)/(nEsp+1),y=v.y-H*t*.95,side=(i%2?1:-1),x=v.x+side*W*.95;
+      s+='<path d="M'+x+','+y+' l'+(side*(4+2*p))+','+(-3) +' M'+x+','+y+' l'+(side*(4+2*p))+',3" stroke="#f0e6c0" stroke-width="1" opacity=".85"/>';
+    }
+    if(v.stage>=5)s+=flower(sp.flor||'star',v.x,v.y-H*1.08,11+5*p,clamp((v.stage-4)/3,0,1),sp);
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-H,2);
+    return s;
+  },
+  huerta:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(28+186*p)*sp.alto;
+    let s=stem(v.x,v.y,H,sp.tallo,4.6+2.4*p,7*p);
+    const maxN=Math.max(4,sp.pares*2),n=clamp(Math.round(maxN*Math.max(p,.2)),2,maxN);
+    s+=hojasTallo(v,'pointy',42,32,n,0,sp.hoja,sp.hoja2,H);
+    if(v.stage>=6&&sp.flor!=='none'){
+      const nf=clamp(Math.round(1+2*p),1,3);
+      const nF=(v.fruits===undefined)?nf:Math.min(nf,v.fruits);
+      for(let i=0;i<nf;i++){
+        const t=0.42+0.24*i,y=v.y-H*t,side=(i%2?1:-1),x=v.x+side*(13+8*p),r=(6.5+4*p);
+        if(sp.fruta){
+          if(i<nF){s+=fruitGlyph(x,y,r,sp.c1,i,side*8);frHit(x,y,r,i);}
+          else s+='<circle cx="'+x+'" cy="'+y+'" r="'+(r*.55)+'" fill="'+shade(sp.c1,.82)+'" opacity=".3"/>';
+        }else{
+          s+='<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+sp.c1+'" stroke="'+shade(sp.c1,.7)+'" stroke-width=".8"/>'
+           +'<path d="M'+(x-r*.5)+','+(y-r*.3)+' q'+(r*.5)+','+(r*.55)+' '+r+',0" fill="none" stroke="#fff8e0" stroke-width="1.2" opacity=".55"/>';
+        }
+      }
+    } else if(sp.flor==='none'){
+      for(let i=0;i<6;i++){
+        const a=i*60+(p*30),L=(24+26*p);
+        s+=leaf('round',L,L*.6,(i%2?sp.hoja2:sp.hoja),shade(sp.hoja,.7),a,v.x+Math.cos(a*Math.PI/180)*6,v.y-10-6*p);
+      }
+    }
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-H*.8,2);
+    return s;
+  },
+  frutal:function(v){
+    const sp=v.sp,p=v.p,tr=sp.tallo||'#7d5a34';
+    const H=(30+150*p)*sp.alto;
+    let s='<g class="tallo"><path d="M'+v.x+','+(v.y+4)+' C'+(v.x-4)+','+(v.y-H*.5)+' '+(v.x+3)+','+(v.y-H*.7)+' '+v.x+','+(v.y-H)+'" fill="none" stroke="'+tr+'" stroke-width="'+(6+5*p)+'" stroke-linecap="round"/></g>';
+    s+='<g class="tallo"><path d="M'+v.x+','+(v.y-H*.62)+' L'+(v.x-20-12*p)+','+(v.y-H*.86)+' M'+v.x+','+(v.y-H*.7)+' L'+(v.x+22+12*p)+','+(v.y-H*.92)+'" fill="none" stroke="'+tr+'" stroke-width="'+(3+2*p)+'" stroke-linecap="round"/></g>';
+    const blobs=[[0,-1.06,26],[-26,-0.94,20],[27,-0.98,21],[-14,-1.16,17],[16,-1.14,18]];
+    const nb=clamp(Math.round(2+3*p),1,5);
+    const nf=clamp(Math.round(-1+5*p),0,4);
+    let can='';
+    if(v.stage===5){
+      for(let i=0;i<Math.max(2,nf);i++){
+        const b=blobs[i%nb];
+        can+=flower('tiny',v.x+b[0],v.y+H*b[1],6+3*p,1,sp);
+      }
+    }
+    if(v.stage>=6&&sp.flor!=='none'){
+      const total=Math.max(2,clamp(Math.round(-1+5*p),1,4));
+      const nF=(v.fruits===undefined)?total:Math.min(total,v.fruits);
+      for(let i=0;i<total;i++){
+        const b=blobs[(i+2)%nb],r=(5.5+3*p);
+        const fx=v.x+b[0]+r*1.15,fy=v.y+H*b[1]+r*1.55;
+        if(i<nF){can+=fruitGlyph(fx,fy,r,sp.c1,i,(i%2?9:-9));frHit(fx,fy,r,i);}
+        else can+='<circle cx="'+fx+'" cy="'+fy+'" r="'+(r*.55)+'" fill="'+shade(sp.c1,.8)+'" opacity=".28"/>';
+      }
+    }
+    return s+can+(v.stage>=6&&v.extra?sparkles(v.x,v.y-H*.95,2):'');
+  },
+  arbol:function(v){
+    const sp=v.sp,p=v.p,col=sp.hoja,col2=sp.hoja2,tr=sp.tallo||'#7a5533';
+    const H=(30+158*p)*sp.alto,variant=sp.formaArbol||'normal';
+    let s='',canopy='';
+    if(variant==='palmera'){
+      s+='<g class="tallo"><path d="M'+v.x+','+(v.y+4)+' C'+(v.x-3)+','+(v.y-H*.6)+' '+(v.x+2)+','+(v.y-H*.8)+' '+v.x+','+(v.y-H)+'" fill="none" stroke="'+tr+'" stroke-width="'+(7+4*p)+'" stroke-linecap="round"/></g>';
+      /* anillos del tronco */
+      for(let i=0;i<6;i++){
+        const t=(i+1)/7,y=v.y-H*t;
+        s+='<path d="M'+(v.x-(7+4*p)*.5)+','+y+' q'+((7+4*p)*.5)+',3 '+(7+4*p)+',0" fill="none" stroke="'+shade(tr,.7)+'" stroke-width="1.2" opacity=".6"/>';
+      }
+      const nf=clamp(Math.round(4+4*p),2,8);
+      for(let i=0;i<nf;i++){
+        const a=-90+(i-(nf-1)/2)*(34),L=(46+22*p),f=i%2?col2:col;
+        canopy+=leaf('frond',L,L*.2,f,shade(col,.7),a,v.x,v.y-H);
+      }
+      if(v.stage>=6)for(let i=0;i<3;i++){canopy+='<circle cx="'+(v.x+(i-1)*11)+'" cy="'+(v.y-H+13)+'" r="5" fill="'+sp.c1+'"/>';}
+    } else if(variant==='conifera'){
+      s+='<g class="tallo"><path d="M'+v.x+','+(v.y+4)+' L'+v.x+','+(v.y-H*.9)+'" stroke="'+tr+'" stroke-width="'+(5+4*p)+'" stroke-linecap="round"/></g>';
+      const nf=clamp(Math.round(2+4*p),1,6);
+      for(let i=0;i<nf;i++){
+        const t=i/nf,y=v.y-H*(0.24+t*.76),w=(52-10*i)*(0.5+0.6*p);
+        canopy+='<path d="M'+(v.x-w)+','+y+' L'+(v.x-w*.2)+','+(y-40*(0.5+0.5*p))+ ' L'+v.x+','+(y-58*(0.5+0.5*p))+ ' L'+(v.x+w*.2)+','+(y-40*(0.5+0.5*p))+' L'+(v.x+w)+','+y+' Z" fill="'+(i%2?col2:col)+'" opacity=".97"/>';
+      }
+    } else if(variant==='bambu'){
+      const ncan=clamp(Math.round(1+3*p),1,4);
+      for(let k=0;k<ncan;k++){
+        const dx=(k-(ncan-1)/2)*13,hk=H*(1-0.18*Math.abs(k-(ncan-1)/2));
+        s+='<g class="tallo"><path d="M'+(v.x+dx)+','+(v.y+4)+' C'+(v.x+dx+2)+','+(v.y-hk*.5)+' '+(v.x+dx-2)+','+(v.y-hk*.8)+' '+(v.x+dx)+','+(v.y-hk)+'" fill="none" stroke="'+(k%2?'#8fc45c':'#7ab54c')+'" stroke-width="'+(5+2*p)+'" stroke-linecap="round"/></g>';
+        for(let i=1;i<4;i++){s+='<path d="M'+(v.x+dx-3)+','+(v.y-hk*i/4)+' h6" stroke="'+shade('#7ab54c',.75)+'" stroke-width="1.4"/>';}
+        const nl=clamp(Math.round(2+2*p),1,4);
+        for(let i=0;i<nl;i++){
+          const t=(i+1)/(nl+1),side=(i%2?1:-1);
+          canopy+=leaf('needle',(32+16*p)*(1-0.2*t),8,(i%2?col2:col),shade(col,.7),(side===1?-(20+14*p):180+(20+14*p)),v.x+dx,v.y-hk*(0.55+0.4*t));
+        }
+      }
+    } else {
+      const twist=(variant==='bonsai');
+      s+='<g class="tallo"><path d="M'+v.x+','+(v.y+4)+' '+(twist?'C'+(v.x-16)+','+(v.y-H*.3)+' '+(v.x+18)+','+(v.y-H*.5)+' '+(v.x-6)+','+(v.y-H*.68)+' C'+(v.x-16)+','+(v.y-H*.8)+' '+(v.x+10)+','+(v.y-H*.86)+' '+(v.x)+','+(v.y-H):'C'+(v.x-6)+','+(v.y-H*.5)+' '+(v.x+6)+','+(v.y-H*.7)+' '+(v.x)+','+(v.y-H))+'" fill="none" stroke="'+tr+'" stroke-width="'+(7+5*p)+'" stroke-linecap="round"/></g>';
+      const droop=(variant==='sauce');
+      const blobs=[[0,-1.02,30],[-30,-0.88,23],[31,-0.92,24],[-15,-1.16,19],[17,-1.14,20],[0,-1.3,17],[-42,-1.0,16],[44,-1.02,16]];
+      const nb=clamp(Math.round(2+6*p),1,8);
+      const cap=clamp(p*1.15,0,1);
+      for(let i=0;i<nb;i++){
+        const b=blobs[i],r=b[2]*(0.5+0.62*p);
+        canopy+='<circle cx="'+(v.x+b[0]*cap)+'" cy="'+(v.y+H*b[1])+'" r="'+r+'" fill="'+(i%2?col2:col)+'" stroke="'+shade(col,.74)+'" stroke-width=".6" opacity=".97"/>';
+        if(droop&&p>0.35){
+          for(let d=0;d<4;d++){
+            const yy=v.y+H*b[1]+r*0.4,xx=v.x+b[0]*cap+(d-1.5)*r*0.5;
+            canopy+=leaf('needle',(22+16*p),5,(i%2?col2:col),shade(col,.7),90+(d-1.5)*6,xx,yy);
+          }
+        }
+      }
+      if(variant==='bonsai'&&p>0.5){canopy+='<path d="M'+(v.x-30)+','+(v.y-H*.92)+' q30,-10 62,2" fill="none" stroke="'+tr+'" stroke-width="3" stroke-linecap="round" opacity=".8"/>';}
+      /* frutas colgando del árbol (recogibles) */
+      if(v.stage>=6&&sp.fruta){
+        const total=clamp(Math.round(2+3*p),2,5);
+        const nF=(v.fruits===undefined)?total:Math.min(total,v.fruits);
+        for(let i=0;i<total;i++){
+          const b=blobs[(i+2)%nb],r=(5+2.5*p);
+          const fx=v.x+b[0]*cap+(i%2?7:-7),fy=v.y+H*b[1]+r*1.45;
+          if(i<nF){canopy+=fruitGlyph(fx,fy,r,sp.c1,i,(i%2?10:-10));frHit(fx,fy,r,i);}
+          else canopy+='<circle cx="'+fx+'" cy="'+fy+'" r="'+(r*.5)+'" fill="'+shade(sp.c1,.82)+'" opacity=".3"/>';
+        }
+      }
+    }
+    if(v.stage>=5&&sp.flor!=='none'&&['normal','bonsai','sauce'].indexOf(variant)>=0){
+      const nf=clamp(Math.round(6*p),1,6);
+      for(let i=0;i<nf;i++){
+        const a=i*(360/nf)+13,r=(20+16*p);
+        canopy+=flower('tiny',v.x+Math.cos(a*Math.PI/180)*r,v.y-H*(0.95+0.18*Math.sin(a*Math.PI/180)),5+3*p,clamp((v.stage-4)/3,0,1),sp);
+      }
+    }
+    return s+canopy+(v.stage>=6&&v.extra?sparkles(v.x,v.y-H*1.05,2):'');
+  },
+  trepadora:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(30+190*p)*sp.alto;
+    let s='';
+    /* tutor */
+    s+='<path d="M'+v.x+','+(v.y+4)+' L'+v.x+','+(v.y-H-6)+'" stroke="#8a6a4a" stroke-width="4" stroke-linecap="round" opacity=".85"/>';
+    s+='<g class="tallo"><path d="M'+(v.x-6)+','+v.y+' C'+(v.x-20)+','+(v.y-H*.3)+' '+(v.x+18)+','+(v.y-H*.55)+' '+(v.x-4)+','+(v.y-H*.8)+' C'+(v.x-12)+','+(v.y-H*.92)+' '+(v.x+6)+','+(v.y-H*.98)+' '+(v.x+2)+','+(v.y-H*1.02)+'" fill="none" stroke="'+sp.tallo+'" stroke-width="3.6" stroke-linecap="round"/></g>';
+    const n=clamp(Math.round(4+6*p),2,10);
+    for(let i=0;i<n;i++){
+      const t=(i+1)/(n+1),side=(i%2?1:-1);
+      const wob=Math.sin(t*Math.PI*3)*8;
+      const y=v.y-H*t,x=v.x+wob;
+      const len=(18+24*p)*(1-0.24*t);
+      s+=leaf('heart',len,len*.62,(i%2?sp.hoja2:sp.hoja),shade(sp.hoja,.7),(side===1?-(30+12*p):180+(30+12*p)),x,y);
+      if(i%3===1&&p>0.3){
+        const dir=side, r=7+4*p;
+        s+='<g class="hoja"><path d="M'+x+','+y+' q'+(dir*r*1.6)+','+(-r*.4)+' '+(dir*r*1.9)+','+(-r*1.5)+' q'+(-dir*r*.5)+','+(r*1.1)+' '+(-dir*r*1.9)+','+(r*1.5)+' Z" fill="none" stroke="'+shade(sp.hoja,.85)+'" stroke-width="1.3"/></g>';
+      }
+    }
+    if(v.stage>=4){
+      const nf=clamp(Math.round(2+5*p),1,7);
+      for(let i=0;i<nf;i++){
+        const t=0.62+0.3*(i/nf),side=(i%2?1:-1);
+        const y=v.y-H*t,x=v.x+Math.sin(t*Math.PI*3)*8+side*(10+6*p);
+        s+=flower(sp.flor||'star',x,y,9+5*p*0.9*(0.4+0.6*(i/nf)),clamp((v.stage-4)/3,0,1),sp);
+      }
+    }
+    if(v.stage>=6&&sp.fruta){
+      const total=clamp(Math.round(2+3*p),2,5);
+      const nF=(v.fruits===undefined)?total:Math.min(total,v.fruits);
+      for(let i=0;i<total;i++){
+        const t=0.42+0.14*i,side=(i%2?1:-1);
+        const y=v.y-H*t+10,x=v.x+Math.sin(t*Math.PI*3)*8+side*(9+5*p),r=(5+2.5*p);
+        if(i<nF){s+=fruitGlyph(x,y,r,sp.c1,i,side*7);frHit(x,y,r,i);}
+        else s+='<circle cx="'+x+'" cy="'+y+'" r="'+(r*.55)+'" fill="'+shade(sp.c1,.8)+'" opacity=".28"/>';
+      }
+    }
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-H*.9,2);
+    return s;
+  },
+  bulbo:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(24+120*p)*sp.alto,bw=(15+9*p);
+    let s='';
+    s+='<ellipse cx="'+v.x+'" cy="'+(v.y+7)+'" rx="'+bw+'" ry="'+(bw*.72)+'" fill="#e8d0a8" stroke="#c0a878" stroke-width="1"/>';
+    for(let i=-1;i<=1;i++)s+='<path d="M'+v.x+','+(v.y+7)+' q'+(i*bw*.6)+',-4 '+(i*bw*.9)+',-1" stroke="#c8ae80" stroke-width="1" fill="none" opacity=".8"/>';
+    s+=stem(v.x,v.y-2,H,sp.tallo,4+2*p,4*p);
+    const n=clamp(Math.round(2+2*p),1,4);
+    for(let i=0;i<n;i++){
+      const side=(i%2?1:-1),t=(i+1)/(n+1);
+      s+=leaf('strap',(26+34*p)*(1-0.25*t),(26+34*p)*.34,(i%2?sp.hoja2:sp.hoja),shade(sp.hoja,.7),(side===1?-(30+16*p):180+(30+16*p)),v.x,v.y-4-H*t*0.6);
+    }
+    if(v.stage>=4)s+=flower(sp.flor||'trumpet',v.x,v.y-H,11+6*p,clamp((v.stage-4)/3,0,1),sp);
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-H-10,2);
+    return s;
+  },
+  tropical:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(26+168*p)*sp.alto;
+    let s='';
+    const n=clamp(Math.round(2+3*p),1,5);
+    for(let i=0;i<n;i++){
+      const side=(i%2?1:-1),t=(i+1)/(n+1);
+      const hh=H*(0.45+0.55*t),ang=(side===1?-(32+10*p):180+(32+10*p));
+      const L=(34+30*p)*(1-0.12*t);
+      const f=(i%2?sp.hoja2:sp.hoja);
+      s+='<g class="tallo"><path d="M'+v.x+','+(v.y-2)+' C'+(v.x+side*8)+','+(v.y-hh*.5)+' '+(v.x+side*14)+','+(v.y-hh*.8)+' '+(v.x+side*16)+','+(v.y-hh)+'" fill="none" stroke="'+shade(f,.8)+'" stroke-width="2.6" stroke-linecap="round"/></g>';
+      s+=leaf('round',L,L*.72,f,shade(sp.hoja,.68),ang,v.x+side*16,v.y-hh);
+      /* recortes tipo monstera */
+      if(p>0.4){
+        const cut='<path d="M0,0" stroke="'+shade(f,.72)+'" stroke-width="2" opacity=".5"/>';
+        s+='<g transform="translate('+(v.x+side*16)+' '+(v.y-hh)+') rotate('+ang+')"><path d="M'+(L*.35)+','+(-L*.3)+' q'+(L*.16)+','+(L*.32)+' 0,'+(L*.6)+' M'+(L*.62)+','+(-L*.24)+' q'+(L*.16)+','+(L*.28)+' 0,'+(L*.5)+'" fill="none" stroke="'+shade(f,.55)+'" stroke-width="3" opacity=".55"/></g>';
+      }
+    }
+    if(v.stage>=5)s+=flower(sp.flor||'spathe',v.x,v.y-H*1.02,10+6*p,clamp((v.stage-4)/3,0,1),sp);
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-H*.9,2);
+    return s;
+  },
+  acuatica:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(20+118*p)*sp.alto;
+    let s='';
+    const padR=(30+34*p);
+    s+='<ellipse cx="'+(v.x-18)+'" cy="'+(v.y+6)+'" rx="'+padR+'" ry="'+(padR*.44)+'" fill="'+sp.hoja+'" stroke="'+shade(sp.hoja,.72)+'" stroke-width="1" opacity=".95" transform="rotate(-6 '+(v.x-18)+' '+(v.y+6)+')"/>';
+    for(let i=0;i<Math.round(3+3*p);i++){
+      const a2=R(-40,40),rr=R(24,58)*(0.5+0.7*p);
+      s+='<ellipse cx="'+(v.x-24+Math.cos(a2*Math.PI/180)*rr)+'" cy="'+(v.y+4+Math.sin(a2*Math.PI/180)*rr*.4)+'" rx="'+(10+10*p)+'" ry="'+(5+4*p)+'" fill="'+sp.hoja2+'" stroke="'+shade(sp.hoja,.75)+'" stroke-width=".7" opacity=".9"/>';
+    }
+    s+='<path d="M'+(v.x-14)+','+(v.y+6)+' L'+(v.x-14-padR*.9)+','+(v.y+6-padR*.32)+' L'+(v.x-14-padR*.86)+','+(v.y+6+padR*.26)+' Z" fill="#2f6a63" opacity=".5"/>';
+    s+=stem(v.x-6,v.y,H,sp.tallo,3.4+1.6*p,3*p);
+    s+=flower(sp.flor||'lotus',v.x-6,v.y-H,(17+11*p),clamp((v.stage-3)/4,0,1)*0.98+0.02,sp);
+    if(v.stage>=6)s+='<ellipse cx="'+(v.x+18)+'" cy="'+(v.y+2)+'" rx="'+(14+10*p)+'" ry="'+(6+4*p)+'" fill="'+sp.hoja2+'" stroke="'+shade(sp.hoja,.72)+'" stroke-width=".8" opacity=".9"/>';
+    return s;
+  },
+  silvestre:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(18+96*p)*sp.alto;
+    let s='';
+    const n=clamp(Math.round(2+4*p),2,6);
+    for(let i=0;i<n;i++){
+      const off=(i-(n-1)/2),dx=off*(9+4*p);
+      const hh=H*(1-0.2*Math.abs(off)/(1+ (n-1)/2));
+      const col=i%2?sp.hoja2:sp.hoja;
+      s+=leaf('blade',hh,hh*.16,col,shade(col,.7),(off*4)+(i%2?10:-10),v.x+dx,v.y-2);
+      if(v.stage>=4&&i%2===0)s+=flower(sp.flor||'puff',v.x+dx+off*2,v.y-2-hh*.92,8+5*p*0.8,clamp((v.stage-3)/4,0,1),sp);
+    }
+    return s;
+  },
+  follaje:function(v){
+    const sp=v.sp,p=v.p;
+    const H=(20+128*p)*sp.alto;
+    let s=stem(v.x,v.y-2,H*0.7,sp.tallo,3.6+1.6*p,5*p);
+    const n=clamp(Math.round(4+5*p),2,9);
+    for(let i=0;i<n;i++){
+      const side=(i%2?1:-1),t=(i+1)/(n+1);
+      const L=(30+34*p)*(1-0.18*t);
+      const f=(i%2?sp.hoja2:sp.hoja);
+      s+=leaf('oval',L,L*.5,f,shade(sp.hoja,.7),(side===1?-(38+14*p):180+(38+14*p))+(i*3),v.x,v.y-4-H*0.7*t);
+    }
+    if(v.stage>=5&&sp.flor!=='none'){
+      for(let i=0;i<2;i++)s+=flower(sp.flor||'spathe',v.x+(i?14:-12),v.y-H*0.95,9+4*p,clamp((v.stage-4)/3,0,1),sp);
+    }
+    if(v.stage>=6&&v.extra)s+=sparkles(v.x,v.y-H*.8,2);
+    return s;
+  }
+};
+/* --- fruta recogible (con zona táctil generosa) --- */
+function fruitGlyph(x,y,r,color,i,rot){
+  /* ojo: el meneo (CSS transform) NO puede ir en el mismo nodo que el
+     atributo transform, o la fruta se dibujaría en la esquina del svg */
+  const dur=(5.4+((i||0)%3)*0.7).toFixed(1),del=(-((i||0)*0.9)%3).toFixed(1);
+  return '<g transform="translate('+x+' '+y+')"><g class="frutaG" data-fi="'+i+'">'
+    +'<g transform="'+(rot?('rotate('+rot+')'):'rotate(0)')+'"><g class="frutaGi" style="animation-duration:'+dur+'s;animation-delay:'+del+'s">'
+      +'<path d="M0,'+(-r)+' q1.5,-5 5,-6" stroke="#5b7a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>'
+      +'<circle r="'+r+'" fill="'+color+'" stroke="'+shade(color,.68)+'" stroke-width=".8"/>'
+      +'<ellipse cx="'+(-r*.32)+'" cy="'+(-r*.36)+'" rx="'+(r*.32)+'" ry="'+(r*.2)+'" fill="#ffffff" opacity=".5" transform="rotate(-28)"/>'
+      +'<circle r="'+(r+11)+'" fill="transparent"/>'
+    +'</g></g>'
+  +'</g></g>';
+}
+/* --- semilla (etapa 0) --- */
+function drawSeed(v){
+  const sp=v.sp;
+  const sc=(sp.fam==='arbol'||sp.fam==='frutal')?1.3:1.12;
+  const c1=mixHex(sp.c1,'#7a5830',.5),c2=mixHex(sp.c2,'#9a7440',.45);
+  let s='';
+  s+='<ellipse cx="'+v.x+'" cy="'+(v.y-6)+'" rx="'+(15*sc)+'" ry="'+(5*sc)+'" fill="#2b1b0e" opacity=".5"/>';
+  s+='<g transform="translate('+v.x+' '+(v.y-12)+')"><g class="semilla">';
+  s+='<path d="M0,-13 C'+(12*sc)+',-11 '+(13*sc)+',4 '+(4*sc)+',11 C'+(-5*sc)+',14 '+(-12*sc)+',6 '+(-11*sc)+',-4 C'+(-10*sc)+',-11 '+(-6*sc)+',-14 0,-13 Z" fill="'+c1+'" stroke="'+shade(c1,.7)+'" stroke-width="1"/>';
+  s+='<path d="M0,-11 C'+(5*sc)+',-7 '+(6*sc)+',1 0,9" fill="none" stroke="'+c2+'" stroke-width="1.4" opacity=".8"/>';
+  s+='<path d="M'+(3*sc)+',-10 C'+(9*sc)+',-7 '+(9*sc)+',2 '+(3*sc)+',9" fill="none" stroke="'+c2+'" stroke-width="1" opacity=".5"/>';
+  s+='</g></g>';
+  for(let i=0;i<7;i++){
+    const a=R(0,360),r=R(24,46);
+    s+='<path class="shine" style="animation-delay:'+R(0,2).toFixed(1)+'s" transform="translate('+(v.x+Math.cos(a*Math.PI/180)*r)+' '+(v.y+Math.sin(a*Math.PI/180)*r*.5)+')" d="M0,-4 L1.2,-1.2 L4,0 L1.2,1.2 L0,4 L-1.2,1.2 L-4,0 L-1.2,-1.2 Z" fill="#ffe9a8"/>';
+  }
+  s+='<g transform="translate('+v.x+' '+(v.y-30)+')" class="shine" style="animation-delay:.6s"><path d="M0,-9 L2.4,-2.4 L9,0 L2.4,2.4 L0,9 L-2.4,2.4 L-9,0 L-2.4,-2.4 Z" fill="#fff8c8" opacity=".9"/></g>';
+  return s;
+}
+function drawPlant(sp,stage,mood,opts){
+  opts=opts||{};
+  fruitHitRec=opts.hit||null;
+  const v={sp:sp,stage:stage,p:GROWTH[clamp(stage,0,7)],mood:mood,x:120,y:POT.soil+2,extra:!!opts.extra,garden:!!opts.garden,fruits:opts.fruits};
+  let inner='';
+  if(stage<=0){inner=drawSeed(v);}
+  else{
+    const f=FORMA[sp.forma]||FORMA.flor;
+    inner=f(v);
+    if(stage===1)inner=inner||drawSeed(v);
+  }
+  return '<g>'+inner+'</g>';
+}
+/* --- maceta con carita --- */
+function renderPot(sp,a){
+  sp=sp||{c1:'#c07a48',c2:'#e8b98a',familia:'flor'};
+  const agua=(sp.fam==='acuatica');
+  /* barro cocido teñido con el color de la especie: siempre parece maceta */
+  const clay=(agua?mixHex(sp.c1,'#4f8a9a',.6):mixHex(sp.c1,'#b4633a',.6));
+  sp=Object.assign({},sp,{c1:clay});
+  const grad='<defs>'
+    +'<linearGradient id="pg" x1="0" y1="0" x2="1" y2="0">'
+    +'<stop offset="0" stop-color="'+shade(sp.c1,.72)+'"/><stop offset=".45" stop-color="'+shade(sp.c1,.98)+'"/><stop offset="1" stop-color="'+shade(sp.c1,.66)+'"/></linearGradient>'
+    +'<linearGradient id="pg2" x1="0" y1="0" x2="1" y2="0">'
+    +'<stop offset="0" stop-color="'+shade(sp.c1,.86)+'"/><stop offset=".5" stop-color="'+mixHex(sp.c1,'#ffffff',.18)+'"/><stop offset="1" stop-color="'+shade(sp.c1,.78)+'"/></linearGradient>'
+    +'<linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">'
+    +'<stop offset="0" stop-color="#5a3d22"/><stop offset="1" stop-color="#33200f"/></linearGradient>'
+    +'<linearGradient id="water" x1="0" y1="0" x2="0" y2="1">'
+    +'<stop offset="0" stop-color="#9fe2f5"/><stop offset="1" stop-color="#3f8fb5"/></linearGradient>'
+    +'</defs>';
+  /* reflejo inferior */
+  let s=grad;
+  s+='<ellipse cx="120" cy="'+(POT.base+2)+'" rx="86" ry="14" fill="#000" opacity=".26"/>';
+  /* tierra / agua */
+  if(agua){
+    s+='<ellipse cx="120" cy="'+(POT.soil+6)+'" rx="70" ry="13" fill="url(#water)"/>';
+    s+='<ellipse cx="104" cy="'+(POT.soil+2)+'" rx="22" ry="4.5" fill="#ffffff" opacity=".5"/>';
+    s+='<ellipse cx="140" cy="'+(POT.soil+9)+'" rx="14" ry="3" fill="#ffffff" opacity=".3"/>';
+  }else{
+    s+='<ellipse cx="120" cy="'+(POT.soil+4)+'" rx="70" ry="13" fill="url(#soil)"/>';
+    for(let i=0;i<9;i++){const a2=R(0,360),r=R(6,60);
+      s+='<circle cx="'+(120+Math.cos(a2*Math.PI/180)*r)+'" cy="'+(POT.soil+4+Math.sin(a2*Math.PI/180)*r*.18)+'" r="'+R(1,2.6).toFixed(1)+'" fill="#6d4a27" opacity=".7"/>';}
+  }
+  /* cuerpo */
+  s+='<path d="M'+(POT.x1+10)+','+(POT.rimBot-2)+' L'+(POT.x1+32)+','+(POT.base-8)+' Q'+(POT.x1+36)+','+POT.base+' '+(POT.x1+48)+','+POT.base+' L'+(POT.x2-48)+','+POT.base+' Q'+(POT.x2-36)+','+POT.base+' '+(POT.x2-32)+','+(POT.base-8)+' L'+(POT.x2-10)+','+(POT.rimBot-2)+' Z" fill="url(#pg)" stroke="'+shade(sp.c1,.55)+'" stroke-width="1.4"/>';
+  /* brillo lateral */
+  s+='<path d="M'+(POT.x1+22)+','+(POT.rimBot+6)+' L'+(POT.x1+42)+','+(POT.base-14)+' L'+(POT.x1+56)+','+(POT.base-14)+' L'+(POT.x1+40)+','+(POT.rimBot+6)+' Z" fill="#ffffff" opacity=".14"/>';
+  /* huellas de días regados */
+  const marks=Math.min(a&&a.waterings?a.waterings:0,10);
+  const mw=9;
+  for(let i=0;i<marks;i++){
+    const x=120-(marks-1)*mw/2+i*mw, y=POT.base-16;
+    s+='<g transform="translate('+x+' '+y+') rotate('+((i*53)%44-22)+') scale(.95)"><path d="M0,0 C3.4,-3.4 6.6,-2.2 7.6,1.2 C5.4,4.4 1.2,4.4 0,0 Z" fill="#ffffff" opacity=".32"/><path d="M.6,0 L6.6,1.2" stroke="#ffffff" stroke-width=".6" opacity=".28"/></g>';
+  }
+  /* boca / cara */
+  const EY=344,MY=368;
+  s+='<g class="potSvgFace">';
+  /* mofletes */
+  s+='<ellipse class="blush" cx="84" cy="356" rx="13" ry="8" fill="#e0705f"/>';
+  s+='<ellipse class="blush" cx="156" cy="356" rx="13" ry="8" fill="#e0705f"/>';
+  /* ojos abiertos */
+  s+='<g class="eyesOpen">'
+    +'<ellipse cx="98" cy="'+EY+'" rx="9" ry="11.5" fill="#2b2018"/>'
+    +'<ellipse cx="142" cy="'+EY+'" rx="9" ry="11.5" fill="#2b2018"/>'
+    +'<circle cx="101" cy="'+(EY-4)+'" r="3.4" fill="#ffffff" opacity=".92"/>'
+    +'<circle cx="145" cy="'+(EY-4)+'" r="3.4" fill="#ffffff" opacity=".92"/>'
+    +'<path d="M88,'+(EY-16)+' q10,-6 20,-1" stroke="'+shade(sp.c1,.6)+'" stroke-width="2.4" fill="none" opacity=".55" stroke-linecap="round"/>'
+    +'<path d="M132,'+(EY-17)+' q10,-5 20,1" stroke="'+shade(sp.c1,.6)+'" stroke-width="2.4" fill="none" opacity=".55" stroke-linecap="round"/>'
+    +'</g>';
+  /* ojos cerrados (contenta/dormida) */
+  s+='<g class="eyesClosed">'
+    +'<path d="M88,'+EY+' q10,-9 20,0" stroke="#2b2018" stroke-width="3.6" fill="none" stroke-linecap="round"/>'
+    +'<path d="M132,'+EY+' q10,-9 20,0" stroke="#2b2018" stroke-width="3.6" fill="none" stroke-linecap="round"/>'
+    +'</g>';
+  /* bocas por estado */
+  s+='<g class="mouth m-feliz"><path d="M108,'+(MY-4)+' q12,12 24,0" stroke="#2b2018" stroke-width="3.4" fill="none" stroke-linecap="round"/></g>';
+  s+='<g class="mouth m-agusto"><path d="M104,'+(MY-6)+' q16,18 32,0 q-16,7 -32,0 Z" fill="#7a3b3b"/><path d="M114,'+(MY+4)+' q6,7 12,0 q-6,3 -12,0 Z" fill="#e0705f"/></g>';
+  s+='<g class="mouth m-mimada"><path d="M106,'+(MY-6)+' q7,10 14,0 q7,10 14,0" stroke="#2b2018" stroke-width="3" fill="none" stroke-linecap="round"/></g>';
+  s+='<g class="mouth m-sedienta"><path d="M106,'+(MY+4)+' q6,-7 12,0 q6,7 12,0" stroke="#2b2018" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="120" cy="'+(EY+16)+'" rx="3" ry="4.4" fill="#6ec8e8" opacity=".9"/></g>';
+  s+='<g class="mouth m-hambre"><ellipse cx="120" cy="'+(MY)+'" rx="7" ry="8" fill="#7a3b3b"/></g>';
+  s+='<g class="mouth m-dormida"><path d="M112,'+(MY-2)+' q8,7 16,0" stroke="#2b2018" stroke-width="3" fill="none" stroke-linecap="round"/></g>';
+  s+='</g>';
+  /* cejas de ánimo */
+  if(a&&a.mood==='sedienta'){
+    s+='<path d="M86,'+(EY-22)+' q12,4 22,8" stroke="#2b2018" stroke-width="2.6" fill="none" opacity=".7" stroke-linecap="round"/>'
+      +'<path d="M154,'+(EY-22)+' q-12,4 -22,8" stroke="#2b2018" stroke-width="2.6" fill="none" opacity=".7" stroke-linecap="round"/>';
+  }
+  if(a&&a.mood==='feliz'||a&&a.mood==='agusto'){
+    s+='<path d="M86,'+(EY-24)+' q12,-6 22,-2" stroke="#2b2018" stroke-width="2.4" fill="none" opacity=".55" stroke-linecap="round"/>'
+      +'<path d="M154,'+(EY-24)+' q-12,-6 -22,-2" stroke="#2b2018" stroke-width="2.4" fill="none" opacity=".55" stroke-linecap="round"/>';
+  }
+  /* borde superior del tiesto */
+  s+='<rect x="'+POT.x1+'" y="'+POT.rimTop+'" width="'+(POT.x2-POT.x1)+'" height="'+(POT.rimBot-POT.rimTop)+'" rx="13" fill="url(#pg2)" stroke="'+shade(sp.c1,.5)+'" stroke-width="1.4"/>';
+  s+='<rect x="'+(POT.x1+7)+'" y="'+(POT.rimTop+4)+'" width="'+(POT.x2-POT.x1-14)+'" height="4" rx="2" fill="#ffffff" opacity=".18"/>';
+  /* zona de mimos (pancita) */
+  s+='<rect x="24" y="284" width="192" height="118" fill="transparent" id="petZoneR"/>';
+  /* zZz de dormida */
+  s+='<g class="zc">'
+    +'<text class="zZz" style="animation-delay:0s" x="168" y="262" font-size="24" fill="#ffffff" opacity=".9" font-family="Georgia,serif" font-weight="700">z</text>'
+    +'<text class="zZz" style="animation-delay:1.1s" x="188" y="238" font-size="18" fill="#ffffff" opacity=".75" font-family="Georgia,serif" font-weight="700">z</text>'
+    +'<text class="zZz" style="animation-delay:2.2s" x="204" y="216" font-size="13" fill="#ffffff" opacity=".6" font-family="Georgia,serif" font-weight="700">z</text></g>';
+  return s;
+}
+
+/* =====================================================================
+   6.b EL CIELO CON LA HORA REAL
+   ===================================================================== */
+const SKY_KEYS=[
+  {h:0,   a:'#0a1428', b:'#152c46'},
+  {h:5,   a:'#122a44', b:'#2f5170'},
+  {h:6.4, a:'#33507a', b:'#e8a06a'},
+  {h:8,   a:'#6fadd8', b:'#d8ecf5'},
+  {h:12,  a:'#3f8ed8', b:'#cfeaff'},
+  {h:17,  a:'#5aa0cc', b:'#ffe6bd'},
+  {h:19.5,a:'#4a6a9c', b:'#f2a86a'},
+  {h:21,  a:'#20335c', b:'#7a5a86'},
+  {h:22.5,a:'#101c38', b:'#1f3550'},
+  {h:24,  a:'#0a1428', b:'#152c46'}
+];
+function skyForHour(h){
+  for(let i=0;i<SKY_KEYS.length-1;i++){
+    const A=SKY_KEYS[i],B=SKY_KEYS[i+1];
+    if(h>=A.h&&h<=B.h){
+      const t=(h-A.h)/(B.h-A.h);
+      return {a:mixHex(A.a,B.a,t),b:mixHex(A.b,B.b,t)};
+    }
+  }
+  return {a:SKY_KEYS[0].a,b:SKY_KEYS[0].b};
+}
+let starsBuilt=false;
+function buildStars(){
+  const box=$('#stars');let s='';
+  for(let i=0;i<22;i++){
+    const x=R(0,100).toFixed(2),y=R(0,62).toFixed(2),sz=R(1.2,3).toFixed(1);
+    const bw=(sz>2.2?4:0);
+    s+='<i class="'+(bw?'big':'')+'" style="left:'+x+'%;top:'+y+'%;width:'+sz+'px;height:'+sz+'px;animation-delay:'+R(0,4.6).toFixed(1)+'s"></i>';
+  }
+  box.innerHTML=s;starsBuilt=true;
+}
+function buildClouds(){
+  const box=$('#clouds');let s='';
+  for(let i=0;i<4;i++){
+    const y=R(7,40).toFixed(1),sc=R(.6,1.25).toFixed(2),dur=R(90,190).toFixed(0),delay=R(0,90).toFixed(0),op=R(.22,.55).toFixed(2);
+    s+='<div class="cloud" style="top:'+y+'%;left:-30%;opacity:'+op+';animation:drift '+dur+'s linear -'+delay+'s infinite">'
+      +'<div class="cloudIn" style="transform:scale('+sc+')">'
+      +'<svg width="120" height="46" viewBox="0 0 120 46"><ellipse cx="38" cy="30" rx="30" ry="15" fill="#ffffff"/><ellipse cx="66" cy="24" rx="24" ry="17" fill="#ffffff"/><ellipse cx="92" cy="31" rx="22" ry="13" fill="#ffffff"/></svg></div></div>';
+  }
+  box.innerHTML=s;
+}
+let lastSkyBg='',lastStars='',lastNight=null,lastBirdsAt=0;
+function dawnBirds(){ if(Date.now()-lastBirdsAt>20*60*1000){lastBirdsAt=Date.now();SFX.dawnBirds();} }
+function paintSky(now){
+  const d=new Date(now),h=d.getHours()+d.getMinutes()/60;
+  const c=skyForHour(h);
+  const bg='linear-gradient('+c.a+' 0%, '+c.b+' 100%)';
+  if(bg!==lastSkyBg){lastSkyBg=bg;$('#sky').style.background=bg;}
+  if(!starsBuilt)buildStars();
+  const night=(h>=20.6||h<5.8);
+  /* ambiente sonoro con el cambio de luz */
+  if(lastNight===null)lastNight=night;
+  else if(night!==lastNight){
+    lastNight=night;
+    if(night){SFX.nightWind();setTimeout(function(){SFX.crickets();},700);}
+    else dawnBirds();
+  }
+  const starOp=night?(h>=20.6?clamp((h-20.6)/1.2,0,1):clamp((5.8-h)/1.2,0,1))*.95:(h>=19.6?.25:0);
+  $('#stars').style.opacity=starOp.toFixed(2);
+  /* el sol recorre de 06:30 a 19:30; la luna, el resto */
+  const dayT=(h-6.5)/13;
+  const isSun=dayT>0&&dayT<1;
+  const t=isSun?dayT:(((h>=19.5)?(h-19.5):(h+4.5))/11);
+  const W=stageRect().width||390,H=stageRect().height||500;
+  const x=lerp(W*0.1,W*0.9,clamp(t,0,1));
+  const y=H*0.7-Math.sin(clamp(t,0,1)*Math.PI)*H*0.44;
+  const cel=$('#celestial');
+  cel.style.transform='translate('+x.toFixed(0)+'px,'+y.toFixed(0)+'px)';
+  const want=isSun?'<div class="sun"></div>':'<div class="moon"></div>';
+  if(cel.dataset.k!==(isSun?'s':'m')){cel.innerHTML=want;cel.dataset.k=isSun?'s':'m';}
+}
+/* =====================================================================
+   7. ESTADO Y PERSISTENCIA
+   ===================================================================== */
+const SKEY='semillita.v1';
+let S=null;
+function defaultState(){
+  return{
+    v:1,
+    plant:null,
+    garden:[],speciesSeen:{},waterings:0,events:[],seeds:[],pendingSeeds:[],lastGranted:null,
+    lastProc:Time.dayIdx(),lastSeen:Date.now(),firstRun:Date.now(),
+    ui:{seenIntro:false,sound:true},pendingGrowth:false,visits:1
+  };
+}
+function load(){
+  const raw=Store.get(SKEY);
+  if(!raw){S=defaultState();return;}
+  try{
+    const d=JSON.parse(raw),def=defaultState();
+    S=Object.assign(def,d);
+    S.plant=d.plant||null;S.garden=d.garden||[];S.events=d.events||[];
+    S.seeds=d.seeds||[];S.pendingSeeds=d.pendingSeeds||[];S.lastGranted=d.lastGranted||null;
+    /* partidas antiguas: si ya mandó una planta al jardín y la maceta quedó libre, le toca una semilla */
+    if(!d.seeds&&!S.plant&&S.garden.length)S.migrateSeed=true;
+    S.ui=Object.assign(def.ui,d.ui||{});delete S.dev;   /* ya no hay modo prueba */
+    S.visits=(d.visits||0)+1;
+  }catch(e){S=defaultState();}
+}
+function save(){S.lastSeen=Date.now();Store.set(SKEY,JSON.stringify(S));}
+function sp(){return S.plant?byId[S.plant.id]:null;}
+/* ---------------- semillas: se ganan al azar ---------------- */
+const EASY_FAMS=['flor','aroma','suculenta','hortaliza','silvestre'];
+function pickRandomSeed(opts){
+  opts=opts||{};
+  const banned={};
+  (S.garden||[]).forEach(function(g){banned[g.id]=1;});
+  if(S.plant)banned[S.plant.id]=1;
+  (S.seeds||[]).forEach(function(id){banned[id]=1;});
+  let pool=SP.filter(function(s){return !banned[s.id]&&!S.speciesSeen[s.id];});
+  if(!pool.length)pool=SP.filter(function(s){return !banned[s.id];});
+  if(opts.familias)pool=pool.filter(function(s){return opts.familias.indexOf(s.fam)>=0;});
+  if(!pool.length&&opts.familias)pool=SP.filter(function(s){return opts.familias.indexOf(s.fam)>=0;});
+  if(!pool.length)pool=SP;
+  return pool[Math.floor(Math.random()*pool.length)];
+}
+function grantSeed(reason,opts){
+  const s=pickRandomSeed(opts);
+  S.seeds.push(s.id);S.lastGranted=s.id;
+  S.pendingSeeds=(S.pendingSeeds||[]);S.pendingSeeds.push(s.id);
+  save();
+  return s;
+}
+function takePendingSeeds(){const p=S.pendingSeeds||[];S.pendingSeeds=[];if(p.length)save();return p;}
+function grantSeedNow(reason,opts){
+  const s=grantSeed(reason,opts);
+  takePendingSeeds();
+  SFX.dice();setTimeout(function(){SFX.seedGet();},420);
+  const pt=soilPoint();
+  burstSparks(pt.x,pt.y-40,10);burstHearts(pt.x,pt.y-70,4);
+  return s;
+}
+function announcePendingSeeds(){
+  const p=takePendingSeeds();
+  if(!p.length)return;
+  const names=p.map(function(id){return byId[id]?byId[id].nombre:id;}).join(', ');
+  SFX.dice();setTimeout(function(){SFX.seedGet();},380);
+  toast('🍃 ¡Semilla'+(p.length===1?' nueva':'s nuevas')+'! Te ha'+(p.length===1?'':'n')+' tocado: <b>'+names+'</b> 🎲',5200);
+}
+function checkSeedStreak(){
+  const a=S.plant;if(!a)return 0;
+  const days=Time.dayIdx()-Time.dayIdx(a.planted)+1;
+  const earned=Math.floor(days/7);
+  a.bonusSeeds=a.bonusSeeds||0;
+  let got=0;
+  while(a.bonusSeeds<earned&&a.bonusSeeds<8){a.bonusSeeds++;grantSeed('racha');got++;}
+  if(got)save();
+  return got;
+}
+function claimStarter(){
+  if(S.seeds.length)return;
+  const s=grantSeed('inicio',{familias:EASY_FAMS});
+  takePendingSeeds();
+  SFX.dice();setTimeout(function(){SFX.seedGet();},430);
+  paintSeeds();
+  const card=$('#seedGridMine .seedCard');if(card)card.classList.add('nueva');
+  toast('🍀 ¡Te ha tocado <b>'+s.nombre+'</b> ('+s.famNombre+')! Pulsa su carta para plantarla 🌱',5400);
+  updateAll();
+}
+function wateredToday(a){a=a||S.plant;return a?a.watered.indexOf(Time.dayIdx())>=0:false;}
+/* días regados que ya se han cerrado: cada uno = una etapa ganada */
+function growthTarget(a){a=a||S.plant;if(!a)return 0;const k=Time.dayIdx();
+  let c=0;for(let i=0;i<a.watered.length;i++){if(a.watered[i]<k)c++;}return clamp(c,0,7);}
+function plantAgeDays(a){a=a||S.plant;return a?Math.max(1,Time.dayIdx()-Time.dayIdx(a.planted)+1):0;}
+/* ---------------- frutas ---------------- */
+function fruitsPerDay(a){
+  const s=byId[a.id];if(!s||!s.fruta)return 0;
+  return 2+(s.fam==='frutal'?1:0)+(a.stage>=7?1:0);
+}
+function pickedTodayOf(o){if(!o)return 0;return (o.pickDay===Time.dayIdx())?(o.pickCount||0):0;}
+function fruitsLeft(a){
+  a=a||S.plant;if(!a||a.stage<6)return 0;
+  const s=byId[a.id];if(!s||!s.fruta)return 0;
+  return Math.max(0,fruitsPerDay(a)-pickedTodayOf(a));
+}
+function gardenFruitsLeft(g){
+  const st=gardenStage(g);if(st<6)return 0;
+  const s=byId[g.id];if(!s||!s.fruta)return 0;
+  return Math.max(0,fruitsPerDay({id:g.id,stage:st})-pickedTodayOf(g));
+}
+function addHarvest(id,n){S.harvest=S.harvest||{};S.harvest[id]=(S.harvest[id]||0)+n;S.harvestTotal=(S.harvestTotal||0)+n;}
+function flyFruit(x,y,color){
+  const d=document.createElement('div');
+  d.className='flyFruit';d.style.left=x+'px';d.style.top=y+'px';d.style.background=color;
+  fx().appendChild(d);burstSparks(x,y,4);
+  setTimeout(function(){d.remove();},950);
+}
+function pickFruit(pt){
+  const a=S.plant;if(!a)return;const s=byId[a.id];
+  if(a.stage<6||!s.fruta)return;
+  const k=Time.dayIdx();
+  if(a.pickDay!==k){a.pickDay=k;a.pickCount=0;}
+  const per=fruitsPerDay(a);
+  if(a.pickCount>=per){SFX.clickSoft();toast('🍎 Hoy ya has recogido todas sus frutas. Mañana madurarán más.',3600);return;}
+  a.pickCount++;
+  addHarvest(a.id,1);
+  save();
+  SFX.harvest();
+  flyFruit(pt?pt.x:stageRect().width/2,pt?pt.y:stageRect().height*0.5,s.c1);
+  renderPlant(true);updateAll();
+  const left=per-a.pickCount;
+  if(left===0){
+    SFX.happyChirp();
+    toast('🧺 ¡Frutas recogidas! Hoy has cogido <b>'+per+'</b>. Cosecha total de '+s.nombre+': <b>'+S.harvest[a.id]+'</b> 🍎',4400);
+    if(S.harvest[a.id]%5===0){SFX.achievement();setTimeout(function(){toast('🏅 ¡Cosecha de récord! Ya llevas <b>'+S.harvest[a.id]+'</b> frutas de '+s.nombre+'.',4200);},1500);}
+  }else toast('🍎 ¡Fruta recogida! Quedan <b>'+left+'</b> hoy.',2400);
+}
+function gardenStage(g,now){const days=Math.floor(((now===undefined?Time.now():now)-g.planted)/DAY);return clamp(Math.min(days,7)+(g.waterBase||3),1,7);}
+
+/* =====================================================================
+   8. ÁNIMO, RENDER Y ANIMACIONES
+   ===================================================================== */
+let mood='feliz',moodTempUntil=0,lastWaterAt=0,next7At=Time.next7();
+let potFruits=[];   /* coordenadas (unidades del svg) de las frutas de la maceta */
+let fruitHitRec=null; /* lista donde apuntar las frutas dibujadas (solo maceta) */
+function frHit(fx,fy,r,i){if(fruitHitRec)fruitHitRec.push({x:fx,y:fy,r:r*1.7,i:i});}
+function nightHour(){const d=Time.date(),h=d.getHours()+d.getMinutes()/60;return (h>=22.2||h<6.1);}
+function computeMood(){
+  const a=S.plant,spx=sp();
+  if(!a||!spx)return 'feliz';
+  if(pet.active)return 'mimada';
+  if(Date.now()<moodTempUntil)return mood;
+  if(nightHour())return 'dormida';
+  if(!wateredToday(a))return 'sedienta';
+  if(Date.now()-lastWaterAt<10000)return 'agusto';
+  return 'feliz';
+}
+function setMoodTemp(m,ms){mood=m;moodTempUntil=Date.now()+(ms||6000);}
+function renderPlant(force){
+  const a=S.plant,spx=sp(),ps=$('#plantSvg');
+  if(!a||!spx){if(ps.dataset.k!=='none'){ps.innerHTML='';ps.dataset.k='none';}return;}
+  const extra=(a.stage>=7&&!a.done)?false:(S.waterings>=7);
+  const wilt=(!wateredToday(a)&&a.stage>=2&&!nightHour());
+  const fr=fruitsLeft(a);
+  const key=[a.id,a.stage,mood,extra&&a.stage>=6?'1':'0',wilt?'1':'0',fr].join('|');
+  /* el viento: más suave en brotes, más amplio en plantas altas */
+  const sway=(0.55+spx.alto*0.85)*(0.8+0.4*GROWTH[clamp(a.stage,0,7)]);
+  const wrap=$('#plantWrap');
+  if(wrap)wrap.style.setProperty('--sway',sway.toFixed(2));
+  if(!force&&ps.dataset.k===key)return;      /* nada cambió: no repintamos */
+  ps.dataset.k=key;
+  potFruits=[];
+  ps.innerHTML=drawPlant(spx,a.stage,mood,{extra:extra&&a.stage>=6,fruits:fr,hit:potFruits});
+  ps.classList.toggle('wilt',wilt);
+}
+function renderMood(){
+  mood=computeMood();
+  const p=$('#potSvg');
+  p.setAttribute('data-mood',mood);
+  renderPlant();
+}
+function updateAll(){
+  const a=S.plant,spx=sp();
+  paintSky(Time.now());
+  renderMood();
+  const pk=[spx?spx.id:'x',mood,Math.min(S.waterings,10),a?(wateredToday(a)?'w':'d'):'n'].join('|');
+  const pot=$('#potSvg');
+  if(pot.dataset.pk!==pk){pot.dataset.pk=pk;pot.innerHTML=renderPot(spx,{waterings:S.waterings,mood:mood});}
+  /* reloj */
+  const d=Time.date();
+  $('#clockTxt').textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());
+  $('#clockSub').textContent='amanecer 07:00 · en '+Time.fmtMs(Time.msToNext7());
+  /* etapa */
+  if(a&&spx){
+    $('#stageTxt').textContent=(a.done&&a.stage>=7?'¡Plenitud!':STAGE_N[a.stage]);
+    $('#dayTxt').textContent='riego '+a.wateredTotal+'/7 · día '+plantAgeDays(a);
+    $('#dayIc').textContent=STAGE_I[a.stage];
+  }else{
+    $('#stageTxt').textContent='Semillero';
+    $('#dayTxt').textContent=S.seeds.length?'semilla lista para plantar':'pide una semilla';
+    $('#dayIc').textContent='🌰';
+  }
+  /* barra de estado */
+  const cp=$('#clockPill');
+  cp.classList.toggle('warn',!!(a&&!wateredToday(a)&&!nightHour()));
+  cp.classList.toggle('good',!!(a&&wateredToday(a)));
+  /* botones */
+  const bw=$('#badgeWater'),bg=$('#badgeGarden');
+  bw.classList.toggle('hide',!(a&&!wateredToday(a)&&a.stage<7));
+  const canW=canWater();
+  $('#btnWater').disabled=!canW;
+  let gf=0;S.garden.forEach(function(g){gf+=gardenFruitsLeft(g);});
+  if(gf>0){bg.textContent='🍎'+gf;bg.classList.remove('hide');bg.classList.add('pulse');}
+  else{
+    bg.classList.remove('pulse');
+    if(a&&a.stage>=7){bg.textContent='¡lista!';bg.classList.remove('hide');}
+    else{bg.textContent=S.garden.length;bg.classList.toggle('hide',S.garden.length===0);}
+  }
+  const bs=$('#badgeSeeds');
+  if(bs){
+    if(S.seeds.length){bs.textContent=S.seeds.length;bs.classList.remove('hide');}
+    else bs.classList.add('hide');
+    bs.classList.toggle('pulse',S.seeds.length>0&&!S.plant);
+  }
+}
+function anim(el,cls,ms){el.classList.remove(cls);void el.offsetWidth;el.classList.add(cls);
+  if(ms)setTimeout(function(){el.classList.remove(cls);},ms);}
+/* toast en cola */
+let toastQ=[],toastBusy=false;
+function toast(html,ms){
+  const t=document.getElementById('toast');
+  if(t&&t.parentElement!==topLayer())topLayer().appendChild(t);   /* que se vean por encima de las hojas */
+  toastQ.push([html,ms||3400]);pumpToast();
+}
+function toastSound(){try{SFX.pop();}catch(e){}}
+function pumpToast(){
+  if(toastBusy||!toastQ.length)return;
+  toastBusy=true;
+  const it=toastQ.shift(),t=$('#toast');
+  t.innerHTML=it[0];t.classList.add('on');toastSound();
+  setTimeout(function(){t.classList.remove('on');
+    setTimeout(function(){toastBusy=false;pumpToast();},420);},it[1]);
+}
+/* parpadeo */
+setInterval(function(){const p=$('#potSvg');
+  if(mood==='dormida'||mood==='agusto')return;
+  p.classList.add('blink');setTimeout(function(){p.classList.remove('blink');},220);},5200);
+/* ritmo circadiano: reintentar ánimo cada 45 s */
+setInterval(function(){if(Date.now()>moodTempUntil)renderMood();},45000);
+
+
+/* =====================================================================
+   8.b RECONCILIACIÓN (qué ha pasado mientras no estabas)
+   ===================================================================== */
+function reconcile(){
+  const k=Time.dayIdx(),a=S.plant;
+  const out={grew:false,to:0,from:0,summary:null};
+  if(a){
+    const target=growthTarget(a);
+    if(target>a.stage){out.grew=true;out.to=target;out.from=a.stage;}
+  }
+  const gap=k-S.lastProc;
+  if(gap>0){
+    let reg=0,sec=0;
+    for(let d=S.lastProc;d<k;d++){
+      if(a&&a.watered.indexOf(d)>=0)reg++;
+      else if(a&&d>=Time.dayIdx(a.planted))sec++;
+    }
+    out.summary={dias:gap,regados:reg,secos:sec};
+  }
+  S.lastProc=k;
+  /* si no estás mirando, el crecimiento se aplica ya (sin animación) */
+  if(out.grew&&document.visibilityState!=='visible'){
+    applyGrowthNow(out.to);
+    S.pendingGrowth=true;
+    out.grew=false;
+  }
+  save();
+  return out;
+}
+function applyGrowthNow(to){
+  const a=S.plant;if(!a)return;
+  a.stage=clamp(to,0,7);
+  if(a.stage>=7)a.done=true;
+  save();
+}
+/* =====================================================================
+   9. EL AMANECER DE LAS 07:00 (tiempo real)
+   ===================================================================== */
+function canWater(){const a=S.plant;return !!a&&a.stage<7&&!wateredToday(a);}
+function handleDawn(){
+  next7At=Time.next7();
+  if(document.visibilityState==='visible')dawnBirds();
+  const streakGot=checkSeedStreak();
+  const a=S.plant,k=Time.dayIdx();
+  let grew=false,to=0;
+  if(a){
+    const target=growthTarget(a);
+    if(target>a.stage){grew=true;to=target;}
+  }
+  S.lastProc=k;save();
+  const vis=document.visibilityState==='visible';
+  if(grew){
+    if(vis&&a)growAnimated(to);
+    else{applyGrowthNow(to);S.pendingGrowth=true;save();}
+  }else if(a&&vis){
+    const yk=k-1;
+    if(a.watered.indexOf(yk)<0){
+      setMoodTemp('sedienta',10000);
+      toast('Amaneció y ayer no hubo agua... <b>'+byId[a.id].nombre+'</b> te mira con ojitos tristes 😢',4000);
+      SFX.thirsty();SFX.rustle();anim($('#plantSvg'),'petted',900);
+    }else{
+      toast('🌅 Nuevo día. Sigue regándola cada día para verla crecer.',3600);
+    }
+    if(a&&a.stage>=6&&byId[a.id].fruta&&fruitsLeft(a)>0){
+      setTimeout(function(){toast('🍎 ¡A <b>'+byId[a.id].nombre+'</b> le han madurado frutas nuevas! Tócalas para recogerlas.',4200);},1200);
+    }
+  }
+  if(S.garden.length){
+    let gf=0;S.garden.forEach(function(g){gf+=gardenFruitsLeft(g);});
+    if(gf>0&&document.visibilityState==='visible'){
+      setTimeout(function(){toast('🧺 En el jardín hay <b>'+gf+'</b> fruta'+(gf===1?'':'s')+' madura'+(gf===1?'':'s')+': ábrelas en su ficha para recogerlas.',4400);},2400);
+    }
+  }
+  if(streakGot&&document.visibilityState==='visible')announcePendingSeeds();
+  updateAll();
+}
+function tick(){
+  const now=Time.now();
+  if(now>=next7At)handleDawn();
+  else{ /* reloj cada segundo */
+    const d=Time.date();
+    $('#clockTxt').textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());
+    $('#clockSub').textContent='amanecer 07:00 · en '+Time.fmtMs(Time.msToNext7());
+  }
+  /* el jardín sigue creciendo solo si la hoja está abierta */
+  if($('#sheetGarden').classList.contains('open')&&Date.now()-lastGardenPaint>8000){lastGardenPaint=Date.now();paintGarden();}
+}
+let lastGardenPaint=0;
+
+/* =====================================================================
+   10. COORDENADAS Y EFECTOS (FX)
+   ===================================================================== */
+function stageRect(){return $('#stage').getBoundingClientRect();}
+function soilPoint(){
+  const r=$('#potSvg').getBoundingClientRect(),sr=stageRect();
+  const scale=Math.min(r.width/240,r.height/400);
+  const left=r.left+(r.width-240*scale)/2,top=r.bottom-400*scale;
+  return {x:left+120*scale-sr.left,y:top+(POT.soil+2)*scale-sr.top,s:scale};
+}
+function fx(){return $('#fx');}
+function el(tag,cls,parent){const d=document.createElement(tag);if(cls)d.className=cls;(parent||fx()).appendChild(d);return d;}
+function dropAt(x,y,scale){const d=el('i','drop');d.style.left=x+'px';d.style.top=y+'px';
+  if(scale&&scale!==1)d.style.transform='translate(-50%,-50%) scale('+scale+')';return d;}
+function splashAt(x,y){const s=el('i','splash');s.style.left=x+'px';s.style.top=y+'px';setTimeout(function(){s.remove();},840);}
+function heartAt(x,y,txt){const h=el('span','heart');h.textContent=txt||(Math.random()<.5?'💚':'💗');
+  h.style.left=x+'px';h.style.top=y+'px';h.style.setProperty('--dx',R(-30,30).toFixed(0)+'px');
+  setTimeout(function(){h.remove();},1600);}
+function sparkAt(x,y){const s=el('span','spark');s.textContent=Math.random()<.5?'✨':'🌿';
+  s.style.left=x+'px';s.style.top=y+'px';s.style.setProperty('--dx',R(-50,50).toFixed(0)+'px');
+  s.style.setProperty('--dy',R(-70,-20).toFixed(0)+'px');
+  setTimeout(function(){s.remove();},1200);}
+function tipAt(x,y,txt){const t=el('div','tipText');t.textContent=txt;t.style.left=x+'px';t.style.top=y+'px';
+  setTimeout(function(){t.remove();},2100);}
+function burstHearts(x,y,n){for(let i=0;i<(n||6);i++)setTimeout(function(){heartAt(x+R(-40,40),y+R(-20,20));},i*110);}
+function burstDrops(x,y,n){for(let i=0;i<(n||10);i++){(function(i){
+  const d=dropAt(x+R(-50,50),y-R(0,40));
+  d.style.transition='transform .55s ease-out, opacity .55s';
+  setTimeout(function(){d.style.transform='translate(-50%,-50%) translateY(-30px) scale(.55)';d.style.opacity='0';},24);
+  setTimeout(function(){d.remove();},760);})(i);}}
+function burstSparks(x,y,n){for(let i=0;i<(n||8);i++)setTimeout(function(){sparkAt(x+R(-46,46),y+R(-40,10));},i*90);}
+
+/* partículas físicas (gotas) */
+const parts=[];
+function partDrop(x,y,tx,ty){
+  const d=dropAt(x,y,1);
+  parts.push({el:d,x:x,y:y,vx:(tx-x)/0.55+R(-14,14),vy:R(90,150),ty:ty});
+  wakeFrame();
+  /* tope de partículas: nada de llenar la pantalla */
+  while(parts.length>26){const p=parts.shift();if(p.el)p.el.remove();}
+}
+function updateParts(dt){
+  const g=1500;
+  for(let i=parts.length-1;i>=0;i--){
+    const p=parts[i];
+    p.vy+=g*dt/1000;
+    p.x+=p.vx*dt/1000;p.y+=p.vy*dt/1000;
+    p.el.style.left=p.x+'px';p.el.style.top=p.y+'px';
+    if(p.y>=p.ty){
+      splashAt(p.x,p.ty);
+      p.el.remove();parts.splice(i,1);
+    }
+  }
+}
+
+/* =====================================================================
+   11. LA REGADERA
+   ===================================================================== */
+const can={el:null,x:0,y:0,open:false,pouring:false,dragging:false,tilt:0,
+  capacity:20,poured:0,lastDrop:0,jetX:0,jetY:0,soilY:0,
+  overPot:false,lastHint:0,lastGround:0,crossed:false,elWater:null,elWaterTop:null};
+can.el=$('#can');
+function canSVG(){
+  const body='M42,32 L126,32 L134,92 Q134,104 120,104 L48,104 Q34,104 34,92 Z';
+  return '<defs>'
+    +'<clipPath id="canClip"><path d="'+body+'"/></clipPath>'
+    +'<linearGradient id="canG" x1="0" y1="0" x2="0" y2="1">'
+    +'<stop offset="0" stop-color="#8fd0b8"/><stop offset=".5" stop-color="#5aa98c"/><stop offset="1" stop-color="#3f7f68"/></linearGradient>'
+    +'</defs>'
+    +'<path d="M62,34 C52,2 106,2 100,34" fill="none" stroke="#3f7f68" stroke-width="7" stroke-linecap="round"/>'
+    +'<path d="'+body+'" fill="url(#canG)" stroke="#2f6b56" stroke-width="2"/>'
+    /* el agua de dentro: dos rects que se mueven sin repintar todo */
+    +'<g clip-path="url(#canClip)">'
+    +'<rect id="canWater" x="30" y="66" width="110" height="42" fill="#6ec8e8" opacity=".58"/>'
+    +'<rect id="canWaterTop" x="30" y="66" width="110" height="4" fill="#bfeeff" opacity=".85"/>'
+    +'</g>'
+    +'<path d="M50,40 L44,94 L54,94 L58,40 Z" fill="#ffffff" opacity=".22"/>'
+    +'<path d="M40,74 C28,76 20,78 14,80 L14,88 C22,90 32,88 42,86 Z" fill="#5aa98c" stroke="#2f6b56" stroke-width="1.6"/>'
+    +'<ellipse cx="13" cy="84" rx="5" ry="7" fill="#7fc4a8" stroke="#2f6b56" stroke-width="1.4"/>'
+    +'<g fill="#2f6b56"><circle cx="13" cy="80" r="1.1"/><circle cx="10" cy="84" r="1.1"/><circle cx="16" cy="84" r="1.1"/><circle cx="13" cy="88" r="1.1"/></g>'
+    +'<path d="M108,32 C112,22 122,22 126,32" fill="none" stroke="#2f6b56" stroke-width="3"/>';
+}
+function buildCan(){
+  can.el.innerHTML='<svg viewBox="0 0 150 120" width="150" height="120">'+canSVG()+'</svg>';
+  can.elWater=$('#canWater');can.elWaterTop=$('#canWaterTop');
+}
+function setCanWater(lvl){ /* lvl 0..1 — mueve el agua de dentro sin repintar */
+  if(!can.elWater)return;
+  const y=104-72*lvl,h=Math.max(0,76*lvl+4);
+  can.elWater.setAttribute('y',y);can.elWater.setAttribute('height',h);
+  can.elWaterTop.setAttribute('y',y);
+  can.elWaterTop.setAttribute('height',lvl>0.02?4:0);
+}
+function placeCan(){
+  can.el.style.left='0px';can.el.style.top='0px';
+  can.el.style.transformOrigin='14px 80px';
+  can.el.style.transform='translate3d('+(can.x-14)+'px,'+(can.y-80)+'px,0) rotate('+can.tilt.toFixed(1)+'deg)';
+  can.jetX=can.x;can.jetY=can.y;
+  const j=$('#waterJet');
+  const dist=Math.max(16,can.soilY-can.y);
+  j.style.transform='translate3d('+(can.x-3)+'px,'+(can.y+4)+'px,0) scaleY('+(dist/JET_MAX)+')';
+}
+const JET_MAX=420;
+function needWater(){const a=S.plant;return a?(14+a.stage*2):16;}   /* gotas necesarias según la etapa */
+function potHalfW(){const r=$('#potSvg').getBoundingClientRect();const s=Math.min(r.width/240,r.height/400);return 88*s;}
+function overPot(){
+  const snd=soilPoint();
+  const okX=Math.abs(can.jetX-snd.x)<potHalfW();          /* el chorro cae dentro de la maceta */
+  const okY=(can.jetY<snd.y-24)&&(can.jetY>snd.y-430);    /* y la regadera está por encima, a tiro */
+  return okX&&okY;
+}
+function setOverPot(v){
+  if(can.overPot===v)return;
+  can.overPot=v;
+  $('#potGlow').classList.toggle('on',v);
+}
+function meterHint(txt){const h=$('#waterHint');if(h)h.textContent=txt;}
+function openCan(){
+  if(!canWater()){
+    const a=S.plant;
+    if(!a)toast('No hay ninguna planta. Consigue una semilla en el Semillero 🌰');
+    else if(wateredToday(a))toast('💧 Ya la has regado hoy. El agua de hoy ya está trabajando: mañana a las 07:00 verás el resultado.',4200);
+    else toast('Está en plenitud 🌟: llévala al jardín para empezar con otra semilla.');
+    SFX.error();
+    return;
+  }
+  const snd=soilPoint();
+  can.soilY=snd.y;
+  const stage=stageRect();
+  can.x=clamp(snd.x,110,stage.width-110);
+  can.y=clamp(snd.y-150,150,stage.height-150);
+  can.open=true;can.pouring=false;can.tilt=0;
+  can.capacity=needWater();can.poured=0;can.crossed=false;
+  can.hint50=false;can.hint75=false;
+  can.overPot=false;
+  can.el.classList.remove('hidden');
+  buildCan();setCanWater(1);placeCan();
+  $('#waterMeter').classList.add('on');
+  $('#waterMeter .fill').style.width='0%';
+  meterHint('Mantén pulsada y arrastra la regadera 💧');
+  setOverPot(overPot());
+  lastWaterAt=Date.now()-15000;
+  setMoodTemp('agusto',30000);
+  renderMood();
+  SFX.canPick();
+  tipAt(can.x,can.y-42,'Arrastra la regadera 💧');
+  wakeFrame();
+}
+function closeCan(){
+  can.open=false;can.pouring=false;
+  SFX.pourStop();
+  can.el.classList.add('hidden');
+  $('#waterJet').classList.remove('on');
+  $('#waterMeter').classList.remove('on');
+  $('#potGlow').classList.remove('on');
+  setOverPot(false);
+  renderMood();
+}
+function startPour(){
+  if(!can.open||can.pouring||!canWater())return;
+  can.pouring=true;
+  SFX.pourStart();
+  setMoodTemp('agusto',30000);
+  wakeFrame();
+}
+function stopPour(silent){
+  if(!can.pouring)return;
+  can.pouring=false;
+  if(!silent)SFX.pourStop();
+  else SFX.pourStop();
+  can.tilt=0;placeCan();
+  $('#waterJet').classList.remove('on');
+  setOverPot(false);
+}
+function finishWatering(){
+  const a=S.plant;
+  if(!a)return;
+  const k=Time.dayIdx();
+  let first=false;
+  if(a.watered.indexOf(k)<0){a.watered.push(k);a.wateredTotal++;first=true;}
+  if(first){S.waterings++;S.lifeWaterings=(S.lifeWaterings||0)+1;}
+  lastWaterAt=Date.now();
+  stopPour(true);
+  const snd=soilPoint();
+  for(let i=0;i<5;i++)setTimeout(function(){splashAt(snd.x+R(-40,40),snd.y+R(-6,10));},i*90);
+  burstHearts(snd.x,snd.y-70,4);
+  SFX.splash();SFX.happyChirp();
+  meterHint('¡Regada! 💚');
+  save();
+  setMoodTemp('agusto',9000);
+  $('#pot').classList.remove('happy');void $('#pot').offsetWidth;$('#pot').classList.add('happy');
+  wakeFrame();
+  setTimeout(function(){
+    updateAll();
+    if(a.stage===0)toast('💧 ¡Semilla empapada! Mañana a las <b>07:00</b>, si estás dentro, la verás sacudirse y asomar el brote 🌱',5000);
+    else if(a.wateredTotal===1)toast('💧 ¡Primer riego hecho! Cada día que la riegues, a las 07:00 dará un pasito más. 🌿',4600);
+    else toast('💧 ¡Regada y contenta! Mañana a las 07:00 crecerá un poquito más. ('+(a.wateredTotal)+'/7 riegos)',4400);
+    if(S.waterings===1)tipAt(snd.x,snd.y+34,'🫶 ahora acaríciale la pancita');
+    closeCan();
+  },420);
+}
+function pourStep(t){
+  if(!can.pouring)return;
+  const over=overPot();
+  setOverPot(over);
+  /* la regadera solo inclina y suelta agua si está encima de la maceta */
+  const wantTilt=over?-26:(can.dragging?-5:0);
+  if(Math.abs(can.tilt-wantTilt)>0.5){can.tilt=wantTilt;placeCan();}
+  if(!over){
+    $('#waterJet').classList.remove('on');
+    if(!can.crossed){can.crossed=true;meterHint('💧 ¡El agua cae fuera! Pon la regadera sobre la maceta');}
+    if(t-can.lastGround>700){
+      can.lastGround=t;
+      const j=can.jetX,g=can.soilY+R(30,70);
+      partDrop(j+R(-3,3),can.jetY+8,j+R(-10,10),g);
+      splashAt(j+R(-14,14),g);
+      SFX.outSplash();
+    }
+    if(t-can.lastHint>4200){can.lastHint=t;tipAt(can.jetX,can.jetY-34,'💧 apunta a la maceta');}
+    return;   /* no se gasta ni una gota de agua */
+  }
+  can.crossed=false;
+  $('#waterJet').classList.add('on');
+  if(t-can.lastDrop>100){
+    can.lastDrop=t;
+    const snd=soilPoint();
+    can.soilY=snd.y;
+    partDrop(can.jetX+R(-4,4),can.jetY+6,can.jetX+R(-16,16),snd.y+R(-8,4));
+    SFX.drop();
+    can.poured++;
+    if(can.poured===1)meterHint('¡Bien! no la muevas de la maceta 💧');
+    const p=clamp(can.poured/can.capacity,0,1);
+    setCanWater(1-p);                          /* el agua de dentro baja… */
+    $('#waterMeter .fill').style.width=(p*100)+'%';  /* …y la barra sube al mismo ritmo */
+    if(!can.hint50&&p>=.5){can.hint50=true;meterHint('¡Sigue! vas por la mitad 💧');}
+    if(!can.hint75&&p>=.78){can.hint75=true;meterHint('¡Casi está! 🌿');SFX.almost();}
+    if(p>=1){can.hint50=can.hint75=false;finishWatering();}
+  }
+}
+/* ---------- arrastrar la regadera ---------- */
+(function(){
+  let pid=null,sx=0,sy=0,cx0=0,cy0=0;
+  can.el.addEventListener('pointerdown',function(e){
+    e.preventDefault();e.stopPropagation();
+    SFX.unlock();SFX.canPick();
+    pid=e.pointerId;can.dragging=true;
+    try{can.el.setPointerCapture(pid);}catch(err){}
+    sx=e.clientX;sy=e.clientY;cx0=can.x;cy0=can.y;
+    can.el.classList.add('grabbing');
+    if(!can.pouring)startPour();
+    wakeFrame();
+  });
+  can.el.addEventListener('pointermove',function(e){
+    if(!can.dragging)return;
+    e.preventDefault();
+    const r=stageRect();
+    can.x=clamp(cx0+(e.clientX-sx),90,r.width-90);
+    can.y=clamp(cy0+(e.clientY-sy),110,r.height-120);
+    placeCan();
+    setOverPot(overPot());
+  });
+  function end(e){
+    if(!can.dragging)return;
+    can.dragging=false;can.el.classList.remove('grabbing');
+    try{can.el.releasePointerCapture(pid);}catch(err){}
+    can.tilt=0;placeCan();
+  }
+  can.el.addEventListener('pointerup',end);
+  can.el.addEventListener('pointercancel',end);
+})();
+/* ---------- recoger frutas tocándolas ---------- */
+function fruitAtScreen(cx,cy){
+  if(!potFruits.length)return null;
+  const svg=$('#plantSvg'),m=svg&&svg.getScreenCTM?svg.getScreenCTM():null;
+  if(!m)return null;
+  let p;
+  try{p=new DOMPoint(cx,cy).matrixTransform(m.inverse());}catch(err){return null;}
+  for(let i=0;i<potFruits.length;i++){
+    const f=potFruits[i],dx=p.x-f.x,dy=p.y-f.y,rr=Math.max(f.r,16);
+    if(dx*dx+dy*dy<=rr*rr)return f;
+  }
+  return null;
+}
+(function(){
+  /* el div de la maceta está por encima de la capa de la planta: si el toque
+     cae sobre una fruta, la cogemos igualmente */
+  $('#pot').addEventListener('pointerdown',function(e){
+    if(!fruitAtScreen(e.clientX,e.clientY))return;
+    e.preventDefault();e.stopPropagation();
+    SFX.unlock();
+    const r=stageRect();
+    pickFruit({x:e.clientX-r.left,y:e.clientY-r.top});
+  },true);
+  const ps=$('#plantSvg');
+  ps.addEventListener('pointerdown',function(e){
+    const g=e.target.closest?e.target.closest('[data-fi]'):null;
+    if(!g)return;
+    e.preventDefault();e.stopPropagation();
+    SFX.unlock();
+    const r=stageRect();
+    pickFruit({x:e.clientX-r.left,y:e.clientY-r.top});
+  });
+})();
+/* =====================================================================
+   12. MIMOS EN LA PANCITA (arrastrar el dedo)
+   ===================================================================== */
+const pet={active:false,d:0,t0:0,lx:0,ly:0,lastHeart:0,lastSound:0,lastWord:0,lastMove:0,
+  words:['je, je…','mmm…','¡qué rico!','iiih ♥','sigue, sigue','¡otra vez!']};
+function potPt(e){const r=stageRect();return {x:e.clientX-r.left,y:e.clientY-r.top};}
+(function(){
+  const p=$('#potSvg'),pot=$('#pot');
+  let pid=null;
+  p.addEventListener('pointerdown',function(e){
+    e.preventDefault();SFX.unlock();
+    pet.active=true;pet.d=0;pet.t0=Date.now();pet.lx=e.clientX;pet.ly=e.clientY;
+    pid=e.pointerId;
+    try{p.setPointerCapture(pid);}catch(err){}
+    pot.classList.add('grabbing');
+    mood='mimada';moodTempUntil=Date.now()+3500;
+    p.setAttribute('data-mood','mimada');
+    $('#petHint').style.opacity='0';
+    SFX.purrStart();SFX.rustle();
+    if(pet.lastMove<Date.now()-400)pet.lastMove=0;
+  });
+  p.addEventListener('pointermove',function(e){
+    if(!pet.active)return;
+    e.preventDefault();
+    const dx=e.clientX-pet.lx,dy=e.clientY-pet.ly;
+    pet.d+=Math.sqrt(dx*dx+dy*dy);
+    pet.lx=e.clientX;pet.ly=e.clientY;
+    const pt=potPt(e),now=Date.now();
+    if(now-pet.lastHeart>150){pet.lastHeart=now;heartAt(pt.x+R(-26,26),pt.y-10);SFX.heart();}
+    if(now-pet.lastSound>2100){pet.lastSound=now;SFX.giggle();}
+    if(now-pet.lastWord>1500){pet.lastWord=now;
+      tipAt(pt.x,pt.y-46,pet.words[Math.floor(Math.random()*pet.words.length)]);}
+    p.setAttribute('data-mood','mimada');
+    moodTempUntil=Date.now()+2500;
+  });
+  function petEnd(e){
+    if(!pet.active)return;
+    pet.active=false;
+    SFX.purrStop();
+    pot.classList.remove('grabbing');
+    try{p.releasePointerCapture(pid);}catch(err){}
+    const dt=Date.now()-pet.t0;
+    const pt=potPt(e);
+    if(pet.d>38){
+      for(let i=0;i<7;i++)setTimeout(function(){heartAt(pt.x+R(-46,46),pt.y+R(-24,24));},i*90);
+      burstSparks(pt.x,pt.y-30,4);
+      anim($('#plantSvg'),'petted',950);
+      pot.classList.remove('happy');void pot.offsetWidth;pot.classList.add('happy');
+      SFX.petHappy();
+      const msgs=['🫶 ¡Le encanta! Se ha quedado relajada.','🫶 Mimos recibidos: la pancita está contenta.','🫶 ¡Se ha puesto roja de gusto!','🫶 Eso ha sido un mimo de verdad.'];
+      toast(msgs[Math.floor(Math.random()*msgs.length)],2800);
+      S.ui.petDone=true;save();
+    }
+    moodTempUntil=Date.now()+1200;
+    setTimeout(function(){renderMood();},900);
+  }
+  p.addEventListener('pointerup',petEnd);
+  p.addEventListener('pointercancel',petEnd);
+  p.addEventListener('pointerleave',function(e){if(pet.active&&pet.d>300)petEnd(e);});
+})();
+
+/* brisa: cada 18-40 s una racha suave de viento */
+let gustTimer=null;
+function applyGust(){
+  const wrap=$('#plantWrap');
+  if(wrap){wrap.classList.remove('gust');void wrap.offsetWidth;wrap.classList.add('gust');
+    setTimeout(function(){wrap.classList.remove('gust');},2900);}
+  if($('#sheetGarden').classList.contains('open'))SFX.gust();
+}
+function scheduleGust(){
+  if(gustTimer)clearTimeout(gustTimer);
+  gustTimer=setTimeout(function(){
+    if(document.visibilityState==='visible'&&(S.plant||S.garden.length))applyGust();
+    scheduleGust();
+  },18000+Math.random()*22000);
+}
+/* bucle principal: solo gira cuando hay gotas o riego en marcha (menos lag y menos batería) */
+let lastFrameT=performance.now(),rafRunning=false;
+function wakeFrame(){
+  if(rafRunning)return;
+  rafRunning=true;lastFrameT=performance.now();
+  requestAnimationFrame(frame);
+}
+function frame(t){
+  const dt=Math.min(60,t-lastFrameT);lastFrameT=t;
+  updateParts(dt);
+  if(can.pouring)pourStep(t);
+  if(can.pouring||parts.length)requestAnimationFrame(frame);
+  else rafRunning=false;
+}
+
+/* =====================================================================
+   13. HOJAS (jardín, semillero, ficha, ajustes)
+   ===================================================================== */
+function openSheet(id){closeSheets(true);$('#'+id).classList.add('open');SFX.open();
+  document.body.classList.add('hojaAbierta');
+  if(id==='sheetGarden')paintGarden();
+  if(id==='sheetSeeds'){paintSeeds();}
+  if(id==='sheetSpec')paintSpec(S.specOpen||(S.plant?S.plant.id:null));
+}
+function closeSheets(silent){
+  let any=false;
+  $$('.sheet').forEach(function(s){if(s.classList.contains('open'))any=true;s.classList.remove('open');});
+  if(!document.querySelector('.sheet.open'))document.body.classList.remove('hojaAbierta');
+  if(any&&!silent)SFX.close();
+}
+function topLayer(){
+  let L=document.getElementById('topLayer');
+  if(!L){L=document.createElement('div');L.id='topLayer';document.body.appendChild(L);}
+  return L;
+}
+function closeConfirm(){
+  const old=document.getElementById('confirmModal');
+  if(old)old.remove();
+}
+function askConfirm(msg,onOk){
+  closeConfirm();                       /* nunca dos avisos apilados */
+  const w=document.createElement('div');
+  w.id='confirmModal';
+  w.style.cssText='position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:rgba(6,18,11,.6);padding:22px;';
+  const c=document.createElement('div');
+  c.style.cssText='max-width:340px;background:linear-gradient(#fdf8ea,#efe4c8);color:#25361f;border-radius:20px;padding:18px;border:2px solid #cbbd97;text-align:center;box-shadow:0 20px 44px rgba(0,0,0,.5)';
+  c.innerHTML='<div style="font-size:30px">🌱</div><p style="font-size:13.5px;line-height:1.5;margin:8px 0 14px">'+msg+'</p>';
+  const row=document.createElement('div');row.style.cssText='display:flex;gap:9px';
+  const b1=document.createElement('button');b1.className='btnBig ghost';b1.textContent='Cancelar';
+  const b2=document.createElement('button');b2.className='btnBig';b2.textContent='Sí, adelante';
+  row.appendChild(b1);row.appendChild(b2);c.appendChild(row);w.appendChild(c);topLayer().appendChild(w);
+  const fin=function(ok){closeConfirm();if(ok&&onOk)onOk();};
+  b1.onclick=function(){SFX.clickSoft();fin(false);};
+  b2.onclick=function(){SFX.click();fin(true);};
+  /* nada de cerrar tocando el fondo: si tocas varias veces seguidas, el aviso se queda */
+  w._esc=function(e){if(e.key==='Escape'){fin(false);document.removeEventListener('keydown',w._esc);}};
+  document.addEventListener('keydown',w._esc);
+}
+/* ---------- plantar una semilla (solo de tu mochila, y con la maceta libre) ---------- */
+function plantSeed(id){
+  const s=byId[id];if(!s)return;
+  if(S.seeds.indexOf(id)<0){toast('Esa semilla no está en tu mochila 🌰');return;}
+  const a=S.plant;
+  if(a){
+    if(a.stage>=7)toast('La maceta sigue con <b>'+byId[a.id].nombre+'</b> en plenitud: envíala al jardín y quedará libre 🌳',4800);
+    else toast('La maceta está ocupada por <b>'+byId[a.id].nombre+'</b> ('+STAGE_N[a.stage]+' '+(a.stage+1)+'/8). Primero acábala y llévala al jardín 🌳',5000);
+    return;
+  }
+  closeSheets();                        /* fuera el menú: el aviso se ve al instante */
+  askConfirm('¿Plantar la semilla de <b>'+s.nombre+'</b>? Ocupará la maceta hasta que llegue a la plenitud y viaje al jardín.',function(){
+    S.seeds=S.seeds.filter(function(x){return x!==id;});
+    if(S.lastGranted===id)S.lastGranted=null;
+    S.plant={id:id,planted:Time.now(),stage:0,watered:[],wateredTotal:0,done:false,bonusSeeds:0};
+    S.waterings=0;S.lastProc=Time.dayIdx();save();
+    closeSheets();updateAll();
+    anim($('#plantSvg'),'pop');
+    SFX.dig();setTimeout(function(){SFX.plantPlop();},260);
+    toast('🌰 Has plantado <b>'+s.nombre+'</b> · '+s.famNombre+'. Riégala hoy: mañana a las 07:00 asomará el brote.',5000);
+    setTimeout(function(){openCan();},900);
+  });
+}
+/* ---------- enviar al jardín ---------- */
+function sendToGarden(){
+  const a=S.plant,s=sp();
+  if(!a||!s)return;
+  if(a.stage<7){toast('Aún no está en plenitud ('+STAGE_N[a.stage]+'). Riégala cada día 🌿');return;}
+  const g={id:a.id,planted:a.planted,sent:Time.now(),waterings:a.wateredTotal,waterBase:3};
+  S.garden.push(g);S.speciesSeen[a.id]=true;
+  S.plant=null;S.waterings=0;S.lastProc=Time.dayIdx();save();
+  SFX.gardenSend();
+  anim($('#plantSvg'),'fly',1000);
+  burstSparks(stageRect().width/2,stageRect().height*0.55,8);
+  setTimeout(function(){updateAll();},950);
+  toast('🎉 ¡<b>'+s.nombre+'</b> vive ya en el jardín! Allí crecerá sola, sin riego, con la hora real.',4600);
+  /* la planta agradecida deja una semilla al azar */
+  const got=grantSeed('plenitud');
+  takePendingSeeds();
+  setTimeout(function(){
+    openSheet('sheetSeeds');
+    paintSeeds();
+    SFX.achievement();
+    setTimeout(function(){SFX.dice();},500);
+    setTimeout(function(){SFX.seedGet();},1000);
+    toast('🍃 <b>'+s.nombre+'</b> te ha dejado una semilla: <b>'+byId[got.id].nombre+'</b> ('+byId[got.id].famNombre+') 🎲',5400);
+  },1700);
+}
+/* ---------- jardín ---------- */
+let gardenKey='';
+function paintGarden(){
+  const grid=$('#gardenGrid');
+  const key=S.garden.map(function(g){return g.id+':'+gardenStage(g)+':'+gardenFruitsLeft(g)+':'+(g.pickCount||0);}).join('|')
+    +'|'+S.harvestTotal+'|'+Time.dayIdx();
+  const igual=(key===gardenKey&&grid.children.length);
+  gardenKey=key;
+  if(!igual){grid.innerHTML='';}
+  if(!igual){
+
+    const now=Time.now();
+    let frutasListas=0;
+    S.garden.forEach(function(g){
+      const s=byId[g.id];if(!s)return;
+      const st=gardenStage(g,now);
+      const left=gardenFruitsLeft(g);
+      frutasListas+=left;
+      const sway=((0.55+s.alto*0.85)*(0.8+0.4*GROWTH[clamp(st,0,7)])).toFixed(2);
+      const d=document.createElement('button');
+      d.className='plot';
+      d.innerHTML='<svg viewBox="30 0 180 320" aria-hidden="true" style="--sway:'+sway+'">'
+          +drawPlant(s,st,'feliz',{fruits:left})+'</svg>'
+        +'<div class="nm">'+s.nombre+'</div>'
+        +'<div class="tm">'+(st>=7?'plenitud':STAGE_N[st]+' '+STAGE_I[st])+' · '+(Math.floor((now-g.planted)/DAY)+1)+'d</div>'
+        +(left?'<div class="frutas">🍎'+left+'</div>':(st>=7?'<div class="ok">✅</div>':''));
+      d.onclick=function(){SFX.clickSoft();S.specOpen=g.id;openSheet('sheetSpec');};
+      grid.appendChild(d);
+    });
+    S.gardenFrutasListas=frutasListas;
+  }
+  /* botón enviar */
+  let wrap=$('#sendWrap');
+  if(!wrap){
+    wrap=document.createElement('div');wrap.id='sendWrap';wrap.className='btnRow';
+    const pb=$('#sheetGarden .pbody');
+    pb.insertBefore(wrap,pb.firstChild);
+  }
+  wrap.innerHTML='';
+  const a=S.plant;
+  if(a&&a.stage>=7&&!a.done){/* nunca */}
+  if(a&&a.stage>=7){
+    wrap.className='btnRow on';
+    const b=document.createElement('button');b.className='btnBig hot pulse';
+    b.innerHTML='🌳 Enviar <b>'+byId[a.id].nombre+'</b> al jardín';
+    b.onclick=sendToGarden;wrap.appendChild(b);
+  }else if(a){
+    wrap.className='btnRow';
+    const b=document.createElement('div');b.className='noteBox';b.style.flex='1 1 100%';
+    b.innerHTML='🌿 <b>'+byId[a.id].nombre+'</b> sigue en tu maceta: '+STAGE_N[a.stage]+' (etapa '+(a.stage+1)+'/8) · riegos '+a.wateredTotal+'/7.';
+    wrap.appendChild(b);
+  }else{wrap.className='btnRow';}
+  /* stats */
+  const tot=S.garden.length;
+  const mad=S.garden.filter(function(g){return gardenStage(g)>=7;}).length;
+  const dias=S.garden.reduce(function(s,g){return s+Math.floor((Time.now()-g.planted)/DAY)+1;},0);
+  $('#gardenStats').innerHTML=
+     '<div class="stat"><b>'+tot+'</b><span>plantas</span></div>'
+    +'<div class="stat"><b>'+mad+'</b><span>en plenitud</span></div>'
+    +'<div class="stat"><b>'+Object.keys(S.speciesSeen).length+'</b><span>especies</span></div>'
+    +'<div class="stat"><b>'+S.seeds.length+'</b><span>semillas</span></div>'
+    +'<div class="stat"><b>'+(S.harvestTotal||0)+'</b><span>🧺 frutas</span></div>'
+    +'<div class="stat"><b>'+(S.lifeWaterings||0)+'</b><span>riegos</span></div>';
+  $('#gardenSub').textContent='Agua automática · crecen solas con la hora real';
+  $('#gardenFoot').innerHTML='Las plantas del jardín crecen solas: cada día que pasa suben una etapa hasta la plenitud. Toca una para ver su ficha.'
+    +'<br>🍎 Algunas plantas dan <b>frutas</b>: se marcan con un contador y se recogen desde su ficha (cada día maduran más).'
+    +'<br>🌰 Las semillas nuevas llegan <b>al azar</b>: al enviar una planta en plenitud y con la racha de 7 días.';
+  /* aviso (no regalo): solo si hay una semilla esperando y la maceta esta libre */
+  const note=$('#gardenNote');
+  if(!S.plant&&S.seeds.length){
+    note.style.display='block';
+    note.innerHTML='<div class="noteBox" style="margin-top:10px">🌱 Tienes <b>'+S.seeds.length+' semilla'+(S.seeds.length===1?'':'s')+'</b> esperando en el semillero y la maceta está libre.</div>'
+      +'<div class="btnRow"><button class="btnBig" id="goSeedsBtn">🌱 Ir al semillero</button></div>';
+    const gb=$('#goSeedsBtn');if(gb)gb.onclick=function(){openSheet('sheetSeeds');};
+  }else{note.style.display='none';note.innerHTML='';}
+}
+/* ---------- semillero (mochila de semillas ganadas + catálogo de consulta) ---------- */
+let catalogBuilt=false,seedFilter='todas',seedQuery='';
+function seedCardInner(s,mode){
+  const seen=!!S.speciesSeen[s.id];
+  return '<svg viewBox="30 0 180 320" aria-hidden="true">'+drawPlant(s,7,'feliz',{})+'</svg>'
+    +'<div class="nm">'+s.nombre+'</div><div class="fm">'+s.famNombre+'</div>'
+    +(mode==='mine'&&S.lastGranted===s.id?'<div class="tag nueva">¡nueva!</div>':'')
+    +(mode==='ref'&&seen?'<div class="tag jardin">vista</div>':'');
+}
+function buildCatalog(){
+  const chips=$('#seedChips');chips.innerHTML='';
+  const fams=['todas'].concat(Object.keys(FAM));
+  fams.forEach(function(f){
+    const b=document.createElement('button');b.className='chip'+(seedFilter===f?' on':'');
+    b.textContent=(f==='todas'?'Todas · '+SP.length:FAM_NOMBRE[f]);
+    b.onclick=function(){seedFilter=f;$$('.chip',chips).forEach(function(c){c.classList.remove('on');});b.classList.add('on');filterSeeds();};
+    chips.appendChild(b);
+  });
+  const g=$('#seedGrid');g.innerHTML='';
+  const frag=document.createDocumentFragment();
+  SP.forEach(function(s){
+    const b=document.createElement('button');b.className='seedCard ref';b.dataset.fam=s.fam;b.dataset.id=s.id;
+    b.dataset.q=(s.nombre+' '+s.famNombre+' '+s.nota).toLowerCase();
+    b.innerHTML=seedCardInner(s,'ref');
+    b.onclick=function(){SFX.clickSoft();S.specOpen=s.id;openSheet('sheetSpec');};
+    frag.appendChild(b);
+  });
+  g.appendChild(frag);
+  catalogBuilt=true;
+  filterSeeds();
+}
+function filterSeeds(){
+  const q=seedQuery.trim().toLowerCase();
+  $$('#sheetSeeds .seedCard').forEach(function(c){
+    const okF=(seedFilter==='todas'||c.dataset.fam===seedFilter);
+    const okQ=(!q||c.dataset.q.indexOf(q)>=0);
+    c.style.display=(okF&&okQ)?'':'none';
+  });
+}
+function paintSeeds(){
+  /* 1) reclamar la primera semilla */
+  const claimable=!S.plant&&!S.seeds.length;
+  $('#seedClaim').style.display=claimable?'block':'none';
+  /* 2) mochila */
+  const mine=$('#seedGridMine');
+  $('#seedMine').style.display=S.seeds.length?'block':'none';
+  mine.innerHTML='';
+  S.seeds.forEach(function(id){
+    const s=byId[id];if(!s)return;
+    const b=document.createElement('button');
+    b.className='seedCard'+(S.lastGranted===id?' nueva':'');
+    b.dataset.id=id;b.dataset.fam=s.fam;
+    b.dataset.q=(s.nombre+' '+s.famNombre+' '+s.nota).toLowerCase();
+    b.innerHTML=seedCardInner(s,'mine');
+    b.onclick=function(){SFX.click();plantSeed(id);};
+    mine.appendChild(b);
+  });
+  $('#seedCount').textContent=S.seeds.length?(S.seeds.length===1?'1 lista para plantar':S.seeds.length+' listas para plantar'):'ninguna todavía';
+  /* 3) progreso hacia la próxima semilla */
+  const pr=$('#seedProgress'),a=S.plant;
+  if(a){
+    const days=Time.dayIdx()-Time.dayIdx(a.planted)+1;
+    const racha=(days%7===0)?7:(days%7);
+    pr.style.display='block';
+    pr.innerHTML='🌿 <b>'+byId[a.id].nombre+'</b> va por la <b>etapa '+(a.stage+1)+'/8</b> ('+STAGE_N[a.stage]+'). Cuando llegue a la plenitud y viaje al jardín te dejará una <b>semilla al azar</b>.<br>⏳ Racha de crecimiento: día <b>'+racha+'/7</b> para una semilla extra.';
+  }else if(S.seeds.length){
+    pr.style.display='block';
+    pr.innerHTML='🌰 Tienes semilla esperando: pulsa su carta para plantarla y empezar de nuevo.';
+  }else pr.style.display='none';
+  /* 4) catálogo */
+  if(!catalogBuilt)buildCatalog();
+  $('#seedSub').textContent=(S.seeds.length?(S.seeds.length+' en la mochila · '):'')+'las semillas se ganan al azar';
+}
+/* ---------- ficha de especie ---------- */
+function paintSpec(id){
+  const s=byId[id];if(!s)return;
+  const cosecha=(S.harvest&&S.harvest[id])||0;
+  $('#specTitle').textContent=s.nombre;
+  $('#specSub').textContent=s.famNombre+' · '+FAM_NOMBRE[s.fam];
+  const inG=S.garden.filter(function(g){return g.id===id;});
+  const isCur=S.plant&&S.plant.id===id;
+  const st=isCur?S.plant.stage:(inG.length?gardenStage(inG[0]):7);
+  $('#specHero').innerHTML='<svg viewBox="30 0 180 320">'+drawPlant(s,st,'feliz',{})+'</svg>'
+    +'<div><h3>'+s.nombre+'</h3><div class="fam">'+s.famNombre+'</div>'
+    +'<p>'+s.nota+'</p></div>';
+  const bar=function(lab,v,max,col){
+    return '<div class="bar"><span>'+lab+'</span><div class="track"><i style="width:'+Math.round(v/max*100)+'%;'+(col?('background:'+col):'')+'"></i></div><span>'+v+'</span></div>';
+  };
+  let bars=bar('Agua',s.agua,100)+bar('Luz',s.luz,100)+bar('Aroma',s.aroma,100)+bar('Cuidado',s.dificil,100,'linear-gradient(90deg,#f2c17a,#d98a1f)');
+  if(isCur)bars+='<div class="bar"><span>Crecimiento</span><div class="track"><i style="width:'+Math.round(S.plant.stage/7*100)+'%"></i></div><span>'+S.plant.stage+'/7</span></div>';
+  $('#specBars').innerHTML=bars;
+  /* botón de recoger frutas (jardín) */
+  const gOld=$('#specGatherBtn');if(gOld)gOld.remove();
+  if(inG.length&&s.fruta){
+    const g=inG[0],left=gardenFruitsLeft(g);
+    const b=document.createElement('button');
+    b.id='specGatherBtn';
+    b.className='btnBig hot'+(left?' pulse':'');
+    b.innerHTML=left?('🧺 Recoger '+left+' fruta'+(left===1?'':'s')):'🍎 Sin frutas nuevas hoy';
+    b.disabled=!left;
+    b.onclick=function(){
+      if(!left)return;
+      const k=Time.dayIdx();
+      if(g.pickDay!==k){g.pickDay=k;g.pickCount=0;}
+      g.pickCount=(g.pickCount||0)+left;
+      addHarvest(g.id,left);save();
+      SFX.harvest();setTimeout(function(){SFX.coin();},260);
+      const r=$('#specGatherBtn').getBoundingClientRect(),sr=stageRect();
+      flyFruit(r.left-sr.left+r.width/2,r.top-sr.top,byId[g.id].c1);
+      S.specOpen=g.id;paintSpec(g.id);paintGarden();updateAll();
+      toast('🧺 ¡Has recogido <b>'+left+'</b> de '+s.nombre+'! Cosecha total: <b>'+S.harvest[g.id]+'</b> 🍎',4200);
+      if(S.harvest[g.id]%5===0){SFX.achievement();setTimeout(function(){toast('🏅 ¡Cosecha de récord! '+S.harvest[g.id]+' frutas de '+s.nombre+'.',4000);},1400);}
+    };
+    const host=$('#specPet')||$('#specCare');if(host)host.after(b);
+  }else if(isCur&&s.fruta&&S.plant.stage>=6){
+    /* recoger de golpe las frutas de la maceta (por si la regadera las tapa) */
+    const a=S.plant,left=fruitsLeft(a);
+    const b=document.createElement('button');
+    b.id='specGatherBtn';
+    b.className='btnBig hot'+(left?' pulse':'');
+    b.innerHTML=left?('🧺 Recoger '+left+' fruta'+(left===1?'':'s')+' de la maceta'):'🍎 Sin frutas nuevas hoy';
+    b.disabled=!left;
+    b.onclick=function(){
+      const n=fruitsLeft(a);if(!n)return;
+      const k=Time.dayIdx();if(a.pickDay!==k){a.pickDay=k;a.pickCount=0;}
+      a.pickCount=(a.pickCount||0)+n;
+      addHarvest(a.id,n);save();
+      SFX.harvest();setTimeout(function(){SFX.coin();},260);
+      const r=$('#specGatherBtn').getBoundingClientRect(),sr=stageRect();
+      flyFruit(r.left-sr.left+r.width/2,r.top-sr.top,s.c1);
+      renderPlant(true);paintSpec(id);updateAll();
+      toast('🧺 ¡Has recogido <b>'+n+'</b> de '+s.nombre+'! Cosecha total: <b>'+S.harvest[a.id]+'</b> 🍎',4200);
+      if(S.harvest[a.id]%5===0){SFX.achievement();setTimeout(function(){toast('🏅 ¡Cosecha de récord! '+S.harvest[a.id]+' frutas de '+s.nombre+'.',4000);},1400);}
+    };
+    const host=$('#specPet')||$('#specCare');if(host)host.after(b);
+  }
+  let care='';
+  if(isCur){
+    care='🌿 <b>En tu maceta</b>: '+STAGE_N[S.plant.stage]+' · riegos '+S.plant.wateredTotal+'/7 · día '+plantAgeDays(S.plant)+'.';
+    if(!wateredToday(S.plant))care+=' <b style="color:#b4532f">Hoy todavía no la has regado.</b>';
+    else care+=' Hoy ya está regada ✅';
+    if(S.plant.stage>=7)care+=' ¡Está en plenitud: llévala al jardín!';
+    if(s.fruta&&S.plant.stage>=6){
+      care+='<br>🍎 <b>Da frutas:</b> '+(fruitsLeft(S.plant)>0?('quedan <b>'+fruitsLeft(S.plant)+'</b> maduras, tócalas en la planta.'):'hoy ya las has recogido, mañana más.');
+    }
+  }else if(inG.length){
+    const g=inG[0];
+    care='🌳 <b>En el jardín</b> desde hace '+Math.floor((Time.now()-g.sent)/DAY)+' días. Etapa actual: '+STAGE_N[gardenStage(g)]+' (crece sola, sin riego).';
+    if(s.fruta)care+='<br>🍎 Da frutas: '+(gardenFruitsLeft(g)>0?('hay <b>'+gardenFruitsLeft(g)+'</b> maduras esperando.'):'hoy ya están recogidas, mañana madurarán más.');
+  }else{
+    care='🌰 Aún no la has plantado. Necesita agua cada día y sol; cada día regado, a las 07:00, sube un paso.';
+  }
+  if(cosecha)care+='<br>🧺 Cosecha de esta especie: <b>'+cosecha+'</b> fruta'+(cosecha===1?'':'s')+'.';
+  $('#specCare').innerHTML=care;
+  $('#specWater').disabled=!isCur||!!(isCur&&!canWater());
+  $('#specWater').textContent=isCur?(wateredToday(S.plant)?'💧 Ya regada hoy':'💧 Regar'):'💧 Regar';
+}
+/* =====================================================================
+   14. CRECIMIENTO ANIMADO / TUTORIAL / VISIBILIDAD
+   ===================================================================== */
+function growAnimated(to){
+  const a=S.plant;if(!a)return;
+  const s=byId[a.id],ps=$('#plantSvg');
+  anim(ps,'shake');SFX.growShake();
+  updateAll();
+  setTimeout(function(){
+    a.stage=clamp(to,0,7);
+    if(a.stage>=7)a.done=true;
+    save();
+    setMoodTemp('agusto',8000);
+    renderMood();anim(ps,'pop');SFX.growPop();
+    const snd=soilPoint();burstSparks(snd.x,snd.y-40,8);burstHearts(snd.x,snd.y-70,3);
+    if(a.stage>=7)toast('🌟 ¡<b>'+s.nombre+'</b> ha llegado a la <b>plenitud</b>! Llévala al jardín 🌳',5400);
+    else toast('🌿 ¡Ha crecido! Etapa '+(a.stage+1)+'/8 · <b>'+STAGE_N[a.stage]+'</b> '+STAGE_I[a.stage],4200);
+    if(a.stage===6&&s.fruta)setTimeout(function(){toast('🍎 ¡Le están saliendo <b>frutas</b>! Tócalas para recogerlas.',4400);},2600);
+    updateAll();
+  },1600);
+}
+function petTutorial(){
+  const h=$('#petHint');h.style.opacity='1';h.classList.add('pulse');
+  const p=soilPoint();
+  tipAt(p.x,p.y+34,'Arrastra por aquí para acariciar la pancita 🫶');
+  burstHearts(p.x,p.y+6,4);
+  SFX.giggle();
+  setTimeout(function(){h.classList.remove('pulse');if(S.ui.petDone)h.style.opacity='0';},5400);
+}
+function flushSummary(sum){
+  if(!sum||!sum.dias)return;
+  let m='📅 Han pasado <b>'+sum.dias+(sum.dias===1?' día':' días')+'</b>.';
+  if(sum.regados)m+=' Días regados: '+sum.regados+'.';
+  if(sum.secos)m+=' Días sin agua: '+sum.secos+'.';
+  toast(m,4200);
+}
+function flushBoot(){
+  const rec=bootRec,a=S.plant;bootRec=null;
+  if(!rec)return;
+  announcePendingSeeds();
+  if(rec.grew){setTimeout(function(){growAnimated(rec.to);},1000);return;}
+  if(rec.summary)flushSummary(rec.summary);
+  if(a&&!wateredToday(a)&&!nightHour()&&a.stage>=1&&!S.pendingGrowth){
+    setTimeout(function(){toast('🌱 <b>'+byId[a.id].nombre+'</b> tiene sed: usa la regadera 💧',4200);anim($('#plantSvg'),'petted',900);},1400);
+  }
+}
+function onVisible(){
+  if(document.visibilityState==='hidden'){SFX.pourStop();SFX.purrStop();return;}
+  if(document.visibilityState!=='visible')return;
+  const rec=reconcile();
+  checkSeedStreak();
+  next7At=Time.next7();
+  updateAll();
+  announcePendingSeeds();
+  if(rec.grew)growAnimated(rec.to);
+  else if(S.pendingGrowth){
+    S.pendingGrowth=false;save();
+    anim($('#plantSvg'),'petted',950);
+    const p=soilPoint();burstSparks(p.x,p.y-40,8);
+    toast('✨ Ha crecido mientras no mirabas: mira su nueva etapa.',4200);
+  }else if(rec.summary)flushSummary(rec.summary);
+  /* banner de novedades del jardín */
+  const gm=S.garden.map(function(g){return g.id+':'+gardenStage(g);}).join(',');
+  if(S.garden.length&&S.ui.lastGardenMap&&S.ui.lastGardenMap!==gm)S.ui.lastGardenMap=gm;
+}
+/* =====================================================================
+   15. CABLEADO Y ARRANQUE
+   ===================================================================== */
+function wire(){
+  $('#introGo').addEventListener('click',function(){
+    SFX.unlock();SFX.ok();S.ui.seenIntro=true;save();
+    $('#intro').classList.add('hide');
+    if(!S.plant&&!S.seeds.length){
+      toast('🌰 Pide tu primera semilla en el <b>Semillero</b>: se elige al azar 🎲',5000);
+      setTimeout(function(){openSheet('sheetSeeds');},700);
+    }else toast('🌰 Empieza regando tu semilla: pulsa <b>Regar</b> y arrastra la regadera.',4600);
+    setTimeout(flushBoot,500);
+  });
+  $('#btnWater').addEventListener('click',function(){SFX.unlock();openCan();});
+  $('#btnPet').addEventListener('click',function(){SFX.unlock();SFX.click();petTutorial();});
+  $('#btnGarden').addEventListener('click',function(){SFX.unlock();SFX.click();openSheet('sheetGarden');});
+  $('#btnSeeds').addEventListener('click',function(){SFX.unlock();SFX.click();openSheet('sheetSeeds');});
+  /* botón bloqueado: suena un aviso suave */
+  $('#dockRow').addEventListener('pointerdown',function(e){
+    const b=e.target.closest?e.target.closest('button[disabled]'):null;
+    if(b){SFX.unlock();SFX.error();}
+  });
+  $('#dayPill').addEventListener('click',function(){
+    if(!S.plant){openSheet('sheetSeeds');return;}
+    S.specOpen=S.plant.id;openSheet('sheetSpec');
+  });
+  $$('[data-close]').forEach(function(b){b.addEventListener('click',closeSheets);});
+  $$('.sheet').forEach(function(s){s.addEventListener('click',function(e){if(e.target===s)closeSheets();});});
+  $('#specWater').addEventListener('click',function(){SFX.click();closeSheets();setTimeout(openCan,320);});
+  $('#specPet').addEventListener('click',function(){SFX.click();closeSheets();setTimeout(petTutorial,320);});
+  $('#claimBtn').addEventListener('click',function(){SFX.unlock();SFX.clickSoft();claimStarter();});
+  $('#catalogToggle').addEventListener('click',function(){SFX.clickSoft();
+    const c=$('#seedCatalog');
+    const open=c.style.display!=='block';
+    c.style.display=open?'block':'none';
+    $('#catalogToggle').textContent=open?'📖 Ocultar el catálogo':'📖 Ver el catálogo de las 100 especies';
+  });
+  $('#seedSearch').addEventListener('input',function(e){seedQuery=e.target.value;filterSeeds();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSheets();});
+}
+let bootRec=null;
+function boot(){
+  load();
+  Time.offset=0;   /* siempre hora real */
+  SFX.setOn(S.ui.sound!==false);
+  buildCan();setCanWater(1);
+  can.el.classList.add('hidden');
+  buildClouds();
+  wire();
+  if(S.ui.seenIntro)$('#intro').classList.add('hide');
+  renderMood();
+  updateAll();
+  if(S.ui.petDone)$('#petHint').style.opacity='0';
+  wakeFrame();
+  scheduleGust();
+  setInterval(tick,1000);
+  if(S.migrateSeed){S.migrateSeed=false;if(!S.plant&&!S.seeds.length){grantSeed('migracion');}}
+  checkSeedStreak();
+  bootRec=reconcile();
+  save();
+  if(S.ui.seenIntro)setTimeout(flushBoot,1300);
+  window.addEventListener('resize',function(){if(can.open)placeCan();});
+  document.addEventListener('visibilitychange',onVisible);
+  if(S.harvestTotal){
+    let gf=0;S.garden.forEach(function(g){gf+=gardenFruitsLeft(g);});
+    if(S.plant&&fruitsLeft(S.plant)>0)setTimeout(function(){toast('🍎 <b>'+byId[S.plant.id].nombre+'</b> tiene frutas maduras: tócalas para recogerlas.',4200);},1600);
+    else if(gf>0)setTimeout(function(){toast('🧺 Hay <b>'+gf+'</b> frutas maduras en el jardín.',4200);},1600);
+  }
+  if(!S.plant&&S.seeds.length){
+    setTimeout(function(){toast('🌰 Tienes <b>'+S.seeds.length+'</b> semilla esperando en el Semillero.',4200);},2200);
+  }else if(!S.plant&&!S.seeds.length){
+    setTimeout(function(){toast('🌰 La maceta está libre: pide tu primera semilla en el <b>Semillero</b> (se elige al azar 🎲).',4600);},2200);
+  }
+  /* preparar el catálogo en segundo plano */
+  setTimeout(function(){if(!catalogBuilt)buildCatalog();},2600);
+}
+boot();
+/* hook de desarrollo/QA (no afecta al juego) */
+window.__SEM={drawPlant:drawPlant,renderPot:renderPot,SP:SP,byId:byId,Time:Time,State:function(){return S;},paintSky:paintSky,skyForHour:skyForHour,updateAll:updateAll,SFX:SFX,Can:function(){return can;},pet:function(){return pet;},growAnimated:growAnimated,fruitsLeft:fruitsLeft,gardenFruitsLeft:gardenFruitsLeft,pickFruit:pickFruit,applyGust:applyGust,grantSeed:grantSeed,garden:paintGarden,potFruits:function(){return potFruits;}};
+})();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a49136e6bb99a180',t:'MTc5MTc1NjgzMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
